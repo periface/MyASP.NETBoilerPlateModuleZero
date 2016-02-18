@@ -783,6 +783,7 @@
     <Content Include="Views\Themes\BlueLight\Layout\_mySiteName.cshtml" />
     <Content Include="Scripts\plugin\bootstrapselect\css\bootstrap-select.css.map" />
     <Content Include="Scripts\plugin\bootstrapselect\js\bootstrap-select.js.map" />
+    <None Include="Views\Home\_ok.cshtml" />
     <None Include="Views\Layout\_mySiteLogo.cshtml" />
     <Content Include="Views\Themes\Blue\Layout\_mySiteLogo.cshtml" />
     <Content Include="Views\Themes\BlueLight\Layout\_mySiteLogo.cshtml" />
@@ -797,6 +798,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GoogleRecaptchaDotNet\GoogleRecaptchaDotNetMvc.csproj">
+      <Project>{0E677D88-E898-448E-9977-57ED01BA034B}</Project>
+      <Name>GoogleRecaptchaDotNetMvc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleCms.Application\SimpleCms.Application.csproj">
       <Project>{edf5d964-4c0f-4f19-b674-58a38a5e5401}</Project>
       <Name>SimpleCms.Application</Name>

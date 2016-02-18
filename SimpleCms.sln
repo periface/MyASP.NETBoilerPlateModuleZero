@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{C8B7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCms.ImageManagement", "SimpleCms.ImageManagement\SimpleCms.ImageManagement.csproj", "{F84344F3-376F-437E-AEED-569A3F4F2AEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleRecaptchaDotNetMvc", "GoogleRecaptchaDotNet\GoogleRecaptchaDotNetMvc.csproj", "{0E677D88-E898-448E-9977-57ED01BA034B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{F84344F3-376F-437E-AEED-569A3F4F2AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84344F3-376F-437E-AEED-569A3F4F2AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84344F3-376F-437E-AEED-569A3F4F2AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E677D88-E898-448E-9977-57ED01BA034B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E677D88-E898-448E-9977-57ED01BA034B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E677D88-E898-448E-9977-57ED01BA034B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E677D88-E898-448E-9977-57ED01BA034B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,5 +98,6 @@ Global
 		{1935A211-5910-475F-8AB5-B078E88C4792} = {C51FE788-DBA7-4D17-A901-4EB985C29A94}
 		{C175DF47-1A08-401F-B4F7-62C019569C96} = {C51FE788-DBA7-4D17-A901-4EB985C29A94}
 		{F84344F3-376F-437E-AEED-569A3F4F2AEA} = {C8B74AF9-AB74-47BB-8171-78F018056AA6}
+		{0E677D88-E898-448E-9977-57ED01BA034B} = {C8B74AF9-AB74-47BB-8171-78F018056AA6}
 	EndGlobalSection
 EndGlobal

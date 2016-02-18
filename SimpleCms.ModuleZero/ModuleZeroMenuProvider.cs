@@ -17,7 +17,7 @@ namespace SimpleCms.ModuleZero
                     "ZeroMenu",
                     L("Zero_Menu")).AddItem(
                     new MenuItemDefinition("ControlPanel",
-                    new LocalizableString("Control_Panel", ModuleZeroConstants.Source),
+                    new LocalizableString("Menu_ControlPanel", ModuleZeroConstants.Source),
                     "fa fa-lg fa-fw fa-bar-chart txt-color-blue",
                     "/Admin/ControlPanel",
                     requiresAuthentication: true

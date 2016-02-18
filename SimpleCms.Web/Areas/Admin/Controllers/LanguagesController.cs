@@ -49,10 +49,10 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
 
         public ViewResult EditLanguageText(string langName,bool isHost=false)
         {
-            if (isHost)
-            {
-                _languageService.InitLanguages(TenantId,langName);
-            }
+            //if (isHost)
+            //{
+            //    _languageService.InitLanguages(TenantId,langName);
+            //}
             ViewBag.LangName = langName;
             return View();
         }
@@ -63,9 +63,9 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             return Json(languages);
         }
         [WrapResult(false)]
-        public JsonResult GetLanguagesForEdit(string langTarget, string langBase, string langSource)
+        public JsonResult GetLanguagesForEdit(string langTarget, string langBase, string langSource, string searchString, int? rows, int? page, string sidx, string sord = "asc")
         {
-            var model = _languageService.GetLanguageText(langTarget,langBase,langSource);
+            var model = _languageService.GetLanguageText(langName:langTarget,baseLanguage:langBase,langSource:langSource,searchString:searchString,rows:rows,page:page,sortColumn:sidx,sortOrder:sord);
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
@@ -95,6 +95,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonResult> EditTextValue(ApplicationTextInput input)
         {
+            //Todo: its getin the wrong target language
             input.TenantId = TenantId;
             await _languageService.EditText(input);
             return Json(input,JsonRequestBehavior.AllowGet);

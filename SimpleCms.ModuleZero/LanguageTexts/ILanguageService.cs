@@ -12,7 +12,7 @@ namespace SimpleCms.ModuleZero.LanguageTexts
         Task<LanguageOutPut> GetLanguages(int? idTenancy, string setActiveStatusName);
         Task UpdateEntry(ApplicationTextInput input);
         Task CreateLanguage(NewLanguageInputDto input);
-        JqGridObject GetLanguageText(string langName, string baseLanguage = "en", string langSource = ModuleZeroConstants.Source);
+        JqGridObject GetLanguageText(string langName, string searchString, int? rows, int? page, string sortColumn, string sortOrder = "asc", string baseLanguage = "en", string langSource = ModuleZeroConstants.Source);
         Task<NewLanguageInputDto> GetLanguageForEdit(int id);
         Task EditLanguage(NewLanguageInputDto input);
         Task EditText(ApplicationTextInput input);

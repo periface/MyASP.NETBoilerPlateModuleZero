@@ -68,8 +68,23 @@ namespace SimpleCms.ModuleZero.LanguageTexts
         {
             using (_unitOfWorkManager.Current.DisableFilter(AbpDataFilters.MayHaveTenant))
             {
-                var baseLanguage = _repositoryLanguageText.Single(a => a.Key == input.Key && a.LanguageName == input.BaseLanguage && a.Source == input.SourceName);
-                var langText = _repositoryLanguageText.Single(a => a.Key == input.Key && a.LanguageName == input.CultureInfoName && a.Source == input.SourceName);
+                var baseLanguage = _repositoryLanguageText.FirstOrDefault(a => a.Key == input.Key && a.LanguageName == input.BaseLanguage && a.Source == input.SourceName);
+                var langText = _repositoryLanguageText.FirstOrDefault(a => a.Key == input.Key && a.LanguageName == input.CultureInfoName && a.Source == input.SourceName);
+                if (langText == null)
+                {
+                    return new ApplicationTextInput()
+                    {
+                        Key = baseLanguage.Key,
+                        SourceName = baseLanguage.Key,
+                        Value = "",
+                        Info = new OutPutInfo()
+                        {
+                            BaseLanguage = baseLanguage.LanguageName,
+                            BaseValue = baseLanguage.Value,
+                            TargetLanguage = baseLanguage.LanguageName,
+                        }
+                    };
+                }
                 return new ApplicationTextInput()
                 {
                     Key = langText.Key,
@@ -158,14 +173,19 @@ namespace SimpleCms.ModuleZero.LanguageTexts
 
             await _languageManager.AddAsync(language);
 
+            //Todo: Dis crap mast be fixed!
 
-            await GetHostLanguages(input.TenantId, input.Name);
+            //await GetHostLanguages(input.TenantId, input.Name);
 
 
             _cacheManager.GetCache("AbpZeroLanguages").Clear();
             _cacheManager.GetCache("AbpZeroMultiTenantLocalizationDictionaryCache").Clear();
         }
-
+        /// <summary>
+        /// harmful code!
+        /// </summary>
+        /// <param name="createdTenantId"></param>
+        /// <returns></returns>
         public async Task InitLanguages(int? createdTenantId)
         {
             var languages = _repositoryLanguageText.GetAllList(a => a.TenantId == null);
@@ -179,6 +199,12 @@ namespace SimpleCms.ModuleZero.LanguageTexts
             }
         }
 
+        /// <summary>
+        /// harmful code!
+        /// </summary>
+        /// <param name="tenantId"></param>
+        /// <param name="langName"></param>
+        /// <returns></returns>
         public async Task InitLanguages(int? tenantId, string langName)
         {
             var languageTextsHost = GetHostLanguagesList(langName);
@@ -207,28 +233,77 @@ namespace SimpleCms.ModuleZero.LanguageTexts
             }
         }
 
-        public JqGridObject GetLanguageText(string langName, string baseLanguage, string source)
+        public JqGridObject GetLanguageText(string langName, string searchString, int? rows, int? page, string sortColumn, string sortOrder = "asc", string baseLanguage = "en", string source = ModuleZeroConstants.Source)
         {
-            var texts = _repositoryLanguageText.GetAllList(a => a.LanguageName.ToUpper().Equals(langName) && a.Source.ToUpper().Equals(source));
+            var pageIndex = page - 1 ?? 0;
+            var pageSize = rows ?? 10;
+
+            var totalRecords =0;
+            //Gets the texts filtered from host 
+            var hostTexts = FilterHostList(baseLanguage, source, searchString, pageIndex, pageSize, sortColumn, sortOrder,out totalRecords);
+            
+            
+            //Gets the texts filtered from client
+            var clientTexts = FilterClientList(langName, source, searchString, pageIndex, pageSize, sortColumn, sortOrder);
+
+            if (!clientTexts.Any())
+            {
+                clientTexts.AddRange(hostTexts.Select(applicationLanguageText => new ApplicationLanguageText()
+                {
+                    Key = applicationLanguageText.Key, LanguageName = applicationLanguageText.LanguageName, Source = applicationLanguageText.Source
+                }));
+            }
+            //Realizes the final filter
+            var list = (from applicationLanguageText in hostTexts
+                        from languageText in clientTexts
+                        where applicationLanguageText.Key == languageText.Key
+                        select new LanguageTextOutPutDto()
+                        {
+                            BaseValue = applicationLanguageText.Value,
+                            Id = applicationLanguageText.Id,
+                            TargetValue = languageText.Value,
+                            Key = applicationLanguageText.Key
+                        }).ToList();
+            var dtoModel = new LanguageTextOutput()
+            {
+                LanguageText = list
+            };
+            
+            var totalPages = (int)Math.Ceiling(totalRecords / (float)pageSize);
+
+            var model = JqGridObject.CreateModel(page ?? 1, totalRecords, totalPages, "", sortOrder, dtoModel.LanguageText);
+            return model;
+        }
+
+        private List<ApplicationLanguageText> FilterClientList(string baseLanguage, string source, string searchString, int pageIndex, int pageSize, string sortColumn, string sortOrder)
+        {
+            var isAsc = sortOrder == "asc";
+            var baseText = _repositoryLanguageText.GetAll();
+            baseText = from text in baseText where text.LanguageName.ToUpper().Equals(baseLanguage) && source.ToUpper().Equals(source) select text;
+           
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                baseText = from text in baseText where text.Key.Contains(searchString)select text;
+            }
+            var dataModel = baseText.OrderBy(a => a.Key).Skip(pageIndex * pageSize).ToList();
+            return dataModel;
+        }
+        private List<ApplicationLanguageText> FilterHostList(string baseLanguage, string source, string searchString, int pageIndex, int pageSize, string sortColumn, string sortOrder,out int total)
+        {
+            var isAsc = sortOrder == "asc";
+            
             using (_unitOfWorkManager.Current.DisableFilter(AbpDataFilters.MayHaveTenant))
             {
-                var baseText = _repositoryLanguageText.GetAllList(a => a.LanguageName.ToUpper().Equals(baseLanguage) && a.Source.ToUpper().Equals(source));
-                var list = (from applicationLanguageText in texts
-                            from languageText in baseText
-                            where applicationLanguageText.Key == languageText.Key
-                            select new LanguageTextOutPutDto()
-                            {
-                                BaseValue = languageText.Value,
-                                Id = applicationLanguageText.Id,
-                                TargetValue = applicationLanguageText.Value,
-                                Key = applicationLanguageText.Key
-                            }).ToList();
-                var dtoModel = new LanguageTextOutput()
+                var baseText = _repositoryLanguageText.GetAll().Where(a => a.TenantId == null);
+                baseText = from text in baseText where text.LanguageName.ToUpper().Equals(baseLanguage) && source.ToUpper().Equals(source) select text;
+                if (!string.IsNullOrEmpty(searchString))
                 {
-                    LanguageText = list
+                    baseText = from text in baseText where text.Key.Contains(searchString)select text;
                 };
-                var model = JqGridObject.CreateModel(1, 10, 100, "", "", dtoModel.LanguageText);
-                return model;
+                total = baseText.Count();
+                var dataModel = baseText.OrderBy(a=>a.Key).Skip(pageIndex * pageSize).ToList();
+                return dataModel;
+
             }
 
         }
