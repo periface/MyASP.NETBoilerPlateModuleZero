@@ -1,2 +1,5 @@
 # MyASP.NETBoilerPlateModuleZero
-A simple a noob implementation of ASP.NETBoilerPlate
+A simple and noob implementation of ASP.NETBoilerPlate
+
+Orginial Proyect Website
+http://aspnetboilerplate.com/
