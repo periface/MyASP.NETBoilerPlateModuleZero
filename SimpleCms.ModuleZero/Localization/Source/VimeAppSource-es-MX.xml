@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="es-MX">
+  <texts>
+    <!--Generic Localization Section-->
+    <text name="BtnCreate" value="Crear" />
+    <text name="BtnCancel" value="Cancelar" />
+    <text name="BtnDelete" value="Borrar" />
+    <text name="BtnRestore" value="Restaurar" />
+
+    <!--Other-->
+    <text name="MessageOk" value="Unidad Guardada " />
+    <text name="MessageDeleted" value="Unidad Borrada " />
+    <text name="MessageDeleteQ" value="¿Estas seguro (a)? " />
+    <text name="MessageDeleteAdvise" value="La unidad sera borrada " />
+    <text name="Yes" value="Si" />
+    <text name="OrgUnits" value="Unidades de Organización" />
+    <text name="Save" value="Guardar"/>
+    <text name="Edit" value="Editar"/>
+    <text name="Close" value="Cerrar"/>
+    <text name="AddChild" value="Agregar Hijo"/>
+    <text name="ConvertToRoot" value="Convertir a Raíz"/>
+    <text name="EditUnit" value="Editar unidad"/>
+    <text name="AddUnitName" value="Agregar nombre"/>
+    <text name="AddUnitNamePh" value="Nombre"/>
+    <text name="UnitCreated" value="Unidad Creada" />
+    <text name="AddMember" value="Agregar Miembro"/>
+    <text name="OrgExist" value="Esta unidad ya existe." />
+    <text name="UserAlreadyInUnit" value="El usuario ya fue asignado a esta unidad de organización." />
+  </texts>
+</localizationDictionary>

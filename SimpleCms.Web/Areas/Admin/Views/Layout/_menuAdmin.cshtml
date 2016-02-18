@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+@using Abp.Collections.Extensions
+@model SimpleCms.Web.Models.Layout.TopMenuViewModel
+<style>
+    .secondaryActive {
+        color: white;
+    }
+</style>
+<aside id="left-panel">
+    @Html.Action("UserMenuOrLoginLink", "Layout", new { Area = "Admin" })
+    <nav>
+        <ul>
+
+            @foreach (var menuItem in Model.MainMenu.Items)
+            {
+
+                var dropDownClass = "";
+                var ulStyle = "";
+                @*
+                    Checks for any coincidence in the items
+                *@
+                var coincidence = menuItem.Items.SingleOrDefault(a => a.Name == Model.ActiveMenuItemName);
+                var coincidenceName = "";
+            if (coincidence != null)
+            {
+                dropDownClass = "active open";
+                ulStyle = "style=display:block;";
+                coincidenceName = coincidence.Name;
+            }
+            <li class="@(Model.ActiveMenuItemName == menuItem.Name ? "active" : dropDownClass)">
+                @if (menuItem.Items.IsNullOrEmpty())
+                {
+                    <a href="@menuItem.Url">
+                        @if (!string.IsNullOrWhiteSpace(menuItem.Icon))
+                        {
+                            <i class="@menuItem.Icon"></i>
+                        }
+                        <span class="menu-item-parent">@menuItem.DisplayName</span>
+                    </a>
+                }
+                else
+                {
+                    <a>
+                        @if (!string.IsNullOrWhiteSpace(menuItem.Icon))
+                        {
+                            <i class="@menuItem.Icon"></i>
+                        }
+                        <span class="menu-item-parent">@menuItem.DisplayName</span>
+                    </a>
+                        <ul @ulStyle>
+                            @foreach (var subMenuItem in menuItem.Items)
+                            {
+                                <li>
+                                    <a class="@(subMenuItem.Name == coincidenceName ? "secondaryActive" :"")" href="@subMenuItem.Url">
+                                        @if (!string.IsNullOrWhiteSpace(subMenuItem.Icon))
+                                        {
+                                            <i class="@subMenuItem.Icon"></i>
+                                        }
+                                        @subMenuItem.DisplayName
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                }
+            </li>
+            }
+        </ul>
+    </nav>
+    <span class="minifyme" data-action="minifyMenu">
+        <i class="fa fa-arrow-circle-left hit"></i>
+    </span>
+</aside>

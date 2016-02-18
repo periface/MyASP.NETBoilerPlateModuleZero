@@ -1,0 +1,73 @@
+﻿@model SimpleCms.ModuleZero.Roles.Dto.NewRoleInput
+@{
+    Layout = null;
+    var prop = string.Empty;
+
+}
+<form id="createRoleForm">
+
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create Role @Model.RoleName</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="widget-body">
+
+                <ul id="myTab1" class="nav nav-tabs bordered">
+                    <li class="active">
+                        <a href="#s1" data-toggle="tab">Properties</a>
+                    </li>
+                    <li class="">
+                        <a href="#s2" data-toggle="tab"><i class="fa fa-fw fa-lg fa-gear"></i> Permissions</a>
+                    </li>
+
+                </ul>
+
+                <div id="myTabContent1" class="tab-content padding-10">
+                    <div class="tab-pane fade active in" id="s1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(a => a.RoleName, new { @class = "form-control", placeholder = "Role Name" })
+                                </div>
+                                <div class="checkbox">
+
+                                    <label>
+                                        @Html.CheckBoxFor(a => a.IsDefault)
+                                        Is asigned by default?
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade checks" id="s2">
+
+                        @foreach (var p in Model.PermisionList)
+                        {
+                            if (p.Granted)
+                            {
+                                prop = "checked ='checked'";
+                            }
+                            <div class="checkbox">
+
+                                <label>
+                                    <input type="checkbox" class="checks" name="@p.DbName" @prop />@p.PermissionName
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+        <button type="submit" class="btn btn-primary">@L("Save")</button>
+    </div>
+</form>
+<script src="~/Areas/Admin/Scripts/_roles_CreateRole.js"></script>

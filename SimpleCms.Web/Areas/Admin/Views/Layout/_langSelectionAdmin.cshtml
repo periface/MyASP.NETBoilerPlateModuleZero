@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+    var clase = "";
+    var first = true;
+}
+@model SimpleCms.Web.Models.Layout.LanguageSelectionViewModel
+<li class>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="@Model.CurrentLanguage.Icon"></i>
+        <span>@Model.CurrentLanguage.DisplayName</span>
+        @*<b class="caret"></b>*@
+    </a>
+    <ul class="dropdown-menu pull-right">
+        @foreach (var language in Model.Languages)
+        {
+            if (first)
+            {
+                first = false;
+                clase = "active";
+            }
+            else
+            {
+                clase = "";
+            }
+            if (language.Name != Model.CurrentLanguage.Name)
+            {
+                <li class="@clase"><a href="/AbpLocalization/ChangeCulture?cultureName=@(language.Name)&returnUrl=@(Request.Url)"><i class="@language.Icon"></i> @language.DisplayName</a></li>
+            }
+        }
+    </ul>
+</li>

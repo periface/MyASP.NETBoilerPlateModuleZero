@@ -1,0 +1,102 @@
+﻿@model SimpleCms.ModuleZero.LanguageTexts.Dto.ApplicationTextInput
+@{
+    Layout = null;
+}
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Edit Text @Model.Info.TargetLanguage</h4>
+    <input type="hidden" id="TargetCulture" value="@Model.Info.TargetLanguage"/>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="widget-body">
+
+            <ul id="myTab1" class="nav nav-tabs bordered">
+                <li class="active">
+                    <a href="#s1" data-toggle="tab">Properties</a>
+                    
+                </li>
+            </ul>
+            @*<input id="1" type="checkbox" />
+            <input type="hidden" id="2" name="checkboxValue"/>
+            <script>
+                $("#1").on("change", function() {
+                    $("#2").val($(this).is(":checked"));
+                });
+            </script>*@
+            <div id="myTabContent1" class="tab-content padding-10">
+                <div class="tab-pane fade active in" id="s1">
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label class="control-label">Base Language</label>
+                            @Html.TextBoxFor(a => a.Info.BaseLanguage, new {disabled = "disabled", @class = "form-control col-lg-6"})
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label class="control-label">Target Language</label>
+                            @Html.TextBoxFor(a => a.Info.TargetLanguage, new {disabled = "disabled", @class = "form-control col-lg-6"})
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label class="control-label">Source</label>
+                            @Html.TextBoxFor(a => a.SourceName, new { disabled = "disabled", @class = "form-control col-lg-6" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label class="control-label">Key</label>
+                            @Html.TextBoxFor(a => a.Key, new { disabled = "disabled", @class = "form-control col-lg-6" })
+                        </div>
+                        
+                        <div class="form-group col-lg-4">
+                            <label class="control-label">Base Value</label>
+                            @Html.TextBoxFor(a => a.Info.BaseValue, new {disabled = "disabled", @class = "form-control col-lg-6"})
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label class="control-label">Value</label>
+                            @Html.TextBoxFor(a => a.Value, new {@class = "form-control col-lg-6"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+    <button type="submit" class="btn btn-primary btnEdit">@L("Save")</button>
+</div>
+<script>
+    $(document).ready(function () {
+        function editData(data) {
+
+            console.log(data);
+            abp.ui.setBusy($("#s1"), abp.ajax({
+                url: urls.Languages + "EditTextValue",
+                data: JSON.stringify(data)
+            }).done(function (d) {
+
+                modal.close();
+                rebindTable(data.Info.BaseLanguage, data.Info.TargetLanguage, data.SourceName);
+
+            }));
+        }
+        function loadNext(data) {
+            $("#s1").load();
+        }
+        $(".btnEdit").click(function() {
+            var data = {
+                SourceName: $("#SourceName").val(),
+                Key: $("#Key").val(),
+                Value: $("#Value").val(),
+                TargetCulture:$("#TargetCulture").val(),
+                Info: {
+                    BaseLanguage: $("#Info_BaseLanguage").val(),
+                    BaseValue: $("#Info_BaseValue").val(),
+                    TargetLanguage: $("#Info_TargetLanguage").val()
+                }
+            };
+            editData(data);
+        });
+        
+    });
+</script>

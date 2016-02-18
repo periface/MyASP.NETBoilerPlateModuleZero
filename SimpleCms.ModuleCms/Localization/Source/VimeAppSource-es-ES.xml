@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="es-ES">
+  <texts>
+    <!--Generic Localization Section-->
+    <text name="Cms_System" value="Administrar Contenidos" />
+    <text name="Cms_Pages" value="Paginas" />
+    <text name="Cms_Tags" value="Etiquetas" />
+    <text name="Cms_Config_General" value="Configurar Sitio"/>
+    <text name="Cms_Config_Theme" value="Cambiar tema"/>
+  </texts>
+</localizationDictionary>

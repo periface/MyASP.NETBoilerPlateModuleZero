@@ -1,0 +1,42 @@
+﻿@using Abp.Collections.Extensions
+@model SimpleCms.Web.Models.Layout.TopMenuViewModel
+<div class="mainmenu pull-left">
+    <ul class="nav navbar-nav collapse navbar-collapse">
+        @foreach (var menuItem in Model.MainMenu.Items.OrderBy(a=>a.Order))
+        {
+        <li class="@(Model.ActiveMenuItemName == menuItem.Name ? "active":"")">
+            @if (menuItem.Items.IsNullOrEmpty())
+            {
+            <a href="@menuItem.Url">
+                @if (!string.IsNullOrWhiteSpace(menuItem.Icon))
+                {
+                <i class="@menuItem.Icon"></i>
+                }
+                @menuItem.DisplayName
+            </a>
+            }
+            else
+            {
+            <a href="" class="dropdown" data-toggle="dropdown">
+                
+                @menuItem.DisplayName  <i class="fa fa-angle-down"></i>
+            </a>
+            <ul role="menu" class="sub-menu">
+                @foreach (var subMenuItem in menuItem.Items)
+                {
+                <li>
+                    <a href="@subMenuItem.Url">
+                        @if (!string.IsNullOrWhiteSpace(subMenuItem.Icon))
+                        {
+                        <i class="@subMenuItem.Icon"></i>
+                        }
+                        @subMenuItem.DisplayName
+                    </a>
+                </li>
+                }
+            </ul>
+            }
+        </li>
+        }
+    </ul>
+</div>

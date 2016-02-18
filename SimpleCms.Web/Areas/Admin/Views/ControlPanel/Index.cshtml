@@ -1,0 +1,493 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+
+    <link href="~/Scripts/jqplot/jquery.jqplot.min.css" rel="stylesheet" />
+    <style>
+        .ActiveUsers {
+            background: #f4f2f1;
+            background: hsl(30,10%,95%);
+            border: 1px solid #d4d2d0;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            font-weight: 300;
+            padding: .5em 1.5em;
+            white-space: nowrap;
+            font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+            font-weight: 600;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+}
+<div id="ribbon">
+
+    <span class="ribbon-button-alignment">
+        <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh" rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true">
+            <i class="fa fa-refresh"></i>
+        </span>
+    </span>
+
+    <!-- breadcrumb -->
+    <ol class="breadcrumb">
+        <li>Admin</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- You can also add more buttons to the
+    ribbon for further usability
+
+    Example below:
+
+    <span class="ribbon-button-alignment pull-right">
+    <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+    <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+    <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+    </span> -->
+
+</div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-cube fa-fw "></i>
+                Control Panel
+                <span>
+                    Welcome!
+                    @User.Identity.Name
+                </span>
+            </h1>
+
+
+        </div>
+    </div>
+</div>
+
+<section id="widget-grid">
+
+    <div class="col-sm-12">
+
+        <article class="col-sm-6 sortable-grid ui-sortable">
+            <div class="jarviswidget jarviswidget-sortable well" id="wid-id-000" role="widget">
+                <header role="heading">
+
+                    <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+
+                </header>
+                <div role="content">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id="embed-api-auth-container"></div>
+                                <div id="view-selector-container"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+        <article class="col-sm-6 sortable-grid ui-sortable">
+            <div class="jarviswidget jarviswidget-sortable well" id="wid-id-000" role="widget">
+                <header role="heading">
+
+                    <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+
+                </header>
+                <div role="content">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id="active-users-container"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+    </div>
+
+    <div class="col-sm-12">
+
+        <article class="col-sm-6 sortable-grid ui-sortable">
+            <div class="jarviswidget jarviswidget-sortable" id="wid-id-003" role="widget">
+                <header role="heading">
+
+                    <h2>
+                        <strong>Visitors - Countries</strong>
+                    </h2>
+
+                    <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+
+                </header>
+                <div role="content">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id="chart-container-2"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+        <article class="col-sm-6 sortable-grid ui-sortable">
+            <div class="jarviswidget jarviswidget-sortable" id="wid-id-001" role="widget">
+                <header role="heading">
+                    <h2>
+                        <strong>Top Browsers</strong>
+                    </h2>
+                    <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+
+                </header>
+                <div role="content">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div id="chart-container-3"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+
+        <article class="col-sm-12 sortable-grid ui-sortable">
+            <div class="jarviswidget jarviswidget-sortable" id="wid-id-002" role="widget">
+                <header role="heading">
+
+                    <h2>
+                        <strong>Visitors</strong>
+                    </h2>
+
+                    <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+
+                </header>
+                <div role="content">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <div id="chart-container"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+        <article class="col-sm-12 sortable-grid ui-sortable">
+            <div class="jarviswidget jarviswidget-sortable" id="wid-id-006" role="widget">
+                <header role="heading">
+
+                    <h2>
+                        <strong>Logs</strong>
+                    </h2>
+
+                    <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+
+                </header>
+                <div role="content">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button class="btn btn-success" onclick="window.refreshTable()">Refresh Table</button>
+                                <table id="tableLogs"></table>
+                                <div id="paginationLogs"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+
+    </div>
+</section>
+@section Scripts{
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script>
+        (function (w, d, s, g, js, fs) {
+            g = w.gapi || (w.gapi = {}); g.analytics = { q: [], ready: function (f) { this.q.push(f); } };
+            js = d.createElement(s); fs = d.getElementsByTagName(s)[0];
+            js.src = 'https://apis.google.com/js/platform.js';
+            fs.parentNode.insertBefore(js, fs); js.onload = function () { g.load('analytics'); };
+        }(window, document, 'script'));
+    </script>
+
+    <!-- Include the ViewSelector2 component script. -->
+    <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/view-selector2.js"></script>
+
+    <!-- Include the DateRangeSelector component script. -->
+    <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/date-range-selector.js"></script>
+
+    <!-- Include the ActiveUsers component script. -->
+    <script src="https://ga-dev-tools.appspot.com/public/javascript/embed-api/components/active-users.js"></script>
+    <script src="~/Scripts/jqplot/jquery.jqplot.min.js"></script>
+
+    <script>
+        gapi.analytics.ready(function () {
+
+            /**
+             * Authorize the user immediately if the user has already granted access.
+             * If no access has been created, render an authorize button inside the
+             * element with the ID "embed-api-auth-container".
+             */
+            gapi.analytics.auth.authorize({
+                container: 'embed-api-auth-container',
+                clientid: '249182475253-d6utq431stfjqfnq4aa84d9699gdjjim.apps.googleusercontent.com'
+            });
+            var activeUsers = new gapi.analytics.ext.ActiveUsers({
+                container: 'active-users-container',
+                pollingInterval: 5
+            });
+
+            activeUsers.once('success', function () {
+                var element = this.container.firstChild;
+                var timeout;
+
+                this.on('change', function (data) {
+                    var element = this.container.firstChild;
+                    var animationClass = data.delta > 0 ? 'is-increasing' : 'is-decreasing';
+                    element.className += (' ' + animationClass);
+
+                    clearTimeout(timeout);
+                    timeout = setTimeout(function () {
+                        element.className =
+                            element.className.replace(/ is-(increasing|decreasing)/g, '');
+                    }, 3000);
+                });
+            });
+            /**
+             * Create a new ViewSelector instance to be rendered inside of an
+             * element with the id "view-selector-container".
+             */
+            var viewSelector = new gapi.analytics.ext.ViewSelector2({
+                container: 'view-selector-container'
+            }).execute();
+
+            // Render the view selector to the page.
+            //viewSelector.execute();
+
+            /**
+             * Create a new DataChart instance with the given query parameters
+             * and Google chart options. It will be rendered inside an element
+             * with the id "chart-container".
+             */
+            var sessionsBar = new gapi.analytics.googleCharts.DataChart({
+                query: {
+                    metrics: 'ga:sessions',
+                    dimensions: 'ga:date',
+                    'start-date': '30daysAgo',
+                    'end-date': 'yesterday'
+                },
+                chart: {
+                    container: 'chart-container',
+                    type: 'LINE',
+                    options: {
+                        width: '100%'
+                    }
+                }
+            });
+
+            var countryChart = new gapi.analytics.googleCharts.DataChart({
+                query: {
+                    metrics: 'ga:sessions',
+                    dimensions: 'ga:country',
+                    'start-date': '30daysAgo',
+                    'end-date': 'yesterday',
+                    'max-results': 6,
+                    sort: '-ga:sessions'
+                },
+                chart: {
+                    container: 'chart-container-2',
+                    type: 'GEO',
+                    options: {
+                        width: '100%'
+                    }
+                }
+            });
+            function DrawMap(ids) {
+                var data = query({
+                    ids:ids,
+                    metrics: 'ga:sessions',
+                    dimensions: 'ga:country',
+                    'start-date': '30daysAgo',
+                    'end-date': 'yesterday',
+                    'max-results': 6,
+                    sort: '-ga:sessions'
+                });
+                Promise.all([data]).then(function (results) {
+                    //Now we can start building the map
+                    var mapData = [];
+                    $.each(results[0].rows, function(i, row) {
+                        mapData.push(row);
+                    });
+                    console.log(mapData);
+                });
+            }
+            var topBrowsersChart = new gapi.analytics.googleCharts.DataChart({
+                query: {
+                    'dimensions': 'ga:browser',
+                    'metrics': 'ga:pageviews',
+                    'sort': '-ga:pageviews',
+                    'max-results': 5
+                },
+                chart: {
+                    container: "chart-container-3",
+                    type: "PIE",
+                    options: {
+                        width: "100%"
+                    }
+                }
+            });
+            /**
+             * Render the dataChart on the page whenever a new view is selected.
+             */
+            viewSelector.on('change', function (ids) {
+                sessionsBar.set({ query: { ids: ids } }).execute();
+                countryChart.set({ query: { ids: ids } }).execute();
+                topBrowsersChart.set({ query: { ids: ids } }).execute();
+
+            });
+            viewSelector.on("viewChange", function (data) {
+                // Start tracking active users for this view.
+                activeUsers.set(data).execute();
+
+                DrawMap(data.ids);
+                $(".FormField").addClass("form-control");
+                $(".FormField").addClass("form-control");
+                $(".FormField").addClass("form-control");
+            });
+            function query(params) {
+                return new Promise(function (resolve, reject) {
+                    var data = new gapi.analytics.report.Data({ query: params });
+                    data.once('success', function (response) { resolve(response); })
+                        .once('error', function (response) { reject(response); })
+                        .execute();
+                });
+            }
+        });
+
+    </script>
+    <script src="~/Scripts/plugin/jqgrid/jquery.jqGrid.min.js"></script>
+    <script src="~/Scripts/plugin/jqgrid/grid.locale-en.min.js"></script>
+    <script>
+        window.refreshTable = function () {
+            $("#tableLogs").trigger('reloadGrid');
+        }
+        window.populateTableLogs = function ()
+        {
+            //$.jgrid.defaults.loadtext = 'Cargando...';
+            $("#tableLogs").jqGrid({
+                url: "/Admin/ControlPanel/GetAuditLogs/",
+                //shrinkToFit: false,
+                datatype: "json",
+                height: 'auto',
+                pager: '#paginationLogs',
+                autowidth: true,
+                emptyrecords: "No logs found",
+                rowNum: 10,
+                jsonReader: {
+                    root: 'Data',
+                    repeatitems: false
+                },
+                rowList: [10, 20, 30],
+                colNames: ["", "Actions", 'Username', "Time", "Service", "Actions", "Duration", "Ip Address", "Browser"],
+                sortname: 'Id',
+                colModel: [
+                    {
+                        name: "Id",
+                        index: "act",
+                        hidden: true
+                    },
+                    {
+                        name: 'act',
+                        index: 'act',
+                        sortable: false,
+                        align: "left"
+
+                    },
+                    {
+                        name: "UserName",
+                        index: "UserName",
+                        align: "center"
+                    },
+                    {
+                        name: "Time",
+                        index: "Time",
+                        align: "center"
+                    },
+                    {
+                        name: "Service",
+                        index: "Service",
+                        align: "center"
+
+                    },
+                    {
+                        name: "Action",
+                        index: "Action",
+                        align: "center"
+
+                    },
+                    {
+                        name: "Duration",
+                        index: "Duration",
+                        align: "center"
+
+                    },
+                    {
+                        name: "IpAdress",
+                        index: "IpAdress",
+                        align: "center"
+
+                    },
+                    {
+                        name: "Browser",
+                        index: "Browser",
+                        align: "center"
+
+                    }
+                ],
+                gridComplete: function () {
+                    var ids = jQuery("#tableLogs").jqGrid('getDataIDs');
+                    for (var i = 0; i < ids.length; i++) {
+                        var cl = ids[i];
+                        var rowClientId = jQuery("#tableLogs").jqGrid('getCell', cl, 'Id');
+                        var ca = "<button class='btn btn-xs btn-primary editRole'  data-id='" + rowClientId + "' data-original-title='Edit Role'><i class='fa fa-edit'></i></button>";
+                        var de = "<button class='btn btn-xs btn-danger deleteRole'  data-id='" + rowClientId + "' data-original-title='Delete Role'><i class='fa fa-times'></i></button>";
+                        //ce = "<button class='btn btn-xs btn-default' onclick=\"jQuery('#jqgrid').restoreRow('"+cl+"');\"><i class='fa fa-times'></i></button>";
+                        //jQuery("#jqgrid").jqGrid('setRowData',ids[i],{act:be+se+ce});
+                        jQuery("#tableLogs").jqGrid('setRowData', ids[i], {
+                            act: de + " " + ca
+                        });
+                    }
+
+                }
+            });
+
+
+        }
+        $(document).ready(function () {
+            window.populateTableLogs();
+        });
+    </script>
+}

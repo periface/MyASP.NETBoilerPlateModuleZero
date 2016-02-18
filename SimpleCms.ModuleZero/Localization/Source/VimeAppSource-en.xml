@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <!--Titulos-->
+    <!--Generic Localization Section-->
+    <text name="BtnCreate" value="Create" />
+    <text name="BtnCreateNew" value="Create new" />
+    <text name="BtnCancel" value="Cancel" />
+    <text name="BtnDelete" value="Delete" />
+    <text name="BtnRestore" value="Restore" />
+    <text name="Btn_Edit" value="Edit" />
+    <text name="Languages" value="Languages (Beta!)" />
+    <text name="OrgUnits" value="Organization Units"/>
+    <text name="OrgUnits_Units" value="Units"/>
+    <text name="OrgUnits_Msg" value="Manage organization units"/>
+    <text name="Options" value="Options"/>
+    <text name="Users_Users" value="Users"/>
+    <text name="OrgUnits_AddMember" value="Add member"/>
+    <text name="Roles" value="Roles"/>
+    <text name="RolesMsg" value="Use roles to group permissions."/>
+    <text name="RoleName" value="Role name"/>
+    <text name="RoleType" value="Role type"/>
+    <text name="RoleTable" value="Roles table"/>
+    <text name="Users" value="Users" />
+    <text name="UserName" value="User name" />
+    <text name="Email" value="Email" />
+    <text name="Actions" value="Actions" />
+    <text name="Save" value="Save"/>
+    <text name="Edit" value="Edit"/>
+    <text name="Close" value="Close"/>
+    <text name="Yes" value="Yes" />
+    <text name="Config" value="Configuration" />
+    <text name="MyOrg" value="My Organization" />
+    <text name="Static" value="Static" />
+    <text name="NoStatic" value="Default / User defined" />
+    <text name="Type" value="Type" />
+    <text name="CreationTime" value="Creation time" />
+    <text name="HostLangMsg" value="*Host languages cannot be edited, but you can change the texts" />
+    <text name="Properties" value="Properties"/>
+    <text name="Permissions" value="Permissions"/>
+    <text name="IsDefault" value="Is asigned by default?"/>
+    <text name="Themes" value="Themes"/>
+    <text name="RolesWarning" value="Warning Modify the admin role can cause unexpected behaviour."/>
+    <!--Other-->
+    <text name="MessageOk" value="Unit Saved " />
+    <text name="MessageDeleted" value="Unit Deleted " />
+    <text name="MessageDeleteQ" value="Are you sure? " />
+    <text name="ToRoot" value="Are you sure to move this unit to root?" />
+    <text name="MessageDeleteAdvise" value="The unit will be deleted " />
+   
+    <text name="Control_Panel" value="Control Panel" />
+   
+    <text name="AddChild" value="Add Child"/>
+    <text name="ConvertToRoot" value="Convert to root"/>
+    <text name="AddUnitName" value="Add unit name"/>
+    <text name="AddUnitNamePh" value="Unit name"/>
+    <text name="AddMember" value="Add Member"/>
+  
+    <text name="OrgExist" value="This organization unit already exists" />
+    <text name="UserAlreadyInUnit" value="The user is already in this organization unit." />
+  </texts>
+</localizationDictionary>

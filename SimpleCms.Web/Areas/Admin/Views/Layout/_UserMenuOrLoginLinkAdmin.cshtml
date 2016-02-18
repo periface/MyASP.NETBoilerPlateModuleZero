@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+@model SimpleCms.Web.Models.Layout.UserMenuOrLoginLinkViewModel
+
+@if (Model.LoginInformations != null)
+{
+    <div class="login-info">
+        <span>
+            <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+            <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                @Html.Raw(Model.GetShownAvatarImage())
+                <span>
+                    @Html.Raw(Model.GetShownLoginName())
+                </span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+        </span>
+    </div>
+
+    @*<li class="dropdown">
+        <a href="" data-toggle="dropdown"><i class="fa fa-user"></i> <span>@Html.Raw(Model.GetShownLoginName())</span> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="@Url.Action("Logout", "Account")"><i class="fa fa-sign-out"></i> @L("Logout")</a></li>
+        </ul>
+    </li>*@
+}
+@*else
+{
+    <li><a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> @L("LogIn")</a></li>
+}*@

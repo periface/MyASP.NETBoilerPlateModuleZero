@@ -1,0 +1,58 @@
+﻿@model SimpleCms.ModuleCms.SiteConfiguration.Dto.SiteInfoDto
+@{
+    Layout = null;
+}
+<form id="editInfoForm">
+
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create Info</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="widget-body">
+
+                <ul id="myTab1" class="nav nav-tabs bordered">
+                    <li class="active">
+                        <a href="#s1" data-toggle="tab">Properties</a>
+                    </li>
+                </ul>
+
+                <div id="myTabContent1" class="tab-content padding-10">
+                    <div class="tab-pane fade active in" id="s1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @Html.HiddenFor(a => a.Id)
+                                <div class="form-group">
+                                    @Html.TextBoxFor(a => a.SiteTitle, new {@class = "form-control", placeholder = "Role Name"})
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(a => a.SiteSlogan, new {@class = "form-control", placeholder = "Role Name"})
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextAreaFor(a => a.SiteDescription, new {@class = "form-control", placeholder = "Role Name"})
+                                </div>
+                                <div class="checkbox">
+
+                                    <label>
+                                        @Html.CheckBoxFor(a => a.IsActive)
+                                        Is Active?
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+        <button type="submit" class="btn btn-primary">@L("Save")</button>
+    </div>
+</form>
+<script src="~/Areas/Admin/Scripts/_siteConfig_EditInfo.js"></script>

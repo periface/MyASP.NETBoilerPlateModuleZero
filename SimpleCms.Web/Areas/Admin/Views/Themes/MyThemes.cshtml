@@ -1,0 +1,41 @@
+﻿@model SimpleCms.ModuleCms.Themes.Dto.ThemeOutput
+@{
+    Layout = null;
+}
+@if (!Model.Themes.Any())
+{
+    <div class="col-sm-12 col-lg-4">
+        <h3>You have only the default theme!</h3>
+    </div>
+}
+@foreach (var item in Model.Themes)
+{
+    <div class="col-sm-12 col-lg-4 themeWrapper-@item.Id">
+        
+        <div class="well well-light">
+
+            @if (item.StillInDevelopment)
+            {
+                <div class="alert alert-warning">This Theme is still in delevopment</div>
+            }
+            else
+            {
+                <div class="alert alert-success">This Theme is released!</div>
+            }
+            <h1>@item.Title</h1>
+            <img style="width: 20vw; height: 10vw; margin: 0 auto;" src="@item.Image"/>
+            <br/>
+            <hr/>
+            @if (item.IsActive)
+            {
+                <button type="button" disabled="disabled" class="btn btn-block">Is Active</button>
+            }
+            else
+            {
+                <button type="button" class="btn btn-primary btn-block activeTheme" data-id="@item.Id">Use this theme</button>
+            }
+        </div>
+    </div>
+}
+
+

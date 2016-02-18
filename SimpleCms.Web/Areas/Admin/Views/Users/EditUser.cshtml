@@ -1,0 +1,160 @@
+﻿@model SimpleCms.ModuleZero.Users.Dto.NewUserInput
+@{
+    Layout = null;
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Edit User </h4>
+</div>
+@Html.HiddenFor(a => a.Id)
+<div class="modal-body">
+    <div class="row">
+        <div class="widget-body">
+
+            <ul id="myTab1" class="nav nav-tabs bordered">
+                <li class="active">
+                    <a href="#s1" data-toggle="tab">Properties</a>
+                </li>
+                <li class="">
+                    <a href="#s2" data-toggle="tab"><i class="fa fa-fw fa-lg fa-gear"></i> Roles (@Model.Roles.Count(a => a.Granted))</a>
+                </li>
+
+            </ul>
+
+            <div id="myTabContent1" class="tab-content padding-10">
+                <div class="tab-pane fade active in" id="s1">
+                    <div class="smart-form">
+                        <form id="imageSubmit" method="post" enctype="multipart/form-data" class="row">
+                            <div >
+                                <section class="col col-8">
+                                    <label class="label">
+                                        Upload profile picture
+                                    </label>
+                                    <section>
+                                        <label class="label">File input</label>
+                                        <label for="file" class="input input-file">
+                                            <div class="button">
+                                                <input type="file" name="file" id="image" onchange="this.parentNode.nextSibling.value = this.value">Browse
+                                            </div><input type="text" placeholder="Include some files" readonly="">
+                                        </label>
+                                    </section>
+                                    <div class="alert alert-danger fileMsg" style="display: none">The file is to heavy!</div>
+                                    <div class="alert alert-success fileMsgSuccess" style="display: none">Image Saved!</div>
+                                </section>
+                                <section id="container" class="col col-4">
+                                    @{
+                                        var img = string.Empty;
+                                        if (!string.IsNullOrEmpty(Model.ImageAvatar))
+                                        {
+                                            img = Url.Content(Model.ImageAvatar);
+                                        }
+                                    }
+                                    <img id="preview" src="@img" height="200" class="img-responsive" alt=""/>
+                                </section>
+                            </div>
+                            
+                        </form>
+                        <section>
+                            <label class="label">
+                                Name
+                            </label>
+                            <label class="input">
+
+                                @Html.TextBoxFor(a => a.Name)
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">
+                                Surname
+                            </label>
+                            <label class="input">
+
+                                @Html.TextBoxFor(a => a.Surname)
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">
+                                Username
+                            </label>
+                            <label class="input">
+
+                                @Html.TextBoxFor(a => a.UserName)
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">
+                                Email
+                            </label>
+                            <label class="input">
+
+                                @Html.TextBoxFor(a => a.Email)
+                            </label>
+                        </section>
+                        <section>
+                            <label>
+                                @Html.CheckBoxFor(a => a.SendActivationEmail) Send Activation Email
+                            </label>
+                        </section>
+                        <section>
+                            <label>
+                                @Html.CheckBoxFor(a => a.CreateRandomPassword) Create Random Password
+                            </label>
+                        </section>
+                        <div style="display: none;" id="ps">
+
+                            <section>
+                                <label class="label">
+                                    Password
+                                </label>
+                                <label class="input">
+
+                                    @Html.EditorFor(a => a.PasswordInput)
+                                </label>
+                            </section>
+                            <section>
+                                <label class="label">
+                                    Confirm Password
+                                </label>
+                                <label class="input">
+
+                                    @Html.EditorFor(a => a.ConfirmPassword)
+                                </label>
+                            </section>
+                        </div>
+                        <section>
+                            <label>
+                                @Html.CheckBoxFor(a => a.IsActive) Active
+                            </label>
+                        </section>
+                    </div>
+                </div>
+                <div class="tab-pane fade checks" id="s2">
+                    @foreach (var p in Model.Roles)
+                    {
+                        var prop = "";
+                        if (p.Granted)
+                        {
+                            prop = "checked ='checked'";
+                        }
+                        <div class="checkbox">
+
+                            <label>
+                                <input type="checkbox" class="checks" name="@p.RoleName" @prop />@p.RoleName
+                            </label>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<form id="editUserForm">
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+        <button type="submit" class="btn btn-primary btnCreate">@L("Save")</button>
+    </div>
+</form>
+<script src="~/Areas/Admin/Scripts/_users_Edit.js"></script>

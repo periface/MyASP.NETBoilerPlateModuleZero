@@ -1,0 +1,32 @@
+﻿@model SimpleCms.ModuleCms.Themes.Dto.ThemeOutput
+@{
+    Layout = null;
+}
+@foreach (var item in Model.Themes)
+{
+    <div class="col-sm-12 col-lg-4">
+        
+        <div class="well well-light">
+
+            @if (item.StillInDevelopment)
+            {
+                <div class="alert alert-warning">This Theme is still in delevopment</div>
+            }
+            else
+            {
+                <div class="alert alert-success">This Theme is released!</div>
+            }
+            <h1>@item.Title</h1>
+            <img style="width: 20vw; height: 10vw; margin: 0 auto;" src="@item.Image" />
+            <br/><hr/>
+            @if (item.IsAdquired)
+            {
+                <button type="button" disabled="disabled" class="btn btn-sm btn-primary">Get this theme! (Already in library)</button>
+            }
+            else
+            {
+                <button type="button" data-id="@item.Id" class="btn btn-sm btn-primary getTheme">Get this theme!</button>
+            }
+        </div>
+    </div>
+}

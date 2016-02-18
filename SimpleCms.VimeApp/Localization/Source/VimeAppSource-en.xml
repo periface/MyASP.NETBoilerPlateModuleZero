@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="info_admin" value="Manage Info" />
+    <text name="landing_admin" value="Manage Landing Page" />
+    <text name="landing_create_admin" value="Create new" />
+
+    <!--Generic Localization Section-->
+    <text name="BtnCreate" value="Create" />
+    <text name="BtnCancel" value="Cancel" />
+    <text name="BtnDelete" value="Delete" />
+    <text name="BtnRestore" value="Restore" />
+    
+    <!--VimeAppInfo General Localization Form-->
+    
+    <text name="SiteName" value="Site Name" />
+    <text name="SiteMision" value="Mision" />
+    <text name="SiteVision" value="Vision" />
+    <text name="SiteSlogan" value="Slogan" />
+    <!--Other-->
+    <text name="SiteLogoFile" value="Site logo image"/>
+    <text name="SiteLogoFileValidation" value="Only image files max file size 4mb"/>
+    <text name="SiteIconFile" value="Site icon image"/>
+    <text name="SiteIconFileValidation" value="Only .ico files max file size 1mb"/>
+    <text name="CreateInfo" value="Create new website info" />
+    <text name="Admin_Module_Vime" value="Administrative Module" />
+    <text name="Welcome_admin" value="Bienvenido" />
+    
+  </texts>
+</localizationDictionary>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <!--Generic Localization Section-->
+    <text name="Ecom_System" value="My Ecommerce" />
+    <text name="Eco_Reports" value="Reports" />
+    <text name="Eco_Categories" value="Categories" />
+    <text name="Eco_Products" value="Products" />
+    <text name="Eco_Shipping" value="Shipping" />
+    <text name="Eco_Carts" value="Carts" />
+    <text name="Eco_PayPal" value="PayPal" />
+  </texts>
+</localizationDictionary>

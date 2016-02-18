@@ -1,0 +1,42 @@
+﻿@using Abp.Extensions
+@model SimpleCms.ModuleCms.SiteConfiguration.Dto.InfosOutput
+@{
+    Layout = null;
+}
+<style>
+    .activateButton {
+        color: white;
+        font-size: 1em;
+    }
+</style>
+@foreach (var info in Model.SiteInfos)
+{
+    <div class="col-sm-12 col-lg-3">
+
+        <div class="well well-light">
+            @if (info.IsActive)
+            {
+                <div class="alert alert-success">Is Active</div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Inactive
+                    <a data-id="@info.Id" class="pull-right activateButton">Set as active</a>
+                </div>
+            }
+            <div class="pull-right">
+                <a data-id="@info.Id" class="uploadIcon">Upload image</a><br />
+                Icon: <img style="width: 2vw; height: 2vw;" src="@info.SiteIcon" />
+            </div>
+            <a data-id="@info.Id" class="uploadLogo">Upload image</a><br />
+            <img style="width: 15vw; height: 10vw; margin: 0 auto;" src="@info.SiteLogo" />
+            <h1>@info.SiteTitle</h1>
+            <q>@info.SiteSlogan</q>
+            <p>
+                @info.SiteDescription.Truncate(maxLength: 50)...
+            </p>
+            <button type="button" data-id="@info.Id" class="btn btn-sm btn-default editInfo">Edit</button> <button type="button" data-id="@info.Id" class="btn btn-sm btn-warning deleteButton">Remove</button>
+        </div>
+    </div>
+}

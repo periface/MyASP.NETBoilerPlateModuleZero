@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="es-MX">
+  <texts>
+    <!--Generic Localization Section-->
+    <text name="BtnCreate" value="Crear" />
+    <text name="BtnCancel" value="Cancelar" />
+    <text name="BtnDelete" value="Borrar" />
+    <text name="BtnRestore" value="Restaurar" />
+    <!--VimeAppInfo General Localization Section-->
+    <text name="SiteName" value="Nombre del sitio" />
+    <text name="SiteMision" value="Misión" />
+    <text name="SiteVision" value="Visión" />
+    <text name="SiteSlogan" value="Slogan" />
+    <text name="SiteLogoFile" value="Logotipo"/>
+    <text name="SiteLogoFileValidation" value="Solo archivos de imagen maximo 4mb"/>
+    <text name="SiteIconFile" value="Icono del sitio"/>
+    <text name="SiteIconFileValidation" value="Solo archivos .ico maximo 1mb"/>
+    <text name="CreateInfo" value="Crear nueva información del sitio" />
+    <text name="Admin_Module_Vime" value="Modulo Administrativo" />
+  </texts>
+</localizationDictionary>

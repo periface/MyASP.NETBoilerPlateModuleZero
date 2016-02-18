@@ -1,0 +1,25 @@
+﻿@model SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+@{
+    Layout = null;
+}
+<form id="editOrgUnit">
+    <div class="row">
+        @Html.HiddenFor(a => a.Id)
+        @Html.HiddenFor(a => a.TenantId)
+        <div class="col-sm-12 smart-form">
+            <label class="label">@L("Btn_Edit")</label>
+            <label class="input">
+                @Html.TextBoxFor(a => a.DisplayName)
+            </label>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <button type="submit" class="btn btn-primary">@L("Save")</button>
+            <button type="button" data-id="@Model.Id" class="btn btn-warning delete">@L("BtnDelete")</button>
+        </div>
+    </div>
+</form>
+<script src="~/Areas/Admin/Scripts/_orgUnits_EditUnit.js"></script>

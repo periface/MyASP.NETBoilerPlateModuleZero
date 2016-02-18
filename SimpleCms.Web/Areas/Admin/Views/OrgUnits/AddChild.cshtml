@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+<form id="addChildForm">
+
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">@L("AddChild")</h4>
+    </div>
+    <div class="modal-body">
+        <input type="hidden" id="ParentIdModal" value="@ViewBag.ParentId"/>
+        <div class="row">
+            <div class="col-sm-12 smart-form">
+                <label class="label">@L("AddUnitName")</label>
+                <label class="input">
+
+                    <input type="text" id="ModalName" placeholder="@L("AddUnitNamePh")" class="form-control"/>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+        <button type="submit" class="btn btn-primary saveChild">@L("Save")</button>
+    </div>
+</form>
+<script src="~/Areas/Admin/Scripts/_orgUnits_AddChild.js"></script>

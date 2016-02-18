@@ -1,0 +1,699 @@
+﻿@model SimpleCms.ModuleZero.LanguageTexts.Dto.NewLanguageInputDto
+
+@{
+    Layout = null;
+}
+<link href="~/Scripts/plugin/bootstrapselect/css/bootstrap-select.css" rel="stylesheet"/>
+<input type="hidden" id="selected" value="@Model.Name"/>
+<input type="hidden" id="icon" value="@Model.Icon" />
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Edit @Model.DisplayText</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="widget-body">
+            <div class="row">
+                <div class="col-sm-12" id="CreateForm">
+                    <label for="LanguageNameEdit">Select Language</label>
+                    <select class="form-control selectpicker" data-live-search="true" id="LanguageNameEdit" name="Name">
+                        <option value="af">Afrikaans (af)</option>
+                        <option value="af-ZA">Afrikaans (South Africa) (af-ZA)</option>
+                        <option value="sq">Albanian (sq)</option>
+                        <option value="sq-AL">Albanian (Albania) (sq-AL)</option>
+                        <option value="gsw">Alsatian (gsw)</option>
+                        <option value="gsw-FR">Alsatian (France) (gsw-FR)</option>
+                        <option value="am">Amharic (am)</option>
+                        <option value="am-ET">Amharic (Ethiopia) (am-ET)</option>
+                        <option value="ar">Arabic (ar)</option>
+                        <option value="ar-DZ">Arabic (Algeria) (ar-DZ)</option>
+                        <option value="ar-BH">Arabic (Bahrain) (ar-BH)</option>
+                        <option value="ar-EG">Arabic (Egypt) (ar-EG)</option>
+                        <option value="ar-IQ">Arabic (Iraq) (ar-IQ)</option>
+                        <option value="ar-JO">Arabic (Jordan) (ar-JO)</option>
+                        <option value="ar-KW">Arabic (Kuwait) (ar-KW)</option>
+                        <option value="ar-LB">Arabic (Lebanon) (ar-LB)</option>
+                        <option value="ar-LY">Arabic (Libya) (ar-LY)</option>
+                        <option value="ar-MA">Arabic (Morocco) (ar-MA)</option>
+                        <option value="ar-OM">Arabic (Oman) (ar-OM)</option>
+                        <option value="ar-QA">Arabic (Qatar) (ar-QA)</option>
+                        <option value="ar-SA">Arabic (Saudi Arabia) (ar-SA)</option>
+                        <option value="ar-SY">Arabic (Syria) (ar-SY)</option>
+                        <option value="ar-TN">Arabic (Tunisia) (ar-TN)</option>
+                        <option value="ar-AE">Arabic (U.A.E.) (ar-AE)</option>
+                        <option value="ar-YE">Arabic (Yemen) (ar-YE)</option>
+                        <option value="hy">Armenian (hy)</option>
+                        <option value="hy-AM">Armenian (Armenia) (hy-AM)</option>
+                        <option value="as">Assamese (as)</option>
+                        <option value="as-IN">Assamese (India) (as-IN)</option>
+                        <option value="az">Azerbaijani (az)</option>
+                        <option value="az-Cyrl">Azerbaijani (Cyrillic) (az-Cyrl)</option>
+                        <option value="az-Cyrl-AZ">Azerbaijani (Cyrillic, Azerbaijan) (az-Cyrl-AZ)</option>
+                        <option value="az-Latn">Azerbaijani (Latin) (az-Latn)</option>
+                        <option value="az-Latn-AZ">Azerbaijani (Latin, Azerbaijan) (az-Latn-AZ)</option>
+                        <option value="bn">Bangla (bn)</option>
+                        <option value="bn-BD">Bangla (Bangladesh) (bn-BD)</option>
+                        <option value="bn-IN">Bangla (India) (bn-IN)</option>
+                        <option value="ba">Bashkir (ba)</option>
+                        <option value="ba-RU">Bashkir (Russia) (ba-RU)</option>
+                        <option value="eu">Basque (eu)</option>
+                        <option value="eu-ES">Basque (Basque) (eu-ES)</option>
+                        <option value="be">Belarusian (be)</option>
+                        <option value="be-BY">Belarusian (Belarus) (be-BY)</option>
+                        <option value="bs">Bosnian (bs)</option>
+                        <option value="bs-Cyrl">Bosnian (Cyrillic) (bs-Cyrl)</option>
+                        <option value="bs-Cyrl-BA">Bosnian (Cyrillic, Bosnia and Herzegovina) (bs-Cyrl-BA)</option>
+                        <option value="bs-Latn">Bosnian (Latin) (bs-Latn)</option>
+                        <option value="bs-Latn-BA">Bosnian (Latin, Bosnia and Herzegovina) (bs-Latn-BA)</option>
+                        <option value="br">Breton (br)</option>
+                        <option value="br-FR">Breton (France) (br-FR)</option>
+                        <option value="bg">Bulgarian (bg)</option>
+                        <option value="bg-BG">Bulgarian (Bulgaria) (bg-BG)</option>
+                        <option value="ca">Catalan (ca)</option>
+                        <option value="ca-ES">Catalan (Catalan) (ca-ES)</option>
+                        <option value="tzm-Tfng-MA">Central Atlas Tamazight (Tifinagh, Morocco) (tzm-Tfng-MA)</option>
+                        <option value="ku">Central Kurdish (ku)</option>
+                        <option value="ku-Arab">Central Kurdish (Arabic) (ku-Arab)</option>
+                        <option value="ku-Arab-IQ">Central Kurdish (Iraq) (ku-Arab-IQ)</option>
+                        <option value="chr">Cherokee (chr)</option>
+                        <option value="chr-Cher-US">Cherokee (Cherokee) (chr-Cher-US)</option>
+                        <option value="chr-Cher">Cherokee (Cherokee) (chr-Cher)</option>
+                        <option value="zh">Chinese (zh)</option>
+                        <option value="zh-Hans">Chinese (Simplified) (zh-Hans)</option>
+                        <option value="zh-CHS">Chinese (Simplified) Legacy (zh-CHS)</option>
+                        <option value="zh-CN">Chinese (Simplified, PRC) (zh-CN)</option>
+                        <option value="zh-SG">Chinese (Simplified, Singapore) (zh-SG)</option>
+                        <option value="zh-Hant">Chinese (Traditional) (zh-Hant)</option>
+                        <option value="zh-CHT">Chinese (Traditional) Legacy (zh-CHT)</option>
+                        <option value="zh-HK">Chinese (Traditional, Hong Kong S.A.R.) (zh-HK)</option>
+                        <option value="zh-MO">Chinese (Traditional, Macao S.A.R.) (zh-MO)</option>
+                        <option value="zh-TW">Chinese (Traditional, Taiwan) (zh-TW)</option>
+                        <option value="co">Corsican (co)</option>
+                        <option value="co-FR">Corsican (France) (co-FR)</option>
+                        <option value="hr">Croatian (hr)</option>
+                        <option value="hr-HR">Croatian (Croatia) (hr-HR)</option>
+                        <option value="hr-BA">Croatian (Latin, Bosnia and Herzegovina) (hr-BA)</option>
+                        <option value="cs">Czech (cs)</option>
+                        <option value="cs-CZ">Czech (Czech Republic) (cs-CZ)</option>
+                        <option value="da">Danish (da)</option>
+                        <option value="da-DK">Danish (Denmark) (da-DK)</option>
+                        <option value="prs">Dari (prs)</option>
+                        <option value="prs-AF">Dari (Afghanistan) (prs-AF)</option>
+                        <option value="dv">Divehi (dv)</option>
+                        <option value="dv-MV">Divehi (Maldives) (dv-MV)</option>
+                        <option value="nl">Dutch (nl)</option>
+                        <option value="nl-BE">Dutch (Belgium) (nl-BE)</option>
+                        <option value="nl-NL">Dutch (Netherlands) (nl-NL)</option>
+                        <option value="en">English (en)</option>
+                        <option value="en-AU">English (Australia) (en-AU)</option>
+                        <option value="en-BZ">English (Belize) (en-BZ)</option>
+                        <option value="en-CA">English (Canada) (en-CA)</option>
+                        <option value="en-029">English (Caribbean) (en-029)</option>
+                        <option value="en-IN">English (India) (en-IN)</option>
+                        <option value="en-IE">English (Ireland) (en-IE)</option>
+                        <option value="en-JM">English (Jamaica) (en-JM)</option>
+                        <option value="en-MY">English (Malaysia) (en-MY)</option>
+                        <option value="en-NZ">English (New Zealand) (en-NZ)</option>
+                        <option value="en-PH">English (Republic of the Philippines) (en-PH)</option>
+                        <option value="en-SG">English (Singapore) (en-SG)</option>
+                        <option value="en-ZA">English (South Africa) (en-ZA)</option>
+                        <option value="en-TT">English (Trinidad and Tobago) (en-TT)</option>
+                        <option value="en-GB">English (United Kingdom) (en-GB)</option>
+                        <option value="en-US">English (United States) (en-US)</option>
+                        <option value="en-ZW">English (Zimbabwe) (en-ZW)</option>
+                        <option value="et">Estonian (et)</option>
+                        <option value="et-EE">Estonian (Estonia) (et-EE)</option>
+                        <option value="fo">Faroese (fo)</option>
+                        <option value="fo-FO">Faroese (Faroe Islands) (fo-FO)</option>
+                        <option value="fil">Filipino (fil)</option>
+                        <option value="fil-PH">Filipino (Philippines) (fil-PH)</option>
+                        <option value="fi">Finnish (fi)</option>
+                        <option value="fi-FI">Finnish (Finland) (fi-FI)</option>
+                        <option value="fr">French (fr)</option>
+                        <option value="fr-BE">French (Belgium) (fr-BE)</option>
+                        <option value="fr-CA">French (Canada) (fr-CA)</option>
+                        <option value="fr-FR">French (France) (fr-FR)</option>
+                        <option value="fr-LU">French (Luxembourg) (fr-LU)</option>
+                        <option value="fr-MC">French (Monaco) (fr-MC)</option>
+                        <option value="fr-CH">French (Switzerland) (fr-CH)</option>
+                        <option value="fy">Frisian (fy)</option>
+                        <option value="fy-NL">Frisian (Netherlands) (fy-NL)</option>
+                        <option value="ff">Fulah (ff)</option>
+                        <option value="ff-Latn">Fulah (Latin) (ff-Latn)</option>
+                        <option value="ff-Latn-SN">Fulah (Latin, Senegal) (ff-Latn-SN)</option>
+                        <option value="gl">Galician (gl)</option>
+                        <option value="gl-ES">Galician (Galician) (gl-ES)</option>
+                        <option value="ka">Georgian (ka)</option>
+                        <option value="ka-GE">Georgian (Georgia) (ka-GE)</option>
+                        <option value="de">German (de)</option>
+                        <option value="de-AT">German (Austria) (de-AT)</option>
+                        <option value="de-DE">German (Germany) (de-DE)</option>
+                        <option value="de-LI">German (Liechtenstein) (de-LI)</option>
+                        <option value="de-LU">German (Luxembourg) (de-LU)</option>
+                        <option value="de-CH">German (Switzerland) (de-CH)</option>
+                        <option value="el">Greek (el)</option>
+                        <option value="el-GR">Greek (Greece) (el-GR)</option>
+                        <option value="kl">Greenlandic (kl)</option>
+                        <option value="kl-GL">Greenlandic (Greenland) (kl-GL)</option>
+                        <option value="gu">Gujarati (gu)</option>
+                        <option value="gu-IN">Gujarati (India) (gu-IN)</option>
+                        <option value="ha">Hausa (ha)</option>
+                        <option value="ha-Latn">Hausa (Latin) (ha-Latn)</option>
+                        <option value="ha-Latn-NG">Hausa (Latin, Nigeria) (ha-Latn-NG)</option>
+                        <option value="haw">Hawaiian (haw)</option>
+                        <option value="haw-US">Hawaiian (United States) (haw-US)</option>
+                        <option value="he">Hebrew (he)</option>
+                        <option value="he-IL">Hebrew (Israel) (he-IL)</option>
+                        <option value="hi">Hindi (hi)</option>
+                        <option value="hi-IN">Hindi (India) (hi-IN)</option>
+                        <option value="hu">Hungarian (hu)</option>
+                        <option value="hu-HU">Hungarian (Hungary) (hu-HU)</option>
+                        <option value="is">Icelandic (is)</option>
+                        <option value="is-IS">Icelandic (Iceland) (is-IS)</option>
+                        <option value="ig">Igbo (ig)</option>
+                        <option value="ig-NG">Igbo (Nigeria) (ig-NG)</option>
+                        <option value="id">Indonesian (id)</option>
+                        <option value="id-ID">Indonesian (Indonesia) (id-ID)</option>
+                        <option value="iu">Inuktitut (iu)</option>
+                        <option value="iu-Latn">Inuktitut (Latin) (iu-Latn)</option>
+                        <option value="iu-Latn-CA">Inuktitut (Latin, Canada) (iu-Latn-CA)</option>
+                        <option value="iu-Cans">Inuktitut (Syllabics) (iu-Cans)</option>
+                        <option value="iu-Cans-CA">Inuktitut (Syllabics, Canada) (iu-Cans-CA)</option>
+                        <option value="">Invariant Language (Invariant Country) ()</option>
+                        <option value="ga">Irish (ga)</option>
+                        <option value="ga-IE">Irish (Ireland) (ga-IE)</option>
+                        <option value="xh">isiXhosa (xh)</option>
+                        <option value="xh-ZA">isiXhosa (South Africa) (xh-ZA)</option>
+                        <option value="zu">isiZulu (zu)</option>
+                        <option value="zu-ZA">isiZulu (South Africa) (zu-ZA)</option>
+                        <option value="it">Italian (it)</option>
+                        <option value="it-IT">Italian (Italy) (it-IT)</option>
+                        <option value="it-CH">Italian (Switzerland) (it-CH)</option>
+                        <option value="ja">Japanese (ja)</option>
+                        <option value="ja-JP">Japanese (Japan) (ja-JP)</option>
+                        <option value="kn">Kannada (kn)</option>
+                        <option value="kn-IN">Kannada (India) (kn-IN)</option>
+                        <option value="kk">Kazakh (kk)</option>
+                        <option value="kk-KZ">Kazakh (Kazakhstan) (kk-KZ)</option>
+                        <option value="km">Khmer (km)</option>
+                        <option value="km-KH">Khmer (Cambodia) (km-KH)</option>
+                        <option value="qut">K&#39;iche (qut)</option>
+                        <option value="qut-GT">K&#39;iche (Guatemala) (qut-GT)</option>
+                        <option value="rw">Kinyarwanda (rw)</option>
+                        <option value="rw-RW">Kinyarwanda (Rwanda) (rw-RW)</option>
+                        <option value="sw">Kiswahili (sw)</option>
+                        <option value="sw-KE">Kiswahili (Kenya) (sw-KE)</option>
+                        <option value="kok">Konkani (kok)</option>
+                        <option value="kok-IN">Konkani (India) (kok-IN)</option>
+                        <option value="ko">Korean (ko)</option>
+                        <option value="ko-KR">Korean (Korea) (ko-KR)</option>
+                        <option value="ky">Kyrgyz (ky)</option>
+                        <option value="ky-KG">Kyrgyz (Kyrgyzstan) (ky-KG)</option>
+                        <option value="lo">Lao (lo)</option>
+                        <option value="lo-LA">Lao (Lao P.D.R.) (lo-LA)</option>
+                        <option value="lv">Latvian (lv)</option>
+                        <option value="lv-LV">Latvian (Latvia) (lv-LV)</option>
+                        <option value="lt">Lithuanian (lt)</option>
+                        <option value="lt-LT">Lithuanian (Lithuania) (lt-LT)</option>
+                        <option value="dsb">Lower Sorbian (dsb)</option>
+                        <option value="dsb-DE">Lower Sorbian (Germany) (dsb-DE)</option>
+                        <option value="lb">Luxembourgish (lb)</option>
+                        <option value="lb-LU">Luxembourgish (Luxembourg) (lb-LU)</option>
+                        <option value="mk-MK">Macedonian (Former Yugoslav Republic of Macedonia) (mk-MK)</option>
+                        <option value="mk">Macedonian (FYROM) (mk)</option>
+                        <option value="ms">Malay (ms)</option>
+                        <option value="ms-BN">Malay (Brunei Darussalam) (ms-BN)</option>
+                        <option value="ms-MY">Malay (Malaysia) (ms-MY)</option>
+                        <option value="ml">Malayalam (ml)</option>
+                        <option value="ml-IN">Malayalam (India) (ml-IN)</option>
+                        <option value="mt">Maltese (mt)</option>
+                        <option value="mt-MT">Maltese (Malta) (mt-MT)</option>
+                        <option value="mi">Maori (mi)</option>
+                        <option value="mi-NZ">Maori (New Zealand) (mi-NZ)</option>
+                        <option value="arn">Mapudungun (arn)</option>
+                        <option value="arn-CL">Mapudungun (Chile) (arn-CL)</option>
+                        <option value="mr">Marathi (mr)</option>
+                        <option value="mr-IN">Marathi (India) (mr-IN)</option>
+                        <option value="moh">Mohawk (moh)</option>
+                        <option value="moh-CA">Mohawk (Mohawk) (moh-CA)</option>
+                        <option value="mn">Mongolian (mn)</option>
+                        <option value="mn-Cyrl">Mongolian (Cyrillic) (mn-Cyrl)</option>
+                        <option value="mn-MN">Mongolian (Cyrillic, Mongolia) (mn-MN)</option>
+                        <option value="mn-Mong">Mongolian (Traditional Mongolian) (mn-Mong)</option>
+                        <option value="mn-Mong-CN">Mongolian (Traditional Mongolian, PRC) (mn-Mong-CN)</option>
+                        <option value="ne">Nepali (ne)</option>
+                        <option value="ne-NP">Nepali (Nepal) (ne-NP)</option>
+                        <option value="no">Norwegian (no)</option>
+                        <option value="nb">Norwegian (Bokm&#229;l) (nb)</option>
+                        <option value="nn">Norwegian (Nynorsk) (nn)</option>
+                        <option value="nb-NO">Norwegian, Bokm&#229;l (Norway) (nb-NO)</option>
+                        <option value="nn-NO">Norwegian, Nynorsk (Norway) (nn-NO)</option>
+                        <option value="oc">Occitan (oc)</option>
+                        <option value="oc-FR">Occitan (France) (oc-FR)</option>
+                        <option value="or">Odia (or)</option>
+                        <option value="or-IN">Odia (India) (or-IN)</option>
+                        <option value="ps">Pashto (ps)</option>
+                        <option value="ps-AF">Pashto (Afghanistan) (ps-AF)</option>
+                        <option value="fa">Persian (fa)</option>
+                        <option value="fa-IR">Persian (Iran) (fa-IR)</option>
+                        <option value="pl">Polish (pl)</option>
+                        <option value="pl-PL">Polish (Poland) (pl-PL)</option>
+                        <option value="pt">Portuguese (pt)</option>
+                        <option value="pt-BR">Portuguese (Brazil) (pt-BR)</option>
+                        <option value="pt-PT">Portuguese (Portugal) (pt-PT)</option>
+                        <option value="pa">Punjabi (pa)</option>
+                        <option value="pa-Arab">Punjabi (Arabic) (pa-Arab)</option>
+                        <option value="pa-IN">Punjabi (India) (pa-IN)</option>
+                        <option value="pa-Arab-PK">Punjabi (Islamic Republic of Pakistan) (pa-Arab-PK)</option>
+                        <option value="quz">Quechua (quz)</option>
+                        <option value="quz-BO">Quechua (Bolivia) (quz-BO)</option>
+                        <option value="quz-EC">Quechua (Ecuador) (quz-EC)</option>
+                        <option value="quz-PE">Quechua (Peru) (quz-PE)</option>
+                        <option value="ro">Romanian (ro)</option>
+                        <option value="ro-RO">Romanian (Romania) (ro-RO)</option>
+                        <option value="rm">Romansh (rm)</option>
+                        <option value="rm-CH">Romansh (Switzerland) (rm-CH)</option>
+                        <option value="ru">Russian (ru)</option>
+                        <option value="ru-RU">Russian (Russia) (ru-RU)</option>
+                        <option value="sah">Sakha (sah)</option>
+                        <option value="sah-RU">Sakha (Russia) (sah-RU)</option>
+                        <option value="smn">Sami (Inari) (smn)</option>
+                        <option value="smj">Sami (Lule) (smj)</option>
+                        <option value="se">Sami (Northern) (se)</option>
+                        <option value="sms">Sami (Skolt) (sms)</option>
+                        <option value="sma">Sami (Southern) (sma)</option>
+                        <option value="smn-FI">Sami, Inari (Finland) (smn-FI)</option>
+                        <option value="smj-NO">Sami, Lule (Norway) (smj-NO)</option>
+                        <option value="smj-SE">Sami, Lule (Sweden) (smj-SE)</option>
+                        <option value="se-FI">Sami, Northern (Finland) (se-FI)</option>
+                        <option value="se-NO">Sami, Northern (Norway) (se-NO)</option>
+                        <option value="se-SE">Sami, Northern (Sweden) (se-SE)</option>
+                        <option value="sms-FI">Sami, Skolt (Finland) (sms-FI)</option>
+                        <option value="sma-NO">Sami, Southern (Norway) (sma-NO)</option>
+                        <option value="sma-SE">Sami, Southern (Sweden) (sma-SE)</option>
+                        <option value="sa">Sanskrit (sa)</option>
+                        <option value="sa-IN">Sanskrit (India) (sa-IN)</option>
+                        <option value="gd">Scottish Gaelic (gd)</option>
+                        <option value="gd-GB">Scottish Gaelic (United Kingdom) (gd-GB)</option>
+                        <option value="sr">Serbian (sr)</option>
+                        <option value="sr-Cyrl">Serbian (Cyrillic) (sr-Cyrl)</option>
+                        <option value="sr-Cyrl-BA">Serbian (Cyrillic, Bosnia and Herzegovina) (sr-Cyrl-BA)</option>
+                        <option value="sr-Cyrl-ME">Serbian (Cyrillic, Montenegro) (sr-Cyrl-ME)</option>
+                        <option value="sr-Cyrl-CS">Serbian (Cyrillic, Serbia and Montenegro (Former)) (sr-Cyrl-CS)</option>
+                        <option value="sr-Cyrl-RS">Serbian (Cyrillic, Serbia) (sr-Cyrl-RS)</option>
+                        <option value="sr-Latn">Serbian (Latin) (sr-Latn)</option>
+                        <option value="sr-Latn-BA">Serbian (Latin, Bosnia and Herzegovina) (sr-Latn-BA)</option>
+                        <option value="sr-Latn-ME">Serbian (Latin, Montenegro) (sr-Latn-ME)</option>
+                        <option value="sr-Latn-CS">Serbian (Latin, Serbia and Montenegro (Former)) (sr-Latn-CS)</option>
+                        <option value="sr-Latn-RS">Serbian (Latin, Serbia) (sr-Latn-RS)</option>
+                        <option value="nso">Sesotho sa Leboa (nso)</option>
+                        <option value="nso-ZA">Sesotho sa Leboa (South Africa) (nso-ZA)</option>
+                        <option value="tn">Setswana (tn)</option>
+                        <option value="tn-BW">Setswana (Botswana) (tn-BW)</option>
+                        <option value="tn-ZA">Setswana (South Africa) (tn-ZA)</option>
+                        <option value="sd">Sindhi (sd)</option>
+                        <option value="sd-Arab">Sindhi (Arabic) (sd-Arab)</option>
+                        <option value="sd-Arab-PK">Sindhi (Islamic Republic of Pakistan) (sd-Arab-PK)</option>
+                        <option value="si">Sinhala (si)</option>
+                        <option value="si-LK">Sinhala (Sri Lanka) (si-LK)</option>
+                        <option value="sk">Slovak (sk)</option>
+                        <option value="sk-SK">Slovak (Slovakia) (sk-SK)</option>
+                        <option value="sl">Slovenian (sl)</option>
+                        <option value="sl-SI">Slovenian (Slovenia) (sl-SI)</option>
+                        <option value="es">Spanish (es)</option>
+                        <option value="es-AR">Spanish (Argentina) (es-AR)</option>
+                        <option value="es-VE">Spanish (Bolivarian Republic of Venezuela) (es-VE)</option>
+                        <option value="es-BO">Spanish (Bolivia) (es-BO)</option>
+                        <option value="es-CL">Spanish (Chile) (es-CL)</option>
+                        <option value="es-CO">Spanish (Colombia) (es-CO)</option>
+                        <option value="es-CR">Spanish (Costa Rica) (es-CR)</option>
+                        <option value="es-DO">Spanish (Dominican Republic) (es-DO)</option>
+                        <option value="es-EC">Spanish (Ecuador) (es-EC)</option>
+                        <option value="es-SV">Spanish (El Salvador) (es-SV)</option>
+                        <option value="es-GT">Spanish (Guatemala) (es-GT)</option>
+                        <option value="es-HN">Spanish (Honduras) (es-HN)</option>
+                        <option value="es-MX">Spanish (Mexico) (es-MX)</option>
+                        <option value="es-NI">Spanish (Nicaragua) (es-NI)</option>
+                        <option value="es-PA">Spanish (Panama) (es-PA)</option>
+                        <option value="es-PY">Spanish (Paraguay) (es-PY)</option>
+                        <option value="es-PE">Spanish (Peru) (es-PE)</option>
+                        <option value="es-PR">Spanish (Puerto Rico) (es-PR)</option>
+                        <option value="es-ES">Spanish (Spain) (es-ES)</option>
+                        <option value="es-US">Spanish (United States) (es-US)</option>
+                        <option value="es-UY">Spanish (Uruguay) (es-UY)</option>
+                        <option value="sv">Swedish (sv)</option>
+                        <option value="sv-FI">Swedish (Finland) (sv-FI)</option>
+                        <option value="sv-SE">Swedish (Sweden) (sv-SE)</option>
+                        <option value="syr">Syriac (syr)</option>
+                        <option value="syr-SY">Syriac (Syria) (syr-SY)</option>
+                        <option value="tg">Tajik (tg)</option>
+                        <option value="tg-Cyrl">Tajik (Cyrillic) (tg-Cyrl)</option>
+                        <option value="tg-Cyrl-TJ">Tajik (Cyrillic, Tajikistan) (tg-Cyrl-TJ)</option>
+                        <option value="tzm">Tamazight (tzm)</option>
+                        <option value="tzm-Latn">Tamazight (Latin) (tzm-Latn)</option>
+                        <option value="tzm-Latn-DZ">Tamazight (Latin, Algeria) (tzm-Latn-DZ)</option>
+                        <option value="tzm-Tfng">Tamazight (Tifinagh) (tzm-Tfng)</option>
+                        <option value="ta">Tamil (ta)</option>
+                        <option value="ta-IN">Tamil (India) (ta-IN)</option>
+                        <option value="ta-LK">Tamil (Sri Lanka) (ta-LK)</option>
+                        <option value="tt">Tatar (tt)</option>
+                        <option value="tt-RU">Tatar (Russia) (tt-RU)</option>
+                        <option value="te">Telugu (te)</option>
+                        <option value="te-IN">Telugu (India) (te-IN)</option>
+                        <option value="th">Thai (th)</option>
+                        <option value="th-TH">Thai (Thailand) (th-TH)</option>
+                        <option value="bo">Tibetan (bo)</option>
+                        <option value="bo-CN">Tibetan (PRC) (bo-CN)</option>
+                        <option value="ti">Tigrinya (ti)</option>
+                        <option value="ti-ER">Tigrinya (Eritrea) (ti-ER)</option>
+                        <option value="ti-ET">Tigrinya (Ethiopia) (ti-ET)</option>
+                        <option value="tr">Turkish (tr)</option>
+                        <option value="tr-TR">Turkish (Turkey) (tr-TR)</option>
+                        <option value="tk">Turkmen (tk)</option>
+                        <option value="tk-TM">Turkmen (Turkmenistan) (tk-TM)</option>
+                        <option value="uk">Ukrainian (uk)</option>
+                        <option value="uk-UA">Ukrainian (Ukraine) (uk-UA)</option>
+                        <option value="hsb">Upper Sorbian (hsb)</option>
+                        <option value="hsb-DE">Upper Sorbian (Germany) (hsb-DE)</option>
+                        <option value="ur">Urdu (ur)</option>
+                        <option value="ur-PK">Urdu (Islamic Republic of Pakistan) (ur-PK)</option>
+                        <option value="ug">Uyghur (ug)</option>
+                        <option value="ug-CN">Uyghur (PRC) (ug-CN)</option>
+                        <option value="uz">Uzbek (uz)</option>
+                        <option value="uz-Cyrl">Uzbek (Cyrillic) (uz-Cyrl)</option>
+                        <option value="uz-Cyrl-UZ">Uzbek (Cyrillic, Uzbekistan) (uz-Cyrl-UZ)</option>
+                        <option value="uz-Latn">Uzbek (Latin) (uz-Latn)</option>
+                        <option value="uz-Latn-UZ">Uzbek (Latin, Uzbekistan) (uz-Latn-UZ)</option>
+                        <option value="ca-ES-valencia">Valencian (Spain) (ca-ES-valencia)</option>
+                        <option value="vi">Vietnamese (vi)</option>
+                        <option value="vi-VN">Vietnamese (Vietnam) (vi-VN)</option>
+                        <option value="cy">Welsh (cy)</option>
+                        <option value="cy-GB">Welsh (United Kingdom) (cy-GB)</option>
+                        <option value="wo">Wolof (wo)</option>
+                        <option value="wo-SN">Wolof (Senegal) (wo-SN)</option>
+                        <option value="ii">Yi (ii)</option>
+                        <option value="ii-CN">Yi (PRC) (ii-CN)</option>
+                        <option value="yo">Yoruba (yo)</option>
+                        <option value="yo-NG">Yoruba (Nigeria) (yo-NG)</option>
+                    </select>
+                    <label for="LanguageIconEdit">Flag </label>
+                    <select id="LanguageIconEdit" name="Icon" class="form-control bs-select selectpicker">
+                        <option data-icon="famfamfam-flag-ad" value="famfamfam-flag-ad"><i class="famfamfam-flag-ad"></i>ad</option>
+                        <option data-icon="famfamfam-flag-ae" value="famfamfam-flag-ae"><i class="famfamfam-flag-ae"></i>ae</option>
+                        <option data-icon="famfamfam-flag-af" value="famfamfam-flag-af"><i class="famfamfam-flag-af"></i>af</option>
+                        <option data-icon="famfamfam-flag-ag" value="famfamfam-flag-ag"><i class="famfamfam-flag-ag"></i>ag</option>
+                        <option data-icon="famfamfam-flag-ai" value="famfamfam-flag-ai"><i class="famfamfam-flag-ai"></i>ai</option>
+                        <option data-icon="famfamfam-flag-al" value="famfamfam-flag-al"><i class="famfamfam-flag-al"></i>al</option>
+                        <option data-icon="famfamfam-flag-am" value="famfamfam-flag-am"><i class="famfamfam-flag-am"></i>am</option>
+                        <option data-icon="famfamfam-flag-an" value="famfamfam-flag-an"><i class="famfamfam-flag-an"></i>an</option>
+                        <option data-icon="famfamfam-flag-ao" value="famfamfam-flag-ao"><i class="famfamfam-flag-ao"></i>ao</option>
+                        <option data-icon="famfamfam-flag-ar" value="famfamfam-flag-ar"><i class="famfamfam-flag-ar"></i>ar</option>
+                        <option data-icon="famfamfam-flag-as" value="famfamfam-flag-as"><i class="famfamfam-flag-as"></i>as</option>
+                        <option data-icon="famfamfam-flag-at" value="famfamfam-flag-at"><i class="famfamfam-flag-at"></i>at</option>
+                        <option data-icon="famfamfam-flag-au" value="famfamfam-flag-au"><i class="famfamfam-flag-au"></i>au</option>
+                        <option data-icon="famfamfam-flag-aw" value="famfamfam-flag-aw"><i class="famfamfam-flag-aw"></i>aw</option>
+                        <option data-icon="famfamfam-flag-ax" value="famfamfam-flag-ax"><i class="famfamfam-flag-ax"></i>ax</option>
+                        <option data-icon="famfamfam-flag-az" value="famfamfam-flag-az"><i class="famfamfam-flag-az"></i>az</option>
+                        <option data-icon="famfamfam-flag-ba" value="famfamfam-flag-ba"><i class="famfamfam-flag-ba"></i>ba</option>
+                        <option data-icon="famfamfam-flag-bb" value="famfamfam-flag-bb"><i class="famfamfam-flag-bb"></i>bb</option>
+                        <option data-icon="famfamfam-flag-bd" value="famfamfam-flag-bd"><i class="famfamfam-flag-bd"></i>bd</option>
+                        <option data-icon="famfamfam-flag-be" value="famfamfam-flag-be"><i class="famfamfam-flag-be"></i>be</option>
+                        <option data-icon="famfamfam-flag-bf" value="famfamfam-flag-bf"><i class="famfamfam-flag-bf"></i>bf</option>
+                        <option data-icon="famfamfam-flag-bg" value="famfamfam-flag-bg"><i class="famfamfam-flag-bg"></i>bg</option>
+                        <option data-icon="famfamfam-flag-bh" value="famfamfam-flag-bh"><i class="famfamfam-flag-bh"></i>bh</option>
+                        <option data-icon="famfamfam-flag-bi" value="famfamfam-flag-bi"><i class="famfamfam-flag-bi"></i>bi</option>
+                        <option data-icon="famfamfam-flag-bj" value="famfamfam-flag-bj"><i class="famfamfam-flag-bj"></i>bj</option>
+                        <option data-icon="famfamfam-flag-bl" value="famfamfam-flag-bl"><i class="famfamfam-flag-bl"></i>bl</option>
+                        <option data-icon="famfamfam-flag-bm" value="famfamfam-flag-bm"><i class="famfamfam-flag-bm"></i>bm</option>
+                        <option data-icon="famfamfam-flag-bn" value="famfamfam-flag-bn"><i class="famfamfam-flag-bn"></i>bn</option>
+                        <option data-icon="famfamfam-flag-bo" value="famfamfam-flag-bo"><i class="famfamfam-flag-bo"></i>bo</option>
+                        <option data-icon="famfamfam-flag-bq" value="famfamfam-flag-bq"><i class="famfamfam-flag-bq"></i>bq</option>
+                        <option data-icon="famfamfam-flag-br" value="famfamfam-flag-br"><i class="famfamfam-flag-br"></i>br</option>
+                        <option data-icon="famfamfam-flag-bs" value="famfamfam-flag-bs"><i class="famfamfam-flag-bs"></i>bs</option>
+                        <option data-icon="famfamfam-flag-bt" value="famfamfam-flag-bt"><i class="famfamfam-flag-bt"></i>bt</option>
+                        <option data-icon="famfamfam-flag-bv" value="famfamfam-flag-bv"><i class="famfamfam-flag-bv"></i>bv</option>
+                        <option data-icon="famfamfam-flag-bw" value="famfamfam-flag-bw"><i class="famfamfam-flag-bw"></i>bw</option>
+                        <option data-icon="famfamfam-flag-by" value="famfamfam-flag-by"><i class="famfamfam-flag-by"></i>by</option>
+                        <option data-icon="famfamfam-flag-bz" value="famfamfam-flag-bz"><i class="famfamfam-flag-bz"></i>bz</option>
+                        <option data-icon="famfamfam-flag-ca" value="famfamfam-flag-ca"><i class="famfamfam-flag-ca"></i>ca</option>
+                        <option data-icon="famfamfam-flag-catalonia" value="famfamfam-flag-catalonia"><i class="famfamfam-flag-catalonia"></i>catalonia</option>
+                        <option data-icon="famfamfam-flag-cc" value="famfamfam-flag-cc"><i class="famfamfam-flag-cc"></i>cc</option>
+                        <option data-icon="famfamfam-flag-cd" value="famfamfam-flag-cd"><i class="famfamfam-flag-cd"></i>cd</option>
+                        <option data-icon="famfamfam-flag-cf" value="famfamfam-flag-cf"><i class="famfamfam-flag-cf"></i>cf</option>
+                        <option data-icon="famfamfam-flag-cg" value="famfamfam-flag-cg"><i class="famfamfam-flag-cg"></i>cg</option>
+                        <option data-icon="famfamfam-flag-ch" value="famfamfam-flag-ch"><i class="famfamfam-flag-ch"></i>ch</option>
+                        <option data-icon="famfamfam-flag-ci" value="famfamfam-flag-ci"><i class="famfamfam-flag-ci"></i>ci</option>
+                        <option data-icon="famfamfam-flag-ck" value="famfamfam-flag-ck"><i class="famfamfam-flag-ck"></i>ck</option>
+                        <option data-icon="famfamfam-flag-cl" value="famfamfam-flag-cl"><i class="famfamfam-flag-cl"></i>cl</option>
+                        <option data-icon="famfamfam-flag-cm" value="famfamfam-flag-cm"><i class="famfamfam-flag-cm"></i>cm</option>
+                        <option data-icon="famfamfam-flag-cn" value="famfamfam-flag-cn"><i class="famfamfam-flag-cn"></i>cn</option>
+                        <option data-icon="famfamfam-flag-co" value="famfamfam-flag-co"><i class="famfamfam-flag-co"></i>co</option>
+                        <option data-icon="famfamfam-flag-cr" value="famfamfam-flag-cr"><i class="famfamfam-flag-cr"></i>cr</option>
+                        <option data-icon="famfamfam-flag-cs" value="famfamfam-flag-cs"><i class="famfamfam-flag-cs"></i>cs</option>
+                        <option data-icon="famfamfam-flag-cu" value="famfamfam-flag-cu"><i class="famfamfam-flag-cu"></i>cu</option>
+                        <option data-icon="famfamfam-flag-cv" value="famfamfam-flag-cv"><i class="famfamfam-flag-cv"></i>cv</option>
+                        <option data-icon="famfamfam-flag-cw" value="famfamfam-flag-cw"><i class="famfamfam-flag-cw"></i>cw</option>
+                        <option data-icon="famfamfam-flag-cx" value="famfamfam-flag-cx"><i class="famfamfam-flag-cx"></i>cx</option>
+                        <option data-icon="famfamfam-flag-cy" value="famfamfam-flag-cy"><i class="famfamfam-flag-cy"></i>cy</option>
+                        <option data-icon="famfamfam-flag-cz" value="famfamfam-flag-cz"><i class="famfamfam-flag-cz"></i>cz</option>
+                        <option data-icon="famfamfam-flag-de" value="famfamfam-flag-de"><i class="famfamfam-flag-de"></i>de</option>
+                        <option data-icon="famfamfam-flag-dj" value="famfamfam-flag-dj"><i class="famfamfam-flag-dj"></i>dj</option>
+                        <option data-icon="famfamfam-flag-dk" value="famfamfam-flag-dk"><i class="famfamfam-flag-dk"></i>dk</option>
+                        <option data-icon="famfamfam-flag-dm" value="famfamfam-flag-dm"><i class="famfamfam-flag-dm"></i>dm</option>
+                        <option data-icon="famfamfam-flag-do" value="famfamfam-flag-do"><i class="famfamfam-flag-do"></i>do</option>
+                        <option data-icon="famfamfam-flag-dz" value="famfamfam-flag-dz"><i class="famfamfam-flag-dz"></i>dz</option>
+                        <option data-icon="famfamfam-flag-ec" value="famfamfam-flag-ec"><i class="famfamfam-flag-ec"></i>ec</option>
+                        <option data-icon="famfamfam-flag-ee" value="famfamfam-flag-ee"><i class="famfamfam-flag-ee"></i>ee</option>
+                        <option data-icon="famfamfam-flag-eg" value="famfamfam-flag-eg"><i class="famfamfam-flag-eg"></i>eg</option>
+                        <option data-icon="famfamfam-flag-eh" value="famfamfam-flag-eh"><i class="famfamfam-flag-eh"></i>eh</option>
+                        <option data-icon="famfamfam-flag-england" value="famfamfam-flag-england"><i class="famfamfam-flag-england"></i>england</option>
+                        <option data-icon="famfamfam-flag-er" value="famfamfam-flag-er"><i class="famfamfam-flag-er"></i>er</option>
+                        <option data-icon="famfamfam-flag-es" value="famfamfam-flag-es"><i class="famfamfam-flag-es"></i>es</option>
+                        <option data-icon="famfamfam-flag-et" value="famfamfam-flag-et"><i class="famfamfam-flag-et"></i>et</option>
+                        <option data-icon="famfamfam-flag-eu" value="famfamfam-flag-eu"><i class="famfamfam-flag-eu"></i>eu</option>
+                        <option data-icon="famfamfam-flag-fam" value="famfamfam-flag-fam"><i class="famfamfam-flag-fam"></i>fam</option>
+                        <option data-icon="famfamfam-flag-fi" value="famfamfam-flag-fi"><i class="famfamfam-flag-fi"></i>fi</option>
+                        <option data-icon="famfamfam-flag-fj" value="famfamfam-flag-fj"><i class="famfamfam-flag-fj"></i>fj</option>
+                        <option data-icon="famfamfam-flag-fk" value="famfamfam-flag-fk"><i class="famfamfam-flag-fk"></i>fk</option>
+                        <option data-icon="famfamfam-flag-fm" value="famfamfam-flag-fm"><i class="famfamfam-flag-fm"></i>fm</option>
+                        <option data-icon="famfamfam-flag-fo" value="famfamfam-flag-fo"><i class="famfamfam-flag-fo"></i>fo</option>
+                        <option data-icon="famfamfam-flag-fr" value="famfamfam-flag-fr"><i class="famfamfam-flag-fr"></i>fr</option>
+                        <option data-icon="famfamfam-flag-ga" value="famfamfam-flag-ga"><i class="famfamfam-flag-ga"></i>ga</option>
+                        <option data-icon="famfamfam-flag-gb" value="famfamfam-flag-gb"><i class="famfamfam-flag-gb"></i>gb</option>
+                        <option data-icon="famfamfam-flag-gd" value="famfamfam-flag-gd"><i class="famfamfam-flag-gd"></i>gd</option>
+                        <option data-icon="famfamfam-flag-ge" value="famfamfam-flag-ge"><i class="famfamfam-flag-ge"></i>ge</option>
+                        <option data-icon="famfamfam-flag-gf" value="famfamfam-flag-gf"><i class="famfamfam-flag-gf"></i>gf</option>
+                        <option data-icon="famfamfam-flag-gg" value="famfamfam-flag-gg"><i class="famfamfam-flag-gg"></i>gg</option>
+                        <option data-icon="famfamfam-flag-gh" value="famfamfam-flag-gh"><i class="famfamfam-flag-gh"></i>gh</option>
+                        <option data-icon="famfamfam-flag-gi" value="famfamfam-flag-gi"><i class="famfamfam-flag-gi"></i>gi</option>
+                        <option data-icon="famfamfam-flag-gl" value="famfamfam-flag-gl"><i class="famfamfam-flag-gl"></i>gl</option>
+                        <option data-icon="famfamfam-flag-gm" value="famfamfam-flag-gm"><i class="famfamfam-flag-gm"></i>gm</option>
+                        <option data-icon="famfamfam-flag-gn" value="famfamfam-flag-gn"><i class="famfamfam-flag-gn"></i>gn</option>
+                        <option data-icon="famfamfam-flag-gp" value="famfamfam-flag-gp"><i class="famfamfam-flag-gp"></i>gp</option>
+                        <option data-icon="famfamfam-flag-gq" value="famfamfam-flag-gq"><i class="famfamfam-flag-gq"></i>gq</option>
+                        <option data-icon="famfamfam-flag-gr" value="famfamfam-flag-gr"><i class="famfamfam-flag-gr"></i>gr</option>
+                        <option data-icon="famfamfam-flag-gs" value="famfamfam-flag-gs"><i class="famfamfam-flag-gs"></i>gs</option>
+                        <option data-icon="famfamfam-flag-gt" value="famfamfam-flag-gt"><i class="famfamfam-flag-gt"></i>gt</option>
+                        <option data-icon="famfamfam-flag-gu" value="famfamfam-flag-gu"><i class="famfamfam-flag-gu"></i>gu</option>
+                        <option data-icon="famfamfam-flag-gw" value="famfamfam-flag-gw"><i class="famfamfam-flag-gw"></i>gw</option>
+                        <option data-icon="famfamfam-flag-gy" value="famfamfam-flag-gy"><i class="famfamfam-flag-gy"></i>gy</option>
+                        <option data-icon="famfamfam-flag-hk" value="famfamfam-flag-hk"><i class="famfamfam-flag-hk"></i>hk</option>
+                        <option data-icon="famfamfam-flag-hm" value="famfamfam-flag-hm"><i class="famfamfam-flag-hm"></i>hm</option>
+                        <option data-icon="famfamfam-flag-hn" value="famfamfam-flag-hn"><i class="famfamfam-flag-hn"></i>hn</option>
+                        <option data-icon="famfamfam-flag-hr" value="famfamfam-flag-hr"><i class="famfamfam-flag-hr"></i>hr</option>
+                        <option data-icon="famfamfam-flag-ht" value="famfamfam-flag-ht"><i class="famfamfam-flag-ht"></i>ht</option>
+                        <option data-icon="famfamfam-flag-hu" value="famfamfam-flag-hu"><i class="famfamfam-flag-hu"></i>hu</option>
+                        <option data-icon="famfamfam-flag-id" value="famfamfam-flag-id"><i class="famfamfam-flag-id"></i>id</option>
+                        <option data-icon="famfamfam-flag-ie" value="famfamfam-flag-ie"><i class="famfamfam-flag-ie"></i>ie</option>
+                        <option data-icon="famfamfam-flag-il" value="famfamfam-flag-il"><i class="famfamfam-flag-il"></i>il</option>
+                        <option data-icon="famfamfam-flag-im" value="famfamfam-flag-im"><i class="famfamfam-flag-im"></i>im</option>
+                        <option data-icon="famfamfam-flag-in" value="famfamfam-flag-in"><i class="famfamfam-flag-in"></i>in</option>
+                        <option data-icon="famfamfam-flag-io" value="famfamfam-flag-io"><i class="famfamfam-flag-io"></i>io</option>
+                        <option data-icon="famfamfam-flag-iq" value="famfamfam-flag-iq"><i class="famfamfam-flag-iq"></i>iq</option>
+                        <option data-icon="famfamfam-flag-ir" value="famfamfam-flag-ir"><i class="famfamfam-flag-ir"></i>ir</option>
+                        <option data-icon="famfamfam-flag-is" value="famfamfam-flag-is"><i class="famfamfam-flag-is"></i>is</option>
+                        <option data-icon="famfamfam-flag-it" value="famfamfam-flag-it"><i class="famfamfam-flag-it"></i>it</option>
+                        <option data-icon="famfamfam-flag-je" value="famfamfam-flag-je"><i class="famfamfam-flag-je"></i>je</option>
+                        <option data-icon="famfamfam-flag-jm" value="famfamfam-flag-jm"><i class="famfamfam-flag-jm"></i>jm</option>
+                        <option data-icon="famfamfam-flag-jo" value="famfamfam-flag-jo"><i class="famfamfam-flag-jo"></i>jo</option>
+                        <option data-icon="famfamfam-flag-jp" value="famfamfam-flag-jp"><i class="famfamfam-flag-jp"></i>jp</option>
+                        <option data-icon="famfamfam-flag-ke" value="famfamfam-flag-ke"><i class="famfamfam-flag-ke"></i>ke</option>
+                        <option data-icon="famfamfam-flag-kg" value="famfamfam-flag-kg"><i class="famfamfam-flag-kg"></i>kg</option>
+                        <option data-icon="famfamfam-flag-kh" value="famfamfam-flag-kh"><i class="famfamfam-flag-kh"></i>kh</option>
+                        <option data-icon="famfamfam-flag-ki" value="famfamfam-flag-ki"><i class="famfamfam-flag-ki"></i>ki</option>
+                        <option data-icon="famfamfam-flag-km" value="famfamfam-flag-km"><i class="famfamfam-flag-km"></i>km</option>
+                        <option data-icon="famfamfam-flag-kn" value="famfamfam-flag-kn"><i class="famfamfam-flag-kn"></i>kn</option>
+                        <option data-icon="famfamfam-flag-kp" value="famfamfam-flag-kp"><i class="famfamfam-flag-kp"></i>kp</option>
+                        <option data-icon="famfamfam-flag-kr" value="famfamfam-flag-kr"><i class="famfamfam-flag-kr"></i>kr</option>
+                        <option data-icon="famfamfam-flag-kw" value="famfamfam-flag-kw"><i class="famfamfam-flag-kw"></i>kw</option>
+                        <option data-icon="famfamfam-flag-ky" value="famfamfam-flag-ky"><i class="famfamfam-flag-ky"></i>ky</option>
+                        <option data-icon="famfamfam-flag-kz" value="famfamfam-flag-kz"><i class="famfamfam-flag-kz"></i>kz</option>
+                        <option data-icon="famfamfam-flag-la" value="famfamfam-flag-la"><i class="famfamfam-flag-la"></i>la</option>
+                        <option data-icon="famfamfam-flag-lb" value="famfamfam-flag-lb"><i class="famfamfam-flag-lb"></i>lb</option>
+                        <option data-icon="famfamfam-flag-lc" value="famfamfam-flag-lc"><i class="famfamfam-flag-lc"></i>lc</option>
+                        <option data-icon="famfamfam-flag-li" value="famfamfam-flag-li"><i class="famfamfam-flag-li"></i>li</option>
+                        <option data-icon="famfamfam-flag-lk" value="famfamfam-flag-lk"><i class="famfamfam-flag-lk"></i>lk</option>
+                        <option data-icon="famfamfam-flag-lr" value="famfamfam-flag-lr"><i class="famfamfam-flag-lr"></i>lr</option>
+                        <option data-icon="famfamfam-flag-ls" value="famfamfam-flag-ls"><i class="famfamfam-flag-ls"></i>ls</option>
+                        <option data-icon="famfamfam-flag-lt" value="famfamfam-flag-lt"><i class="famfamfam-flag-lt"></i>lt</option>
+                        <option data-icon="famfamfam-flag-lu" value="famfamfam-flag-lu"><i class="famfamfam-flag-lu"></i>lu</option>
+                        <option data-icon="famfamfam-flag-lv" value="famfamfam-flag-lv"><i class="famfamfam-flag-lv"></i>lv</option>
+                        <option data-icon="famfamfam-flag-ly" value="famfamfam-flag-ly"><i class="famfamfam-flag-ly"></i>ly</option>
+                        <option data-icon="famfamfam-flag-ma" value="famfamfam-flag-ma"><i class="famfamfam-flag-ma"></i>ma</option>
+                        <option data-icon="famfamfam-flag-mc" value="famfamfam-flag-mc"><i class="famfamfam-flag-mc"></i>mc</option>
+                        <option data-icon="famfamfam-flag-md" value="famfamfam-flag-md"><i class="famfamfam-flag-md"></i>md</option>
+                        <option data-icon="famfamfam-flag-me" value="famfamfam-flag-me"><i class="famfamfam-flag-me"></i>me</option>
+                        <option data-icon="famfamfam-flag-mf" value="famfamfam-flag-mf"><i class="famfamfam-flag-mf"></i>mf</option>
+                        <option data-icon="famfamfam-flag-mg" value="famfamfam-flag-mg"><i class="famfamfam-flag-mg"></i>mg</option>
+                        <option data-icon="famfamfam-flag-mh" value="famfamfam-flag-mh"><i class="famfamfam-flag-mh"></i>mh</option>
+                        <option data-icon="famfamfam-flag-mk" value="famfamfam-flag-mk"><i class="famfamfam-flag-mk"></i>mk</option>
+                        <option data-icon="famfamfam-flag-ml" value="famfamfam-flag-ml"><i class="famfamfam-flag-ml"></i>ml</option>
+                        <option data-icon="famfamfam-flag-mm" value="famfamfam-flag-mm"><i class="famfamfam-flag-mm"></i>mm</option>
+                        <option data-icon="famfamfam-flag-mn" value="famfamfam-flag-mn"><i class="famfamfam-flag-mn"></i>mn</option>
+                        <option data-icon="famfamfam-flag-mo" value="famfamfam-flag-mo"><i class="famfamfam-flag-mo"></i>mo</option>
+                        <option data-icon="famfamfam-flag-mp" value="famfamfam-flag-mp"><i class="famfamfam-flag-mp"></i>mp</option>
+                        <option data-icon="famfamfam-flag-mq" value="famfamfam-flag-mq"><i class="famfamfam-flag-mq"></i>mq</option>
+                        <option data-icon="famfamfam-flag-mr" value="famfamfam-flag-mr"><i class="famfamfam-flag-mr"></i>mr</option>
+                        <option data-icon="famfamfam-flag-ms" value="famfamfam-flag-ms"><i class="famfamfam-flag-ms"></i>ms</option>
+                        <option data-icon="famfamfam-flag-mt" value="famfamfam-flag-mt"><i class="famfamfam-flag-mt"></i>mt</option>
+                        <option data-icon="famfamfam-flag-mu" value="famfamfam-flag-mu"><i class="famfamfam-flag-mu"></i>mu</option>
+                        <option data-icon="famfamfam-flag-mv" value="famfamfam-flag-mv"><i class="famfamfam-flag-mv"></i>mv</option>
+                        <option data-icon="famfamfam-flag-mw" value="famfamfam-flag-mw"><i class="famfamfam-flag-mw"></i>mw</option>
+                        <option data-icon="famfamfam-flag-mx" value="famfamfam-flag-mx"><i class="famfamfam-flag-mx"></i>mx</option>
+                        <option data-icon="famfamfam-flag-my" value="famfamfam-flag-my"><i class="famfamfam-flag-my"></i>my</option>
+                        <option data-icon="famfamfam-flag-mz" value="famfamfam-flag-mz"><i class="famfamfam-flag-mz"></i>mz</option>
+                        <option data-icon="famfamfam-flag-na" value="famfamfam-flag-na"><i class="famfamfam-flag-na"></i>na</option>
+                        <option data-icon="famfamfam-flag-nc" value="famfamfam-flag-nc"><i class="famfamfam-flag-nc"></i>nc</option>
+                        <option data-icon="famfamfam-flag-ne" value="famfamfam-flag-ne"><i class="famfamfam-flag-ne"></i>ne</option>
+                        <option data-icon="famfamfam-flag-nf" value="famfamfam-flag-nf"><i class="famfamfam-flag-nf"></i>nf</option>
+                        <option data-icon="famfamfam-flag-ng" value="famfamfam-flag-ng"><i class="famfamfam-flag-ng"></i>ng</option>
+                        <option data-icon="famfamfam-flag-ni" value="famfamfam-flag-ni"><i class="famfamfam-flag-ni"></i>ni</option>
+                        <option data-icon="famfamfam-flag-nl" value="famfamfam-flag-nl"><i class="famfamfam-flag-nl"></i>nl</option>
+                        <option data-icon="famfamfam-flag-no" value="famfamfam-flag-no"><i class="famfamfam-flag-no"></i>no</option>
+                        <option data-icon="famfamfam-flag-np" value="famfamfam-flag-np"><i class="famfamfam-flag-np"></i>np</option>
+                        <option data-icon="famfamfam-flag-nr" value="famfamfam-flag-nr"><i class="famfamfam-flag-nr"></i>nr</option>
+                        <option data-icon="famfamfam-flag-nu" value="famfamfam-flag-nu"><i class="famfamfam-flag-nu"></i>nu</option>
+                        <option data-icon="famfamfam-flag-nz" value="famfamfam-flag-nz"><i class="famfamfam-flag-nz"></i>nz</option>
+                        <option data-icon="famfamfam-flag-om" value="famfamfam-flag-om"><i class="famfamfam-flag-om"></i>om</option>
+                        <option data-icon="famfamfam-flag-pa" value="famfamfam-flag-pa"><i class="famfamfam-flag-pa"></i>pa</option>
+                        <option data-icon="famfamfam-flag-pe" value="famfamfam-flag-pe"><i class="famfamfam-flag-pe"></i>pe</option>
+                        <option data-icon="famfamfam-flag-pf" value="famfamfam-flag-pf"><i class="famfamfam-flag-pf"></i>pf</option>
+                        <option data-icon="famfamfam-flag-pg" value="famfamfam-flag-pg"><i class="famfamfam-flag-pg"></i>pg</option>
+                        <option data-icon="famfamfam-flag-ph" value="famfamfam-flag-ph"><i class="famfamfam-flag-ph"></i>ph</option>
+                        <option data-icon="famfamfam-flag-pk" value="famfamfam-flag-pk"><i class="famfamfam-flag-pk"></i>pk</option>
+                        <option data-icon="famfamfam-flag-pl" value="famfamfam-flag-pl"><i class="famfamfam-flag-pl"></i>pl</option>
+                        <option data-icon="famfamfam-flag-pm" value="famfamfam-flag-pm"><i class="famfamfam-flag-pm"></i>pm</option>
+                        <option data-icon="famfamfam-flag-pn" value="famfamfam-flag-pn"><i class="famfamfam-flag-pn"></i>pn</option>
+                        <option data-icon="famfamfam-flag-pr" value="famfamfam-flag-pr"><i class="famfamfam-flag-pr"></i>pr</option>
+                        <option data-icon="famfamfam-flag-ps" value="famfamfam-flag-ps"><i class="famfamfam-flag-ps"></i>ps</option>
+                        <option data-icon="famfamfam-flag-pt" value="famfamfam-flag-pt"><i class="famfamfam-flag-pt"></i>pt</option>
+                        <option data-icon="famfamfam-flag-pw" value="famfamfam-flag-pw"><i class="famfamfam-flag-pw"></i>pw</option>
+                        <option data-icon="famfamfam-flag-py" value="famfamfam-flag-py"><i class="famfamfam-flag-py"></i>py</option>
+                        <option data-icon="famfamfam-flag-qa" value="famfamfam-flag-qa"><i class="famfamfam-flag-qa"></i>qa</option>
+                        <option data-icon="famfamfam-flag-re" value="famfamfam-flag-re"><i class="famfamfam-flag-re"></i>re</option>
+                        <option data-icon="famfamfam-flag-ro" value="famfamfam-flag-ro"><i class="famfamfam-flag-ro"></i>ro</option>
+                        <option data-icon="famfamfam-flag-rs" value="famfamfam-flag-rs"><i class="famfamfam-flag-rs"></i>rs</option>
+                        <option data-icon="famfamfam-flag-ru" value="famfamfam-flag-ru"><i class="famfamfam-flag-ru"></i>ru</option>
+                        <option data-icon="famfamfam-flag-rw" value="famfamfam-flag-rw"><i class="famfamfam-flag-rw"></i>rw</option>
+                        <option data-icon="famfamfam-flag-sa" value="famfamfam-flag-sa"><i class="famfamfam-flag-sa"></i>sa</option>
+                        <option data-icon="famfamfam-flag-sb" value="famfamfam-flag-sb"><i class="famfamfam-flag-sb"></i>sb</option>
+                        <option data-icon="famfamfam-flag-sc" value="famfamfam-flag-sc"><i class="famfamfam-flag-sc"></i>sc</option>
+                        <option data-icon="famfamfam-flag-scotland" value="famfamfam-flag-scotland"><i class="famfamfam-flag-scotland"></i>scotland</option>
+                        <option data-icon="famfamfam-flag-sd" value="famfamfam-flag-sd"><i class="famfamfam-flag-sd"></i>sd</option>
+                        <option data-icon="famfamfam-flag-se" value="famfamfam-flag-se"><i class="famfamfam-flag-se"></i>se</option>
+                        <option data-icon="famfamfam-flag-sg" value="famfamfam-flag-sg"><i class="famfamfam-flag-sg"></i>sg</option>
+                        <option data-icon="famfamfam-flag-sh" value="famfamfam-flag-sh"><i class="famfamfam-flag-sh"></i>sh</option>
+                        <option data-icon="famfamfam-flag-si" value="famfamfam-flag-si"><i class="famfamfam-flag-si"></i>si</option>
+                        <option data-icon="famfamfam-flag-sj" value="famfamfam-flag-sj"><i class="famfamfam-flag-sj"></i>sj</option>
+                        <option data-icon="famfamfam-flag-sk" value="famfamfam-flag-sk"><i class="famfamfam-flag-sk"></i>sk</option>
+                        <option data-icon="famfamfam-flag-sl" value="famfamfam-flag-sl"><i class="famfamfam-flag-sl"></i>sl</option>
+                        <option data-icon="famfamfam-flag-sm" value="famfamfam-flag-sm"><i class="famfamfam-flag-sm"></i>sm</option>
+                        <option data-icon="famfamfam-flag-sn" value="famfamfam-flag-sn"><i class="famfamfam-flag-sn"></i>sn</option>
+                        <option data-icon="famfamfam-flag-so" value="famfamfam-flag-so"><i class="famfamfam-flag-so"></i>so</option>
+                        <option data-icon="famfamfam-flag-sr" value="famfamfam-flag-sr"><i class="famfamfam-flag-sr"></i>sr</option>
+                        <option data-icon="famfamfam-flag-ss" value="famfamfam-flag-ss"><i class="famfamfam-flag-ss"></i>ss</option>
+                        <option data-icon="famfamfam-flag-st" value="famfamfam-flag-st"><i class="famfamfam-flag-st"></i>st</option>
+                        <option data-icon="famfamfam-flag-sv" value="famfamfam-flag-sv"><i class="famfamfam-flag-sv"></i>sv</option>
+                        <option data-icon="famfamfam-flag-sx" value="famfamfam-flag-sx"><i class="famfamfam-flag-sx"></i>sx</option>
+                        <option data-icon="famfamfam-flag-sy" value="famfamfam-flag-sy"><i class="famfamfam-flag-sy"></i>sy</option>
+                        <option data-icon="famfamfam-flag-sz" value="famfamfam-flag-sz"><i class="famfamfam-flag-sz"></i>sz</option>
+                        <option data-icon="famfamfam-flag-tc" value="famfamfam-flag-tc"><i class="famfamfam-flag-tc"></i>tc</option>
+                        <option data-icon="famfamfam-flag-td" value="famfamfam-flag-td"><i class="famfamfam-flag-td"></i>td</option>
+                        <option data-icon="famfamfam-flag-tf" value="famfamfam-flag-tf"><i class="famfamfam-flag-tf"></i>tf</option>
+                        <option data-icon="famfamfam-flag-tg" value="famfamfam-flag-tg"><i class="famfamfam-flag-tg"></i>tg</option>
+                        <option data-icon="famfamfam-flag-th" value="famfamfam-flag-th"><i class="famfamfam-flag-th"></i>th</option>
+                        <option data-icon="famfamfam-flag-tj" value="famfamfam-flag-tj"><i class="famfamfam-flag-tj"></i>tj</option>
+                        <option data-icon="famfamfam-flag-tk" value="famfamfam-flag-tk"><i class="famfamfam-flag-tk"></i>tk</option>
+                        <option data-icon="famfamfam-flag-tl" value="famfamfam-flag-tl"><i class="famfamfam-flag-tl"></i>tl</option>
+                        <option data-icon="famfamfam-flag-tm" value="famfamfam-flag-tm"><i class="famfamfam-flag-tm"></i>tm</option>
+                        <option data-icon="famfamfam-flag-tn" value="famfamfam-flag-tn"><i class="famfamfam-flag-tn"></i>tn</option>
+                        <option data-icon="famfamfam-flag-to" value="famfamfam-flag-to"><i class="famfamfam-flag-to"></i>to</option>
+                        <option data-icon="famfamfam-flag-tr" value="famfamfam-flag-tr"><i class="famfamfam-flag-tr"></i>tr</option>
+                        <option data-icon="famfamfam-flag-tt" value="famfamfam-flag-tt"><i class="famfamfam-flag-tt"></i>tt</option>
+                        <option data-icon="famfamfam-flag-tv" value="famfamfam-flag-tv"><i class="famfamfam-flag-tv"></i>tv</option>
+                        <option data-icon="famfamfam-flag-tw" value="famfamfam-flag-tw"><i class="famfamfam-flag-tw"></i>tw</option>
+                        <option data-icon="famfamfam-flag-tz" value="famfamfam-flag-tz"><i class="famfamfam-flag-tz"></i>tz</option>
+                        <option data-icon="famfamfam-flag-ua" value="famfamfam-flag-ua"><i class="famfamfam-flag-ua"></i>ua</option>
+                        <option data-icon="famfamfam-flag-ug" value="famfamfam-flag-ug"><i class="famfamfam-flag-ug"></i>ug</option>
+                        <option data-icon="famfamfam-flag-um" value="famfamfam-flag-um"><i class="famfamfam-flag-um"></i>um</option>
+                        <option data-icon="famfamfam-flag-us" value="famfamfam-flag-us"><i class="famfamfam-flag-us"></i>us</option>
+                        <option data-icon="famfamfam-flag-uy" value="famfamfam-flag-uy"><i class="famfamfam-flag-uy"></i>uy</option>
+                        <option data-icon="famfamfam-flag-uz" value="famfamfam-flag-uz"><i class="famfamfam-flag-uz"></i>uz</option>
+                        <option data-icon="famfamfam-flag-va" value="famfamfam-flag-va"><i class="famfamfam-flag-va"></i>va</option>
+                        <option data-icon="famfamfam-flag-vc" value="famfamfam-flag-vc"><i class="famfamfam-flag-vc"></i>vc</option>
+                        <option data-icon="famfamfam-flag-ve" value="famfamfam-flag-ve"><i class="famfamfam-flag-ve"></i>ve</option>
+                        <option data-icon="famfamfam-flag-vg" value="famfamfam-flag-vg"><i class="famfamfam-flag-vg"></i>vg</option>
+                        <option data-icon="famfamfam-flag-vi" value="famfamfam-flag-vi"><i class="famfamfam-flag-vi"></i>vi</option>
+                        <option data-icon="famfamfam-flag-vn" value="famfamfam-flag-vn"><i class="famfamfam-flag-vn"></i>vn</option>
+                        <option data-icon="famfamfam-flag-vu" value="famfamfam-flag-vu"><i class="famfamfam-flag-vu"></i>vu</option>
+                        <option data-icon="famfamfam-flag-wales" value="famfamfam-flag-wales"><i class="famfamfam-flag-wales"></i>wales</option>
+                        <option data-icon="famfamfam-flag-wf" value="famfamfam-flag-wf"><i class="famfamfam-flag-wf"></i>wf</option>
+                        <option data-icon="famfamfam-flag-ws" value="famfamfam-flag-ws"><i class="famfamfam-flag-ws"></i>ws</option>
+                        <option data-icon="famfamfam-flag-ye" value="famfamfam-flag-ye"><i class="famfamfam-flag-ye"></i>ye</option>
+                        <option data-icon="famfamfam-flag-yt" value="famfamfam-flag-yt"><i class="famfamfam-flag-yt"></i>yt</option>
+                        <option data-icon="famfamfam-flag-za" value="famfamfam-flag-za"><i class="famfamfam-flag-za"></i>za</option>
+                        <option data-icon="famfamfam-flag-zm" value="famfamfam-flag-zm"><i class="famfamfam-flag-zm"></i>zm</option>
+                        <option data-icon="famfamfam-flag-zw" value="famfamfam-flag-zw"><i class="famfamfam-flag-zw"></i>zw</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" id="createLang" data-dismiss="modal">@L("Save")</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+</div>
+<script src="~/Scripts/plugin/bootstrapselect/js/bootstrap-select.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var value = $("#selected").val();
+        $("#LanguageNameEdit").val(value);
+        var valueIcon = $("#icon").val();
+        $("#LanguageIconEdit").val(valueIcon);
+        function edit(language) {
+            abp.ui.setBusy($("#EditForm"), abp.ajax({
+                url: "/Admin/Languages/EditLanguage",
+                data: JSON.stringify(language)
+            }).done(function () {
+                modal.close();
+                ReloadData();
+            }));
+        };
+        $("#LanguageIconEdit").selectpicker({
+            iconBase: "famfamfam-flag",
+            tickIcon: "fa fa-check"
+        });
+        $("#LanguageNameEdit").selectpicker({
+            iconBase: "famfamfam-flag",
+            tickIcon: "fa fa-check"
+        });
+        $("editLang").click(function () {
+            var data = {};
+            data.Name = $("#LanguageNameEdit").val();
+            data.Icon = $("#LanguageIconEdit").val();
+            edit(data);
+        });
+    });
+</script>

@@ -1,0 +1,142 @@
+﻿using System.Web.Mvc;
+using Abp.Application.Navigation;
+using Abp.Configuration.Startup;
+using Abp.Localization;
+using Abp.Threading;
+using SimpleCms.ModuleCms.SiteConfiguration;
+using SimpleCms.ModuleCms.SiteConfiguration.Dto;
+using SimpleCms.ModuleZero.Tenancy;
+using SimpleCms.Sessions;
+using SimpleCms.Web.Models.Layout;
+
+namespace SimpleCms.Web.Controllers
+{
+    public class LayoutController : SimpleCmsControllerBase
+    {
+        private readonly IUserNavigationManager _userNavigationManager;
+        private readonly ILocalizationManager _localizationManager;
+        private readonly ISessionAppService _sessionAppService;
+        private readonly IMultiTenancyConfig _multiTenancyConfig;
+        private readonly ISiteService _siteService;
+        private readonly ITenancyService _tenancyService;
+        public LayoutController(
+            IUserNavigationManager userNavigationManager,
+            ILocalizationManager localizationManager,
+            ISessionAppService sessionAppService,
+            IMultiTenancyConfig multiTenancyConfig, ISiteService siteService, ITenancyService tenancyService)
+        {
+            _userNavigationManager = userNavigationManager;
+            _localizationManager = localizationManager;
+            _sessionAppService = sessionAppService;
+            _multiTenancyConfig = multiTenancyConfig;
+            _siteService = siteService;
+            _tenancyService = tenancyService;
+        }
+
+
+        [ChildActionOnly]
+        public PartialViewResult TopMenu(string activeMenu = "")
+        {
+            var model = new TopMenuViewModel
+            {
+                MainMenu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync("MainMenu", AbpSession.UserId)),
+                ActiveMenuItemName = activeMenu
+            };
+
+            return PartialView("_TopMenu", model);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult LanguageSelection()
+        {
+            var model = new LanguageSelectionViewModel
+            {
+                CurrentLanguage = _localizationManager.CurrentLanguage,
+                Languages = _localizationManager.GetAllLanguages()
+            };
+
+            return PartialView("_LanguageSelection", model);
+        }
+        [ChildActionOnly]
+        public PartialViewResult GetSiteInformation()
+        {
+            var tenantId = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName));
+            var info = _siteService.GetCurrentInfo(tenantId);
+            //Todo: If null return principalWebSiteInfo
+            if (info == null)
+            {
+                return PartialView("_siteInformationHeaderClient", new SiteInfoDto()
+                {
+                    SiteTitle = "PymeTam"
+                });
+            }
+            return PartialView("_siteInformationHeaderClient",info);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult RenderMySiteName()
+        {
+            var tenant = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName)); 
+            var info = _siteService.GetCurrentInfo(tenant);
+            //Todo: If null return principalWebSiteInfo
+            if (info == null)
+            {
+                return PartialView("_mySiteName","PymeTam");
+            }
+            return PartialView("_mySiteName",info.SiteTitle);
+        }
+        [ChildActionOnly]
+        public PartialViewResult RenderMySiteLogo()
+        {
+            var tenant = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName));
+            var info = _siteService.GetCurrentInfo(tenant);
+            //Todo: If null return principalWebSiteInfo
+            if (info == null)
+            {
+                return PartialView("_mySiteName", new SiteInfoDto()
+                {
+                    SiteTitle = "PymeTam"
+                });
+            }
+            return PartialView("_mySiteLogo", info.SiteLogo);
+        }
+        [ChildActionOnly]
+        public PartialViewResult RenderMySiteSlogan()
+        {
+            var tenant = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName));
+            var info = _siteService.GetCurrentInfo(tenant);
+            //Todo: If null return principalWebSiteInfo
+            if (info == null)
+            {
+                return PartialView("_mySiteName", new SiteInfoDto()
+                {
+                    SiteTitle = "PymeTam"
+                });
+            }
+            return PartialView("_mySiteSlogan", info.SiteSlogan);
+        }
+        [ChildActionOnly]
+        public PartialViewResult UserMenuOrLoginLink()
+        {
+            UserMenuOrLoginLinkViewModel model;
+
+            if (AbpSession.UserId.HasValue)
+            {
+                model = new UserMenuOrLoginLinkViewModel
+                {
+                    LoginInformations = AsyncHelper.RunSync(() => _sessionAppService.GetCurrentLoginInformations()),
+                    IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled,
+                };
+            }
+            else
+            {
+                model = new UserMenuOrLoginLinkViewModel
+                {
+                    IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled
+                };
+            }
+
+            return PartialView("_UserMenuOrLoginLink", model);
+        }
+    }
+}

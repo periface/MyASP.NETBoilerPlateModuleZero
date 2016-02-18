@@ -1,0 +1,81 @@
+﻿@model SimpleCms.ModuleZero.Roles.Dto.NewRoleInput
+@{
+    Layout = null;
+}
+<form id="editRoleForm">
+
+    @Html.HiddenFor(a => a.Id)
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit Role @Model.RoleName</h4>
+    </div>
+    <div class="modal-body">
+        @if (Model.RoleName == "Admin")
+        {
+            <div class="row">
+                <div class="alert alert-warning fade in">
+                    <button class="close" data-dismiss="alert">
+                        ×
+                    </button>
+                    <i class="fa-fw fa fa-warning"></i>
+                    <strong>Warning</strong> Modify the admin role can cause unexpected behaviour.
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="widget-body">
+
+                <ul id="myTab1" class="nav nav-tabs bordered">
+                    <li class="active">
+                        <a href="#s1" data-toggle="tab">Properties</a>
+                    </li>
+                    <li class="">
+                        <a href="#s2" data-toggle="tab"><i class="fa fa-fw fa-lg fa-gear"></i> Permissions (@Model.GrantedCount)</a>
+                    </li>
+
+                </ul>
+
+                <div id="myTabContent1" class="tab-content padding-10">
+                    <div class="tab-pane fade active in" id="s1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(a => a.RoleName, new {@class = "form-control", placeholder = "Role Name"})
+                                </div>
+                                <div class="checkbox">
+
+                                    <label>
+                                        @Html.CheckBoxFor(a => a.IsDefault)
+                                        Is asigned by default?
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade checks" id="s2">
+
+                        @foreach (var p in Model.PermisionList)
+                        {
+                            var prop = p.Granted ? "checked ='checked'" : "";
+                            <div class="checkbox">
+
+                                <label>
+                                    <input type="checkbox" class="checks" name="@p.DbName" @prop/>@p.PermissionName
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
+        <button type="submit" class="btn btn-primary saveRole">@L("Save")</button>
+    </div>
+</form>
+<script src="~/Areas/Admin/Scripts/_roles_EditRole.js"></script>
