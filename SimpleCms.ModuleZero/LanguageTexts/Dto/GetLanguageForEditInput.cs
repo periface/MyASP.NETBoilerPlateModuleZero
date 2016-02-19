@@ -2,7 +2,7 @@
 
 namespace SimpleCms.ModuleZero.LanguageTexts.Dto
 {
-    public class GetLanguageForEditInput : HaveCultureInfo
+    public class GetLanguageForEditInput
     {
         public int? TenantId { get; set; }
         public string SourceName { get; set; }

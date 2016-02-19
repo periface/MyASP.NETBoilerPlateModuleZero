@@ -104,7 +104,7 @@ $(document).ready(function () {
             SourceName:source,
             Key:key,
             BaseLanguage:base,
-            CultureInfoName: lang
+            TargetLanguage: lang
         }
         instance.LoadEditTextForm(data);
     });

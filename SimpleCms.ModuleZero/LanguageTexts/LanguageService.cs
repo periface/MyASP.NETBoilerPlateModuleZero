@@ -69,19 +69,19 @@ namespace SimpleCms.ModuleZero.LanguageTexts
             using (_unitOfWorkManager.Current.DisableFilter(AbpDataFilters.MayHaveTenant))
             {
                 var baseLanguage = _repositoryLanguageText.FirstOrDefault(a => a.Key == input.Key && a.LanguageName == input.BaseLanguage && a.Source == input.SourceName);
-                var langText = _repositoryLanguageText.FirstOrDefault(a => a.Key == input.Key && a.LanguageName == input.CultureInfoName && a.Source == input.SourceName);
+                var langText = _repositoryLanguageText.FirstOrDefault(a => a.Key == input.Key && a.LanguageName == input.TargetLanguage && a.Source == input.SourceName);
                 if (langText == null)
                 {
                     return new ApplicationTextInput()
                     {
                         Key = baseLanguage.Key,
-                        SourceName = baseLanguage.Key,
+                        SourceName = baseLanguage.Source,
                         Value = "",
                         Info = new OutPutInfo()
                         {
                             BaseLanguage = baseLanguage.LanguageName,
                             BaseValue = baseLanguage.Value,
-                            TargetLanguage = baseLanguage.LanguageName,
+                            TargetLanguage = input.TargetLanguage,
                         }
                     };
                 }
