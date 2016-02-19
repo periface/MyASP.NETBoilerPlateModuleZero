@@ -13,9 +13,9 @@ globalVariables.Url.Languages = "/Admin/Languages/";
 globalVariables.Url.OrgUnits = "/Admin/OrgUnits/";
 globalVariables.Url.Pages = "/Admin/Pages/";
 globalVariables.Url.Roles = "/Admin/Roles/";
-globalVariables.Url.SiteConfig = "/Admin/SiteConfig/";
-globalVariables.Url.Tags = "/Admin/Tags/";
-globalVariables.Url.Themes = "/Admin/Themes/";
+globalVariables.Url.SiteConfig = "/AdminCms/SiteConfig/";
+globalVariables.Url.Tags = "/AdminCms/Tags/";
+globalVariables.Url.Themes = "/AdminCms/Themes/";
 
 //Helper para realizar localización de textos
 var globalConfigs = function (constant) {
