@@ -253,7 +253,7 @@ namespace SimpleCms.ModuleZero.LanguageTexts
                     Key = applicationLanguageText.Key, LanguageName = applicationLanguageText.LanguageName, Source = applicationLanguageText.Source
                 }));
             }
-            //Realizes the final filter
+            //Final filter
             var list = (from applicationLanguageText in hostTexts
                         from languageText in clientTexts
                         where applicationLanguageText.Key == languageText.Key
