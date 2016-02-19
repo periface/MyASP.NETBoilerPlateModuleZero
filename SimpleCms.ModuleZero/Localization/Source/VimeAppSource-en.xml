@@ -15,6 +15,7 @@
     <text name="OrgUnits_Msg" value="Manage organization units"/>
     <text name="Options" value="Options"/>
     <text name="Users_Users" value="Users"/>
+    <text name="Menu_ControlPanel" value="Control Panel"/>
     <text name="OrgUnits_AddMember" value="Add member"/>
     <text name="Roles" value="Roles"/>
     <text name="RolesMsg" value="Use roles to group permissions."/>
