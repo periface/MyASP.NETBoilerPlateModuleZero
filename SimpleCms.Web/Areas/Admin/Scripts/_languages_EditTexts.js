@@ -4,13 +4,13 @@ var nameSpace = new window.globalConfigs(window.globalVariables.Localization.Mod
 var urls = window.globalVariables.Url;
 var L = nameSpace.L;
 var rebindTable = function (langBase, langTarget, source) {
-    console.log(langBase);
-    console.log(langTarget);
-
     $("#langTextsTable").jqGrid("setGridParam", {
         url: urls.Languages + "GetLanguagesForEdit?langTarget=" + langTarget + "&langBase=" + langBase + "&langSource=" + source
     });
     $("#langTextsTable").jqGrid("setGridParam", { datatype: "json" }).trigger("reloadGrid");
+}
+var onlyReloadTable = function() {
+    $("#langTextsTable").trigger("reloadGrid");
 }
 $(document).ready(function () {
     //Fun fun fun fun!!
@@ -169,15 +169,10 @@ $(document).ready(function () {
                     var src = instance.selectSource.val();
                     var base = instance.selectBase.val();
                     var ed = "<button class='btn btn-xs btn-primary editLanguageText' data-key="+rowKey+" data-source='" + src + "' data-base='" + base + "' data-target='" +lang + "' data-original-title='Cancel'><i class='fa fa-edit'></i></button>";
-                    //ce = "<button class='btn btn-xs btn-default' onclick=\"jQuery('#jqgrid').restoreRow('"+cl+"');\"><i class='fa fa-times'></i></button>";
-                    //jQuery("#jqgrid").jqGrid('setRowData',ids[i],{act:be+se+ce});
                     jQuery("#langTextsTable").jqGrid('setRowData', ids[i], {
                         act: ed
                     });
                 }
-                //setTimeout(function () {
-                //    $('#usersTable').trigger('resize.jqGrid');
-                //}, 1000);
             }
         });
     }

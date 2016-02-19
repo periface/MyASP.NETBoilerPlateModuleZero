@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using Abp.Application.Services.Dto;
 
 namespace SimpleCms.ModuleZero.LanguageTexts.Dto
@@ -17,7 +12,6 @@ namespace SimpleCms.ModuleZero.LanguageTexts.Dto
         public string Value { get; set; }
         public OutPutInfo Info { get; set; }
         public string TargetCulture { get; set; }
-        
     }
 
     public class OutPutInfo

@@ -12,7 +12,10 @@ namespace SimpleCms.ModuleCms.Managers
         Task<int> CreatePageAsync(Page input);
         Task<Page> GetPage(int idPage);
         Task UpdatePageAsync(Page page);
+        Task CreateCategory(PageCategory category);
         Task<IEnumerable<Page>> GetPagesAsync(Expression<Func<Page,bool>> predicate);
         Task DeletePageAsync(Page page);
+        Task UpdatePageContentAsync(PageContent content,int pageId,string language);
+        IEnumerable<PageCategory> GetCategories();
     }
 }

@@ -13,6 +13,8 @@ namespace SimpleCms.EntityFramework
         //TODO: Define an IDbSet for your Entities...
 
         public virtual IDbSet<Page> Pages { get; set; }
+        public virtual IDbSet<PageContent> PageContent { get; set; }
+        public virtual IDbSet<CategoryContent> CategoryContents{ get; set; }
         public virtual IDbSet<PageTags> Tags { get; set; }
         public virtual IDbSet<Menu> Menus { get; set; }
         public virtual IDbSet<PageCategory> PageCategory { get; set; }

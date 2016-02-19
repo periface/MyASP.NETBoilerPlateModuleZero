@@ -7,5 +7,6 @@
     <text name="Cms_Tags" value="Tags" />
     <text name="Cms_Config_General" value="Site Config"/>
     <text name="Cms_Config_Theme" value="Change Theme"/>
+    <text name="PagesCategories" value="Categories"/>
   </texts>
 </localizationDictionary>

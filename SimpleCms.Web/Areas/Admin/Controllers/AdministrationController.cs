@@ -7,7 +7,7 @@ using SimpleCms.Web.Controllers;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
-    public class AdministrationController : SimpleCmsControllerBase
+    public class AdministrationController : AdminController
     {
         // GET: Admin/Administration
         public ActionResult Index()

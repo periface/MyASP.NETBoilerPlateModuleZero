@@ -1,0 +1,26 @@
+﻿@using SimpleCms.ModuleCms.Pages.Dto
+@model SimpleCms.ModuleCms.Pages.Dto.CategoryOutput
+
+@{
+    Layout = null;
+}
+<ul>
+
+    @foreach (var category in Model.Categories)
+    {
+        if (category != null)
+        {
+
+            <li>
+                <h3>
+                    <a data-clicked="false" class="folderCategory" data-id="@category.Id">
+                        <span class="fa fa-folder spanFolder"></span>
+                        @category.Name
+                    </a>
+                </h3>
+               
+            </li>
+        }
+    }
+
+</ul>

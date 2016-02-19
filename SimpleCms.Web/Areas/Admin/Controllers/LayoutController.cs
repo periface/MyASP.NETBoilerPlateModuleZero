@@ -11,7 +11,7 @@ using SimpleCms.Web.Models.Layout;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
-    public class LayoutController : SimpleCmsControllerBase
+    public class LayoutController : AdminController
     {
         private readonly IUserNavigationManager _userNavigationManager;
         private readonly ILocalizationManager _localizationManager;

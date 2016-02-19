@@ -1,13 +1,12 @@
 ﻿using System.Web.Mvc;
 using Abp.UI;
-using SimpleCms.ModuleCms.Inputs;
 using SimpleCms.ModuleCms.SiteConfiguration;
 using SimpleCms.ModuleCms.Themes;
 using SimpleCms.Web.Controllers;
 
-namespace SimpleCms.Web.Areas.Admin.Controllers
+namespace SimpleCms.Web.Areas.AdminCms.Controllers
 {
-    public class ThemesController : SimpleCmsControllerBase
+    public class ThemesController : AdminController
     {
         private readonly IThemeService _themeService;
         private readonly ISiteService _siteService;

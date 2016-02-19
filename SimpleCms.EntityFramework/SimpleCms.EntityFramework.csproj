@@ -193,6 +193,10 @@
     <Compile Include="Migrations\201602152051557_Upgrade.Designer.cs">
       <DependentUpon>201602152051557_Upgrade.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602191909099_Update.cs" />
+    <Compile Include="Migrations\201602191909099_Update.Designer.cs">
+      <DependentUpon>201602191909099_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SimpleCmsDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -278,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602152051557_Upgrade.resx">
       <DependentUpon>201602152051557_Upgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602191909099_Update.resx">
+      <DependentUpon>201602191909099_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

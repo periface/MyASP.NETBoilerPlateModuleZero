@@ -566,17 +566,17 @@
     <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Users\CreateUser.cshtml" />
     <Content Include="Areas\Admin\Views\Users\EditUser.cshtml" />
-    <Content Include="Areas\Admin\Views\Pages\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Tags\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\SiteConfig\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Themes\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\SiteConfig\SiteInfos.cshtml" />
+    <Content Include="Areas\AdminCms\Views\Pages\Index.cshtml" />
+    <Content Include="Areas\AdminCms\Views\Tags\Index.cshtml" />
+    <Content Include="Areas\AdminCms\Views\SiteConfig\Index.cshtml" />
+    <Content Include="Areas\AdminCms\Views\Themes\Index.cshtml" />
+    <Content Include="Areas\AdminCms\Views\SiteConfig\SiteInfos.cshtml" />
     <Content Include="Areas\Admin\Views\Layout\_siteInformationHeader.cshtml" />
-    <Content Include="Areas\Admin\Views\Themes\MyThemes.cshtml" />
-    <Content Include="Areas\Admin\Views\Themes\AllThemes.cshtml" />
-    <Content Include="Areas\Admin\Views\SiteConfig\CreateInfo.cshtml" />
-    <Content Include="Areas\Admin\Views\SiteConfig\EditInfo.cshtml" />
-    <Content Include="Areas\Admin\Views\SiteConfig\UploadImage.cshtml" />
+    <Content Include="Areas\AdminCms\Views\Themes\MyThemes.cshtml" />
+    <Content Include="Areas\AdminCms\Views\Themes\AllThemes.cshtml" />
+    <Content Include="Areas\AdminCms\Views\SiteConfig\CreateInfo.cshtml" />
+    <Content Include="Areas\AdminCms\Views\SiteConfig\EditInfo.cshtml" />
+    <Content Include="Areas\AdminCms\Views\SiteConfig\UploadImage.cshtml" />
     <Content Include="Areas\Admin\Views\Languages\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Languages\CreateLanguage.cshtml" />
     <Content Include="Abp\Framework\styles\abp.mixings.less" />
@@ -585,6 +585,10 @@
     <Content Include="Areas\Admin\Views\Languages\EditLanguageText.cshtml" />
     <Content Include="Areas\Admin\Views\Languages\EditLanguage.cshtml" />
     <Content Include="Areas\Admin\Views\Languages\EditText.cshtml" />
+    <Content Include="Areas\Admin\Views\Languages\ReloadEditTextForm.cshtml" />
+    <Content Include="Areas\AdminCms\Views\web.config" />
+    <Content Include="Areas\AdminEcommerce\Views\web.config" />
+    <Content Include="Areas\AdminCms\Views\Pages\GetCategories.cshtml" />
     <None Include="Properties\PublishProfiles\pyme - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\pyme - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
@@ -716,17 +720,21 @@
     <Compile Include="App_Start\SimpleCmsWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Areas\AdminCms\AdminCmsAreaRegistration.cs" />
+    <Compile Include="Areas\AdminCms\Views\SimpleCmsAdminCmsWebViewPageBase.cs" />
+    <Compile Include="Areas\AdminController.cs" />
+    <Compile Include="Areas\AdminEcommerce\AdminEcommerceAreaRegistration.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdministrationController.cs" />
     <Compile Include="Areas\Admin\Controllers\ControlPanelController.cs" />
     <Compile Include="Areas\Admin\Controllers\LanguagesController.cs" />
     <Compile Include="Areas\Admin\Controllers\LayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrgUnitsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PagesController.cs" />
+    <Compile Include="Areas\AdminCms\Controllers\PagesController.cs" />
     <Compile Include="Areas\Admin\Controllers\RolesController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SiteConfigController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TagsController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ThemesController.cs" />
+    <Compile Include="Areas\AdminCms\Controllers\SiteConfigController.cs" />
+    <Compile Include="Areas\AdminCms\Controllers\TagsController.cs" />
+    <Compile Include="Areas\AdminCms\Controllers\ThemesController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Areas\Admin\Views\SimpleCmsAdminWebViewPageBase.cs" />
     <Compile Include="Controllers\AboutController.cs" />
@@ -790,6 +798,7 @@
     <None Include="Views\Layout\_mySiteSlogan.cshtml" />
     <Content Include="Views\Themes\Eshopper\Layout\_mySiteLogo.cshtml" />
     <Content Include="Views\Themes\Eshopper\Layout\_mySiteName.cshtml" />
+    <Content Include="Views\Shared\_adminTopBar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -832,6 +841,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\AdminCms\Models\" />
+    <Folder Include="Areas\AdminCms\Views\Shared\" />
+    <Folder Include="Areas\AdminEcommerce\Controllers\" />
+    <Folder Include="Areas\AdminEcommerce\Models\" />
+    <Folder Include="Areas\AdminEcommerce\Views\Shared\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Administration\" />
     <Folder Include="Content\fonts\" />
@@ -845,6 +859,7 @@
     <Folder Include="Scripts\smart-chat-ui\" />
     <Folder Include="Scripts\smartwidgets\" />
     <Folder Include="Scripts\speech\" />
+    <Folder Include="Views\AdminController\" />
     <Folder Include="Views\Themes\Eshopper\Content\" />
   </ItemGroup>
   <PropertyGroup>

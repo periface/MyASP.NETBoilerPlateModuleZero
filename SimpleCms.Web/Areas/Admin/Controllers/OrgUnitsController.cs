@@ -17,7 +17,7 @@ using SimpleCms.Web.Helpers;
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
     [AbpMvcAuthorize("Administration.OrgUnits")]
-    public class OrgUnitsController : SimpleCmsControllerBase
+    public class OrgUnitsController : AdminController
     {
         private readonly IOrganizationUnitService _organizationUnitService;
         private readonly IUserAppServiceZero _userAppService;

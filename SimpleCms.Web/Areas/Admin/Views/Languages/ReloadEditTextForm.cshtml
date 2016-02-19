@@ -1,0 +1,33 @@
+﻿@model SimpleCms.ModuleZero.LanguageTexts.Dto.ApplicationTextInput
+@{
+    Layout = null;
+}
+<div class="row">
+    <div class="form-group col-lg-4">
+        <label class="control-label">Base Language</label>
+        @Html.TextBoxFor(a => a.Info.BaseLanguage, new { disabled = "disabled", @class = "form-control col-lg-6" })
+    </div>
+    <div class="form-group col-lg-4">
+        <label class="control-label">Target Language</label>
+        @Html.TextBoxFor(a => a.Info.TargetLanguage, new { disabled = "disabled", @class = "form-control col-lg-6" })
+    </div>
+    <div class="form-group col-lg-4">
+        <label class="control-label">Source</label>
+        @Html.TextBoxFor(a => a.SourceName, new { disabled = "disabled", @class = "form-control col-lg-6" })
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-lg-4">
+        <label class="control-label">Key</label>
+        @Html.TextBoxFor(a => a.Key, new { disabled = "disabled", @class = "form-control col-lg-6" })
+    </div>
+
+    <div class="form-group col-lg-4">
+        <label class="control-label">Base Value</label>
+        @Html.TextBoxFor(a => a.Info.BaseValue, new { disabled = "disabled", @class = "form-control col-lg-6" })
+    </div>
+    <div class="form-group col-lg-4">
+        <label class="control-label">Value</label>
+        @Html.TextBoxFor(a => a.Value, new { @class = "form-control col-lg-6" })
+    </div>
+</div>

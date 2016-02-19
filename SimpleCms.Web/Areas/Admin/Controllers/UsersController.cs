@@ -13,7 +13,7 @@ using SimpleCms.Web.Controllers;
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
     [AbpMvcAuthorize("Administration.ManageUsers")]
-    public class UsersController : SimpleCmsControllerBase
+    public class UsersController : AdminController
     {
         private readonly IUserAppServiceZero _userAppServiceZero;
         private readonly IRoleAppServiceZero _roleAppServiceZero;

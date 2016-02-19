@@ -14,6 +14,7 @@ namespace SimpleCms.ModuleCms.Pages.Dto
 
     public class CategoriesDto : IDto
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public List<PrincipalPage> Pages { get; set; } 
     }

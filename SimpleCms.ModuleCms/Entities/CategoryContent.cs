@@ -8,10 +8,13 @@ using Abp.Domain.Entities.Auditing;
 
 namespace SimpleCms.ModuleCms.Entities
 {
-    public class PageCategory : FullAuditedEntity, IMustHaveTenant
+    
+    public class CategoryContent :FullAuditedEntity, IMustHaveTenant 
     {
+        public string Lang { get; set; }
+        public string CategoryName { get; set; }
+        public string FriendlyUrl { get; set; }
+        public virtual PageCategory Category { get; set; }
         public int TenantId { get; set; }
-        public virtual ICollection<Page> Pages { get; set; } 
-        public virtual ICollection<CategoryContent> Content { get; set; } 
     }
 }

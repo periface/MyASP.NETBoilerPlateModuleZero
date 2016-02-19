@@ -26,12 +26,6 @@ namespace SimpleCms.Web.Controllers
             var output = _tenantAppService.GetTenants();
             return View(output);
         }
-
-        public async Task<JsonResult> InitLanguages(string tenantName)
-        {
-            await _languageService.InitLanguages(TenantId(tenantName));
-            return Json(new { ok = true });
-        }
         private int? TenantId(string activeTenantName)
         {
             return AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(activeTenantName));

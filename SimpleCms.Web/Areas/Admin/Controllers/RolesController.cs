@@ -15,7 +15,7 @@ using SimpleCms.Web.Controllers;
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
     [AbpMvcAuthorize("Administration.ManageRoles")]
-    public class RolesController : SimpleCmsControllerBase
+    public class RolesController : AdminController
     {
         private readonly IRoleAppServiceZero _roleAppServiceZero;
 

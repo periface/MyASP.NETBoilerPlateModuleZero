@@ -7,12 +7,9 @@ namespace SimpleCms.Web.ViewEngines
 {
     public class SystemThemeViewEngine : RazorViewEngine
     {
-        public SystemThemeViewEngine(string parsedTenancyName)
+        public SystemThemeViewEngine(string activeThemeName)
         {
-            var container = IocManager.Instance;
-            var instance = container.Resolve<IThemeService>().GetCurrentActiveThemeFromTenant(parsedTenancyName);
-            if (instance == null) return;
-            var activeThemeName = instance.UniqueFolderId;
+            
             ViewLocationFormats = new[]
             {
                 "~/Views/Themes/" + activeThemeName + "/{1}/{0}.cshtml",

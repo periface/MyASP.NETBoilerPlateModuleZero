@@ -18,10 +18,6 @@ namespace SimpleCms.ModuleCms.Policies
 
         public void AttemptAddContentToPageAsync(Page page)
         {
-            if (page.Content.Contains("<script>"))
-            {
-                throw new UserFriendlyException("Posible malicious code detected!.");
-            }
         }
     }
 }

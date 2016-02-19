@@ -10,7 +10,7 @@ using SimpleCms.Web.Controllers;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
-    public class ControlPanelController : SimpleCmsControllerBase
+    public class ControlPanelController : AdminController
     {
         private readonly IAuditLogService _auditLogService;
 

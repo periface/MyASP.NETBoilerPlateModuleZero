@@ -17,13 +17,7 @@
                     
                 </li>
             </ul>
-            @*<input id="1" type="checkbox" />
-            <input type="hidden" id="2" name="checkboxValue"/>
-            <script>
-                $("#1").on("change", function() {
-                    $("#2").val($(this).is(":checked"));
-                });
-            </script>*@
+            
             <div id="myTabContent1" class="tab-content padding-10">
                 <div class="tab-pane fade active in" id="s1">
                     <div class="row">
@@ -64,6 +58,7 @@
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">@L("Close")</button>
     <button type="submit" class="btn btn-primary btnEdit">@L("Save")</button>
+    @*<button type="submit" class="btn btn-primary btnEditNext">@L("Save_Next")</button>*@
 </div>
 <script>
     $(document).ready(function () {
@@ -74,14 +69,30 @@
                 url: urls.Languages + "EditTextValue",
                 data: JSON.stringify(data)
             }).done(function (d) {
-
                 modal.close();
-                rebindTable(data.Info.BaseLanguage, data.Info.TargetLanguage, data.SourceName);
-
+                onlyReloadTable();
             }));
         }
-        function loadNext(data) {
-            $("#s1").load();
+        function editDataGetNext(data) {
+
+            console.log(data);
+            abp.ui.setBusy($("#s1"), abp.ajax({
+                url: urls.Languages + "EditTextValueGetNext",
+                data: JSON.stringify(data)
+            }).done(function (d) {
+                console.log(d);
+                var newData = {
+                    SourceName: d.sourceName,
+                    Key: d.key,
+                    BaseLanguage: d.info.baseLanguage,
+                    TargetLanguage: d.targetCulture
+                }
+                $("#s1").text("");
+
+                $("#s1").load(urls.Languages + "ReloadEditTextForm", newData);
+
+                onlyReloadTable();
+            }));
         }
         $(".btnEdit").click(function() {
             var data = {
@@ -96,6 +107,20 @@
                 }
             };
             editData(data);
+        });
+        $(".btnEditNext").click(function () {
+            var data = {
+                SourceName: $("#SourceName").val(),
+                Key: $("#Key").val(),
+                Value: $("#Value").val(),
+                TargetCulture: $("#TargetCulture").val(),
+                Info: {
+                    BaseLanguage: $("#Info_BaseLanguage").val(),
+                    BaseValue: $("#Info_BaseValue").val(),
+                    TargetLanguage: $("#Info_TargetLanguage").val()
+                }
+            };
+            editDataGetNext(data);
         });
         
     });

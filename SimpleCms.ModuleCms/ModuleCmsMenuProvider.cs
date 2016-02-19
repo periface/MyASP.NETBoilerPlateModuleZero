@@ -41,18 +41,18 @@ namespace SimpleCms.ModuleCms
                     new MenuItemDefinition(
                         name: "SiteConfig",
                         icon: "fa fa-desktop",
-                        url: "/Admin/SiteConfig",
+                        url: "/AdminCms/SiteConfig",
                         displayName: new LocalizableString("Cms_Config_General", ModuleCmsConstants.Source)
                         )).AddItem(
                     new MenuItemDefinition(
                         name: "Themes",
-                        url: "/Admin/Themes",
+                        url: "/AdminCms/Themes",
                         icon: "fa fa-paint-brush",
                         displayName: new LocalizableString("Cms_Config_Theme", ModuleCmsConstants.Source)
                         )).AddItem(
                     new MenuItemDefinition(
                         name: "Pages",
-                        url: "/Admin/Pages",
+                        url: "/AdminCms/Pages",
                         icon: "fa fa-file-text-o",
                         displayName: new LocalizableString("Cms_Pages", ModuleCmsConstants.Source)
                         )).AddItem(new MenuItemDefinition(

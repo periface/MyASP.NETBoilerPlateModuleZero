@@ -10,7 +10,7 @@ using SimpleCms.Web.Controllers;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
-    public class LanguagesController : SimpleCmsControllerBase
+    public class LanguagesController : AdminController
     {
         private readonly ILanguageService _languageService;
         private readonly ITenancyService _tenancyService;
@@ -95,14 +95,23 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonResult> EditTextValue(ApplicationTextInput input)
         {
-            //Todo: its getin the wrong target language
             input.TenantId = TenantId;
             await _languageService.EditText(input);
             return Json(input,JsonRequestBehavior.AllowGet);
         }
-        public JsonResult GetNext(int id)
+
+        [HttpPost]
+        public async Task<JsonResult> EditTextValueGetNext(ApplicationTextInput input)
         {
-            return new JsonResult();
+            input.TenantId = TenantId;
+            var next = await _languageService.EditTextGetNext(input);
+            return next == null ? Json(new {ok = true}) : Json(next);
+        }
+
+        public ViewResult ReloadEditTextForm(GetLanguageForEditInput input)
+        {
+            var text = _languageService.GetNextLanguageTextForEdit(input);
+            return View(text);
         }
     }
 }

@@ -16,8 +16,8 @@ namespace SimpleCms.ModuleZero.LanguageTexts
         Task<NewLanguageInputDto> GetLanguageForEdit(int id);
         Task EditLanguage(NewLanguageInputDto input);
         Task EditText(ApplicationTextInput input);
+        Task<ApplicationTextInput> EditTextGetNext(ApplicationTextInput input);
         ApplicationTextInput GetLanguageTextForEdit(GetLanguageForEditInput input);
-        Task InitLanguages(int? createdTenantId);
-        Task InitLanguages(int? tenantId, string langName);
+        ApplicationTextInput GetNextLanguageTextForEdit(GetLanguageForEditInput input);
     }
 }

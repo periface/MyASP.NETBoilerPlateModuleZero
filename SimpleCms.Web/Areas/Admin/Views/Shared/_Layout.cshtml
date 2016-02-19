@@ -13,7 +13,7 @@
 
         <title>SimpleCms</title>*@
 
-    @{Html.RenderAction("SiteInformationHeader", "Layout");}
+    @{Html.RenderAction("SiteInformationHeader", "Layout",new { Area="Admin"});}
 
     @*@Styles.Render("~/Bundles/vendor/css")
         @Styles.Render("~/Bundles/css")*@
@@ -63,7 +63,7 @@
 </head>
 <body @*class="smart-style-4"*@>
 
-    @Html.Partial("_adminTopBar")
+    @Html.Partial("_adminTopBar", new { Area = "Admin" })
 
     <div id="main" role="main">
         @RenderBody()

@@ -9,10 +9,10 @@ using SimpleCms.ModuleCms.SiteConfiguration;
 using SimpleCms.ModuleCms.SiteConfiguration.Dto;
 using SimpleCms.Web.Controllers;
 
-namespace SimpleCms.Web.Areas.Admin.Controllers
+namespace SimpleCms.Web.Areas.AdminCms.Controllers
 {
     [AbpMvcAuthorize()]
-    public class SiteConfigController : SimpleCmsControllerBase
+    public class SiteConfigController : AdminController
     {
         private readonly ISiteService _siteService;
 

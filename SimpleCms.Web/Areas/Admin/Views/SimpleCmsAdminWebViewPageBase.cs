@@ -18,6 +18,7 @@ namespace SimpleCms.Web.Areas.Admin.Views
         {
             /*LocalizationSourceName = VimeApp.SimpleCmsVimeAppConstants.LocalizationSourceName*/;
             LocalizationSourceName = ModuleZero.Constants.ModuleZeroConstants.Source;
+            
         }
     }
 }

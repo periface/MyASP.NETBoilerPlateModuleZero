@@ -124,10 +124,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\ModuleCmsConstants.cs" />
+    <Compile Include="Entities\CategoryContent.cs" />
     <Compile Include="Entities\ConfigThemeRelation.cs" />
     <Compile Include="Entities\Menu.cs" />
     <Compile Include="Entities\Page.cs" />
     <Compile Include="Entities\PageCategory.cs" />
+    <Compile Include="Entities\PageContent.cs" />
     <Compile Include="Entities\SiteAdress.cs" />
     <Compile Include="Entities\SiteConfig.cs" />
     <Compile Include="Entities\SiteInfo.cs" />
@@ -144,6 +146,9 @@
     <Compile Include="Managers\ThemeManager.cs" />
     <Compile Include="ModuleCmsActivator.cs" />
     <Compile Include="ModuleCmsMenuProvider.cs" />
+    <Compile Include="Pages\Dto\CategoryOutput.cs" />
+    <Compile Include="Pages\Dto\InitialCategoryInput.cs" />
+    <Compile Include="Pages\Dto\InitialPageInput.cs" />
     <Compile Include="Pages\Dto\PagesWithCategoriesOutput.cs" />
     <Compile Include="Pages\IPageService.cs" />
     <Compile Include="Pages\PageService.cs" />

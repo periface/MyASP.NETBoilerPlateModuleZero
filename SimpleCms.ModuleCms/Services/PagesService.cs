@@ -23,10 +23,7 @@ namespace SimpleCms.ModuleCms.Services
         {
             var page = new Page()
             {
-                ShortDescription = input.ShortDescription,
                 Tags = GetTagsFromInput(input.Tags),
-                Title = input.Title,
-                FriendlyUrl = "",
                 IsActive = false
             };
             var idPage = await _pagesManager.CreatePageAsync(page);
@@ -36,7 +33,6 @@ namespace SimpleCms.ModuleCms.Services
         public async Task AddContentToPageAsync(string content, int idPage)
         {
             var page = await _pagesManager.GetPage(idPage);
-            page.CreateContent(content);
             await _pagesManager.UpdatePageAsync(page);
 
         }
@@ -44,10 +40,7 @@ namespace SimpleCms.ModuleCms.Services
         public async Task EditPage(PageInput input)
         {
             var page = await _pagesManager.GetPage(input.Id);
-            page.Title = page.Title;
-            page.ShortDescription = page.ShortDescription;
             page.Tags = GetTagsFromInput(input.Tags);
-            page.FriendlyUrl = "";
             await _pagesManager.UpdatePageAsync(page);
         }
 
@@ -79,8 +72,6 @@ namespace SimpleCms.ModuleCms.Services
             return new PageInput()
             {
                 Id = page.Id,
-                ShortDescription = page.ShortDescription,
-                Title = page.Title,
 
             };
         }
@@ -91,7 +82,6 @@ namespace SimpleCms.ModuleCms.Services
             return new PageContentInput()
             {
                 IdPage = page.Id,
-                Content = page.Content
             };
         }
 

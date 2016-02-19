@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web.Mvc;
+using Abp.Dependency;
 using Abp.Extensions;
 using Abp.IdentityFramework;
 using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
+using SimpleCms.ModuleCms.Themes;
 using SimpleCms.Web.ViewEngines;
 
 namespace SimpleCms.Web.Controllers
@@ -16,6 +17,7 @@ namespace SimpleCms.Web.Controllers
     /// </summary>
     public abstract class SimpleCmsControllerBase : AbpController
     {
+        private const string KeySession = "Theme";
         /// <summary>
         /// Gets the active tenancy, usefull for anon users
         /// </summary>
@@ -43,18 +45,36 @@ namespace SimpleCms.Web.Controllers
         {
             InsertViewEngine();
         }
-
-        private  void InsertViewEngine()
+        /// <summary>
+        /// Theme resolver
+        /// </summary>
+        private void InsertViewEngine()
         {
+            string activeThemeName;
+            if (Session[KeySession] == null)
+            {
+                var container = IocManager.Instance;
+                var instance = container.Resolve<IThemeService>().GetCurrentActiveThemeFromTenant(GetTenancyNameByUrl());
+                if (instance == null)
+                {
+                    Session[KeySession] = "";
+                    return;
+                }
+                activeThemeName = instance.UniqueFolderId;
+                Session[KeySession] = activeThemeName;
+            }
+            else
+            {
+                activeThemeName = (string)Session[KeySession];
+            }
             try
             {
-
-                System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(GetTenancyNameByUrl()));
+                System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(activeThemeName));
             }
             catch (Exception)
             {
                 System.Web.Mvc.ViewEngines.Engines.Clear();
-                System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(GetTenancyNameByUrl()));
+                System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(activeThemeName));
             }
         }
         private string GetTenancyNameByUrl()
