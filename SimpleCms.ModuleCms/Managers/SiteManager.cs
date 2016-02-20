@@ -4,13 +4,15 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
+using Abp.Domain.Services;
+using Abp.Domain.Uow;
 using Abp.UI;
 using SimpleCms.ModuleCms.Entities;
 using SimpleCms.ModuleCms.Policies;
 
 namespace SimpleCms.ModuleCms.Managers
 {
-    public class SiteManager : ISiteManager
+    public class SiteManager : DomainService, ISiteManager
     {
         private readonly IRepository<SiteConfig> _siteConfigRepository;
         private readonly IRepository<SiteInfo> _siteinfoRepository;
@@ -80,7 +82,7 @@ namespace SimpleCms.ModuleCms.Managers
         public void AsignThemesToCurrentConfig(List<int> themeIds)
         {
             //La gallina debe revisar ambos lados de la calle!!
-            var config = this.GetCurrentTenantConfig();
+            var config = GetCurrentTenantConfig();
             //
             foreach (var themeId in
                 from themeId

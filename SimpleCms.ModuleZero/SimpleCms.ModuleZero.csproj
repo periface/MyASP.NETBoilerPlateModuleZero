@@ -31,16 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=0.8.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.0.8.0.1\lib\net461\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.0.8.1.0\lib\net461\Abp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=0.8.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.AutoMapper.0.8.0.1\lib\net461\Abp.AutoMapper.dll</HintPath>
+    <Reference Include="Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.AutoMapper.0.8.1.0\lib\net461\Abp.AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Zero, Version=0.8.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Zero.0.8.0.1\lib\net461\Abp.Zero.dll</HintPath>
+    <Reference Include="Abp.Zero, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Zero.0.8.1.0\lib\net461\Abp.Zero.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
@@ -110,10 +110,6 @@
     <Compile Include="LanguageTexts\Dto\NewLanguageInputDto.cs" />
     <Compile Include="LanguageTexts\ILanguageService.cs" />
     <Compile Include="LanguageTexts\LanguageService.cs" />
-    <Compile Include="Managers\IOrganizationManager.cs" />
-    <Compile Include="Managers\IZeroLanguageManager.cs" />
-    <Compile Include="Managers\ZeroLanguageManager.cs" />
-    <Compile Include="Managers\OrganizationManager.cs" />
     <Compile Include="ModuleZeroActivator.cs" />
     <Compile Include="ModuleZeroMenuProvider.cs" />
     <Compile Include="ModuleZeroPermissionsProvider.cs" />
@@ -159,6 +155,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SimpleCms.Application\SimpleCms.Application.csproj">
+      <Project>{EDF5D964-4C0F-4F19-B674-58A38A5E5401}</Project>
+      <Name>SimpleCms.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleCms.Core\SimpleCms.Core.csproj">
       <Project>{17298EA0-AF73-4F30-B6F1-2066100D7D74}</Project>
       <Name>SimpleCms.Core</Name>

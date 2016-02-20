@@ -10,18 +10,16 @@ using SimpleCms.MultiTenancy;
 
 namespace SimpleCms.ModuleCms.Themes
 {
-    public class ThemeService : IThemeService
+    public class ThemeService : SimpleCmsAppServiceBase, IThemeService
     {
         private readonly IThemeManager _themeManager;
         private readonly ISiteManager _siteManager;
-        private readonly IRepository<SiteConfig> _siteConfigRepository;
         private readonly IRepository<ConfigThemeRelation> _configThemeRelationRepository;
         private readonly TenantManager _tenantManager;
-        public ThemeService(IThemeManager themeManager, ISiteManager siteManager, IRepository<SiteConfig> siteConfigRepository, IRepository<ConfigThemeRelation> configThemeRelationRepository, TenantManager tenantManager)
+        public ThemeService(IThemeManager themeManager, ISiteManager siteManager, IRepository<ConfigThemeRelation> configThemeRelationRepository, TenantManager tenantManager)
         {
             _themeManager = themeManager;
             _siteManager = siteManager;
-            _siteConfigRepository = siteConfigRepository;
             _configThemeRelationRepository = configThemeRelationRepository;
             _tenantManager = tenantManager;
         }

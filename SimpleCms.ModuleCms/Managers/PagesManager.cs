@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
 using Abp.Domain.Services;
+using Abp.Domain.Uow;
 using Abp.Localization;
 using Abp.UI;
 using SimpleCms.ModuleCms.Entities;
@@ -26,7 +27,6 @@ namespace SimpleCms.ModuleCms.Managers
             _pageContentRepository = pageContentRepository;
             _categoryRepository = categoryRepository;
         }
-
         public async Task<int> CreatePageAsync(Page input)
         {
             _pagesCreationPolicy.AttemptPageCreationAsync(input);
@@ -40,7 +40,6 @@ namespace SimpleCms.ModuleCms.Managers
             if(page==null) throw new UserFriendlyException("Page not found");
             return page;
         }
-
         public async Task UpdatePageAsync(Page page)
         {
 
@@ -66,7 +65,6 @@ namespace SimpleCms.ModuleCms.Managers
         {
             await _pageRepository.DeleteAsync(page);
         }
-
         public async Task UpdatePageContentAsync(PageContent content, int pageId, string language)
         {
             var page = _pageRepository.Get(pageId);

@@ -1,4 +1,4 @@
-WARN  2016-02-18 16:53:53,893 [63   ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
+WARN  2016-02-20 14:03:19,451 [67   ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
@@ -45,7 +45,6 @@ WARN  2016-02-18 16:53:53,893 [63   ] Abp.BackgroundJobs.BackgroundJobManager  -
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
    en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -53,10 +52,8 @@ WARN  2016-02-18 16:53:53,893 [63   ] Abp.BackgroundJobs.BackgroundJobManager  -
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   en Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
    en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
    en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
 System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
@@ -106,7 +103,6 @@ System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
    en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -114,13 +110,11 @@ System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   en Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
    en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
    en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
-WARN  2016-02-18 16:53:58,924 [60   ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
+WARN  2016-02-20 14:03:24,481 [84   ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
@@ -167,7 +161,6 @@ WARN  2016-02-18 16:53:58,924 [60   ] Abp.BackgroundJobs.BackgroundJobManager  -
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
    en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -175,10 +168,8 @@ WARN  2016-02-18 16:53:58,924 [60   ] Abp.BackgroundJobs.BackgroundJobManager  -
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   en Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
    en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
    en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
 System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
@@ -228,7 +219,6 @@ System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
    en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -236,13 +226,11 @@ System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   en Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
    en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
    en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
-WARN  2016-02-18 16:54:12,739 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
+WARN  2016-02-20 14:03:29,490 [71   ] Abp.BackgroundJobs.BackgroundJobManager  - System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
@@ -289,7 +277,6 @@ WARN  2016-02-18 16:54:12,739 [7    ] Abp.BackgroundJobs.BackgroundJobManager  -
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
    en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -297,10 +284,8 @@ WARN  2016-02-18 16:54:12,739 [7    ] Abp.BackgroundJobs.BackgroundJobManager  -
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   en Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
    en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
    en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
 System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid object name 'dbo.AbpBackgroundJobs'.
@@ -350,7 +335,6 @@ System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
    en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -358,9 +342,825 @@ System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while
 --- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
    en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
-   en Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
    en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
    en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+DEBUG 2016-02-20 14:03:29,740 [78   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-02-20 14:03:29,740 [78   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-02-20 14:17:33,972 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-20 14:17:43,447 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-02-20 14:17:43,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:17:43,464 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-02-20 14:17:43,515 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:43,516 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:43,516 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:43,516 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:43,516 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:43,516 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:43,516 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:17:54,802 [1    ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-20 14:17:54,819 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-20 14:17:54,820 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-20 14:17:54,821 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-20 14:17:54,824 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-20 14:17:54,828 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-20 14:17:54,830 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-20 14:17:54,831 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-20 14:17:54,973 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2016-02-20 14:18:02,762 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - System.InvalidOperationException: The model backing the 'SimpleCmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Database.Initialize(Boolean force)
+   en Abp.EntityFramework.AbpDbContext.Initialize()
+   en Castle.MicroKernel.LifecycleConcerns.InitializationConcern.Apply(ComponentModel model, Object component)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyConcerns(IEnumerable`1 steps, Object instance)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyCommissionConcerns(Object instance)
+   en Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   en Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.<>c__DisplayClass6.<InvokeResolvePipeline>b__5()
+   en Castle.MicroKernel.Handlers.ResolveInvocation.Proceed()
+   en Castle.MicroKernel.Handlers.ComponentLifecycleExtension.Intercept(ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   en Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   en Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   en Castle.Windsor.WindsorContainer.Resolve[T]()
+   en Abp.Dependency.IocManager.Resolve[T]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.Resolve[TDbContext]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext]()
+   en Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork)
+   en Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.get_DbContext()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
+   en Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
+   en Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
+   en Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__9_0()
+   en System.Threading.Tasks.Task`1.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+System.InvalidOperationException: The model backing the 'SimpleCmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Database.Initialize(Boolean force)
+   en Abp.EntityFramework.AbpDbContext.Initialize()
+   en Castle.MicroKernel.LifecycleConcerns.InitializationConcern.Apply(ComponentModel model, Object component)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyConcerns(IEnumerable`1 steps, Object instance)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyCommissionConcerns(Object instance)
+   en Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   en Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.<>c__DisplayClass6.<InvokeResolvePipeline>b__5()
+   en Castle.MicroKernel.Handlers.ResolveInvocation.Proceed()
+   en Castle.MicroKernel.Handlers.ComponentLifecycleExtension.Intercept(ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   en Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   en Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   en Castle.Windsor.WindsorContainer.Resolve[T]()
+   en Abp.Dependency.IocManager.Resolve[T]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.Resolve[TDbContext]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext]()
+   en Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork)
+   en Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.get_DbContext()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
+   en Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
+   en Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
+   en Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__9_0()
+   en System.Threading.Tasks.Task`1.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+DEBUG 2016-02-20 14:18:04,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-20 14:18:04,430 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-20 14:18:04,845 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-20 14:18:04,863 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-20 14:18:04,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-20 14:18:04,910 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-20 14:18:04,921 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-20 14:18:05,019 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-20 14:18:05,021 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-20 14:18:05,024 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-20 14:18:05,031 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-20 14:18:08,456 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - System.InvalidOperationException: The model backing the 'SimpleCmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Database.Initialize(Boolean force)
+   en Abp.EntityFramework.AbpDbContext.Initialize()
+   en Castle.MicroKernel.LifecycleConcerns.InitializationConcern.Apply(ComponentModel model, Object component)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyConcerns(IEnumerable`1 steps, Object instance)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyCommissionConcerns(Object instance)
+   en Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   en Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.<>c__DisplayClass6.<InvokeResolvePipeline>b__5()
+   en Castle.MicroKernel.Handlers.ResolveInvocation.Proceed()
+   en Castle.MicroKernel.Handlers.ComponentLifecycleExtension.Intercept(ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   en Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   en Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   en Castle.Windsor.WindsorContainer.Resolve[T]()
+   en Abp.Dependency.IocManager.Resolve[T]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.Resolve[TDbContext]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext]()
+   en Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork)
+   en Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.get_DbContext()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
+   en Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
+   en Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
+   en Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__9_0()
+   en System.Threading.Tasks.Task`1.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+System.InvalidOperationException: The model backing the 'SimpleCmsDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Database.Initialize(Boolean force)
+   en Abp.EntityFramework.AbpDbContext.Initialize()
+   en Castle.MicroKernel.LifecycleConcerns.InitializationConcern.Apply(ComponentModel model, Object component)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyConcerns(IEnumerable`1 steps, Object instance)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.ApplyCommissionConcerns(Object instance)
+   en Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   en Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   en Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   en Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.<>c__DisplayClass6.<InvokeResolvePipeline>b__5()
+   en Castle.MicroKernel.Handlers.ResolveInvocation.Proceed()
+   en Castle.MicroKernel.Handlers.ComponentLifecycleExtension.Intercept(ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.InvokeResolvePipeline(Int32 extensionIndex, ResolveInvocation invocation)
+   en Castle.MicroKernel.Handlers.ExtendedHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   en Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   en Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   en Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   en Castle.Windsor.WindsorContainer.Resolve[T]()
+   en Abp.Dependency.IocManager.Resolve[T]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.Resolve[TDbContext]()
+   en Abp.EntityFramework.Uow.EfUnitOfWork.GetOrCreateDbContext[TDbContext]()
+   en Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork)
+   en Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.get_DbContext()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Context_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Context()
+   en Abp.EntityFramework.Repositories.EfRepositoryBase`3.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_get_Table_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.get_Table()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll_callback()
+   en Castle.Proxies.Invocations.EfRepositoryBase`3_GetAll_2.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.EfRepositoryBase`3Proxy_1.GetAll()
+   en Abp.BackgroundJobs.BackgroundJobStore.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync_callback(Int32 maxResultCount)
+   en Castle.Proxies.Invocations.BackgroundJobStore_GetWaitingJobsAsync.InvokeMethodOnTarget()
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   en Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   en Castle.DynamicProxy.AbstractInvocation.Proceed()
+   en Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobsAsync(Int32 maxResultCount)
+   en Abp.BackgroundJobs.BackgroundJobManager.<DoWork>b__9_0()
+   en System.Threading.Tasks.Task`1.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   en Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   en Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   en Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+DEBUG 2016-02-20 14:25:25,967 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-20 14:25:32,930 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-02-20 14:25:32,933 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,935 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,935 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,935 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,935 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,935 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,936 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:25:32,942 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-02-20 14:25:32,967 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:32,968 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:32,968 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:32,968 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:32,968 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:32,968 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:32,968 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:25:40,325 [1    ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-20 14:25:40,331 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-20 14:25:40,332 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-20 14:25:40,332 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-20 14:25:40,333 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-20 14:25:40,334 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-20 14:25:40,334 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-20 14:25:40,334 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-20 14:25:40,431 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-02-20 14:25:46,999 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-20 14:25:46,999 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-20 14:25:47,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-20 14:25:47,240 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-20 14:25:47,241 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-20 14:25:47,261 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-20 14:25:47,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-20 14:25:47,303 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-20 14:25:47,304 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-20 14:25:47,305 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-20 14:25:47,306 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-20 14:25:59,462 [7    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+ERROR 2016-02-20 14:26:07,568 [7    ] Admin.Controllers.ControlPanelController - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+System.Web.HttpException (0x80004005): Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'. ---> System.InvalidOperationException: UserId not found.
+   at Microsoft.AspNet.Identity.UserManager`2.<GetRolesAsync>d__ac.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.Users.AbpUserManager`3.<>c__DisplayClass73_0.<<GetUserPermissionCacheItemAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Runtime.Caching.CacheExtensions.<>c__DisplayClass5_0`2.<<GetAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Runtime.Caching.CacheBase.<GetAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Runtime.Caching.CacheExtensions.<GetAsync>d__5`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.Users.AbpUserManager`3.<GetUserPermissionCacheItemAsync>d__73.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.Users.AbpUserManager`3.<IsGrantedAsync>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.Users.AbpUserManager`3.<IsGrantedAsync>d__38.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.PermissionChecker`3.<IsGrantedAsync>d__11.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Application.Navigation.UserNavigationManager.<FillUserMenuItems>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Application.Navigation.UserNavigationManager.<FillUserMenuItems>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Application.Navigation.UserNavigationManager.<GetMenuAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass7`1.<Run>b__5(Task`1 t)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException[TResult](Task`1 task)
+   at Nito.AsyncEx.AsyncContext.Run[TResult](Func`1 action)
+   at Abp.Threading.AsyncHelper.RunSync[TResult](Func`1 func)
+   at SimpleCms.Web.Areas.Admin.Controllers.LayoutController.AdminTopMenu(String activeMenu) in C:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Areas\Admin\Controllers\LayoutController.cs:line 42
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.<>c__DisplayClassa.<EndProcessRequest>b__9()
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   at System.Web.HttpServerUtilityWrapper.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   at System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)
+   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)
+   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, Object routeValues)
+   at ASP._Page_Areas_Admin_Views_Shared__adminTopBar_cshtml.Execute() in c:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Areas\Admin\Views\Shared\_adminTopBar.cshtml:line 202
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP._Page_Areas_Admin_Views_Shared__Layout_cshtml.Execute() in c:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Areas\Admin\Views\Shared\_Layout.cshtml:line 66
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   at System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   at System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   at System.Web.WebPages.WebPageBase.PopContext()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2016-02-20 14:26:31,389 [6    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-20 14:26:32,081 [11   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-20 14:26:38,715 [12   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-20 14:26:39,277 [6    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-20 14:26:41,707 [5    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-20 14:31:01,934 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-20 14:31:12,579 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-02-20 14:31:12,583 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:31:12,597 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-02-20 14:31:12,629 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:12,629 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:12,629 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:12,629 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:12,629 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:12,629 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:12,630 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:31:21,399 [1    ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-20 14:31:21,419 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-20 14:31:21,420 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-20 14:31:21,421 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-20 14:31:21,422 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-20 14:31:21,422 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-20 14:31:21,423 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-20 14:31:21,424 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-20 14:31:21,574 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-02-20 14:31:28,401 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-20 14:31:28,401 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-20 14:31:28,637 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-20 14:31:28,675 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-20 14:31:28,676 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-20 14:31:28,694 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-20 14:31:28,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-20 14:31:28,731 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-20 14:31:28,732 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-20 14:31:28,733 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-20 14:31:28,734 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+ERROR 2016-02-20 14:31:41,522 [6    ] pleCms.Web.Controllers.AccountController - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+System.Web.HttpException (0x80004005): Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'. ---> System.InvalidOperationException: The partial view '_TopMenu' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Themes//Layout/_TopMenu.cshtml
+~/Views/Themes//Shared/_TopMenu.cshtml
+~/Views/Layout/_TopMenu.aspx
+~/Views/Layout/_TopMenu.ascx
+~/Views/Shared/_TopMenu.aspx
+~/Views/Shared/_TopMenu.ascx
+   at System.Web.Mvc.PartialViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.<>c__DisplayClassa.<EndProcessRequest>b__9()
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   at System.Web.HttpServerUtilityWrapper.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   at System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)
+   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)
+   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, Object routeValues)
+   at ASP._Page_Views_Shared__TopBar_cshtml.Execute() in c:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Views\Shared\_TopBar.cshtml:line 14
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName)
+   at ASP._Page_Views_Shared__Layout_cshtml.Execute() in c:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Views\Shared\_Layout.cshtml:line 29
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   at System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   at System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   at System.Web.WebPages.WebPageBase.PopContext()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2016-02-20 14:31:41,540 [9    ] SimpleCms.Web.Controllers.HomeController - Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'.
+System.Web.HttpException (0x80004005): Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'. ---> System.InvalidOperationException: The partial view '_TopMenu' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Themes//Layout/_TopMenu.cshtml
+~/Views/Themes//Shared/_TopMenu.cshtml
+~/Views/Layout/_TopMenu.aspx
+~/Views/Layout/_TopMenu.ascx
+~/Views/Shared/_TopMenu.aspx
+~/Views/Shared/_TopMenu.ascx
+   at System.Web.Mvc.PartialViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.<>c__DisplayClassa.<EndProcessRequest>b__9()
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)
+   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   at System.Web.HttpServerUtilityWrapper.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   at System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)
+   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)
+   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, Object routeValues)
+   at ASP._Page_Views_Shared__TopBar_cshtml.Execute() in c:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Views\Shared\_TopBar.cshtml:line 14
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName)
+   at ASP._Page_Views_Shared__Layout_cshtml.Execute() in c:\Users\USUARIO\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Views\Shared\_Layout.cshtml:line 29
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   at System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   at System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   at System.Web.WebPages.WebPageBase.PopContext()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2016-02-20 14:32:26,979 [12   ] SimpleCms.Web.Controllers.HomeController - The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Themes//Home/Index.cshtml
+~/Views/Themes//Shared/Index.cshtml
+~/Views/Home/Index.aspx
+~/Views/Home/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+System.InvalidOperationException: The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Themes//Home/Index.cshtml
+~/Views/Themes//Shared/Index.cshtml
+~/Views/Home/Index.aspx
+~/Views/Home/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2016-02-20 14:35:28,726 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-20 14:35:31,399 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2016-02-20 14:35:31,402 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-20 14:35:31,410 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:31,433 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-20 14:35:34,467 [1    ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-20 14:35:34,472 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-20 14:35:34,473 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-20 14:35:34,474 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-20 14:35:34,474 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-20 14:35:34,475 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-20 14:35:34,475 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-20 14:35:34,475 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-20 14:35:34,527 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2016-02-20 14:35:36,859 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-20 14:35:36,859 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-20 14:35:37,104 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-20 14:35:37,111 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-20 14:35:37,112 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-20 14:35:37,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-20 14:35:37,136 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-20 14:35:37,153 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-20 14:35:37,154 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-20 14:35:37,155 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-20 14:35:37,156 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-20 14:35:45,001 [9    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!

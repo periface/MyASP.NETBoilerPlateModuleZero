@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.Application.Services;
 using Abp.UI;
 using SimpleCms.ModuleZero.Tenancy.Dto;
 using SimpleCms.MultiTenancy;
 
 namespace SimpleCms.ModuleZero.Tenancy
 {
-    public class TenancyService : ITenancyService
+    public class TenancyService : SimpleCmsAppServiceBase, ITenancyService
     {
         private readonly TenantManager _tenantManager;
 

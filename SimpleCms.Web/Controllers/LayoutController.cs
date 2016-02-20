@@ -60,8 +60,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult GetSiteInformation()
         {
-            var tenantId = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName));
-            var info = _siteService.GetCurrentInfo(tenantId);
+            var info = _siteService.GetCurrentInfo(TenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -76,8 +75,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult RenderMySiteName()
         {
-            var tenant = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName)); 
-            var info = _siteService.GetCurrentInfo(tenant);
+            var info = _siteService.GetCurrentInfo(TenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -88,8 +86,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult RenderMySiteLogo()
         {
-            var tenant = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName));
-            var info = _siteService.GetCurrentInfo(tenant);
+            var info = _siteService.GetCurrentInfo(TenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -103,8 +100,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult RenderMySiteSlogan()
         {
-            var tenant = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName));
-            var info = _siteService.GetCurrentInfo(tenant);
+            var info = _siteService.GetCurrentInfo(TenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -137,6 +133,11 @@ namespace SimpleCms.Web.Controllers
             }
 
             return PartialView("_UserMenuOrLoginLink", model);
+        }
+
+        private int? TenantId
+        {
+            get { return AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName)); }
         }
     }
 }

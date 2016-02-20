@@ -11,7 +11,7 @@ using SimpleCms.ModuleCms.Pages.Dto;
 
 namespace SimpleCms.ModuleCms.Pages
 {
-    public class PageService : IPageService 
+    public class PageService : SimpleCmsAppServiceBase, IPageService 
     {
         private readonly IPagesManager _pagesManager;
 

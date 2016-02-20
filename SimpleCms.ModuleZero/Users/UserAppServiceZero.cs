@@ -13,23 +13,23 @@ using Abp.UI;
 using Microsoft.AspNet.Identity;
 using SimpleCms.Authorization.Roles;
 using SimpleCms.ModuleZero.GenericOutPuts;
-using SimpleCms.ModuleZero.Managers;
+using SimpleCms.ModuleZero.OrgUnits;
 using SimpleCms.ModuleZero.Policies;
 using SimpleCms.ModuleZero.Users.Dto;
 using SimpleCms.Users;
 
 namespace SimpleCms.ModuleZero.Users
 {
-    public class UserAppServiceZero : ApplicationService, IUserAppServiceZero
+    public class UserAppServiceZero : SimpleCmsAppServiceBase, IUserAppServiceZero
     {
         private readonly IUserToUnitPolicies _userToUnitPolicies;
         private readonly UserManager _userManager;
         private readonly IPermissionManager _permissionManager;
-        private readonly IOrganizationManager _organizationManager;
+        private readonly IOrganizationUnitService _organizationManager;
         private readonly RoleManager _roleManager;
         private const string ImageFolderBase = "/Content/Images/Profiles/{0}/ProfilePicture/";
         private readonly HttpServerUtility _server;
-        public UserAppServiceZero(UserManager userManager, IPermissionManager permissionManager, IOrganizationManager organizationManager, IUserToUnitPolicies userToUnitPolicies, RoleManager roleManager)
+        public UserAppServiceZero(UserManager userManager, IPermissionManager permissionManager, IOrganizationUnitService organizationManager, IUserToUnitPolicies userToUnitPolicies, RoleManager roleManager)
         {
             _userManager = userManager;
             _permissionManager = permissionManager;

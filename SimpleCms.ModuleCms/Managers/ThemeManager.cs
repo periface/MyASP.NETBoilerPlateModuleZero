@@ -4,12 +4,13 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
+using Abp.Domain.Services;
 using SimpleCms.ModuleCms.Entities;
 using SimpleCms.ModuleCms.SiteConfiguration;
 
 namespace SimpleCms.ModuleCms.Managers
 {
-    public class ThemeManager : IThemeManager
+    public class ThemeManager :DomainService, IThemeManager
     {
         private readonly IRepository<Theme> _themeRepository;
         private readonly IRepository<ConfigThemeRelation> _themeRelationRepository;

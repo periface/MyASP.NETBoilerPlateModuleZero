@@ -14,7 +14,7 @@ using Role = SimpleCms.Authorization.Roles.Role;
 
 namespace SimpleCms.ModuleZero.Roles
 {
-    public class RoleAppServiceZero : ApplicationService, IRoleAppServiceZero
+    public class RoleAppServiceZero : SimpleCmsAppServiceBase, IRoleAppServiceZero
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;

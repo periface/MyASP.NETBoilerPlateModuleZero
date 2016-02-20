@@ -67,15 +67,12 @@ namespace SimpleCms.Web.Controllers
             {
                 activeThemeName = (string)Session[KeySession];
             }
-            try
+            if (!string.IsNullOrEmpty(activeThemeName))
             {
                 System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(activeThemeName));
+
             }
-            catch (Exception)
-            {
-                System.Web.Mvc.ViewEngines.Engines.Clear();
-                System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(activeThemeName));
-            }
+
         }
         private string GetTenancyNameByUrl()
         {

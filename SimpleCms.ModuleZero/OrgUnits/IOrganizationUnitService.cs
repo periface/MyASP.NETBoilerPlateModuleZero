@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.Application.Services;
+using Abp.Organizations;
 using SimpleCms.ModuleZero.OrgUnits.Dto;
 
 namespace SimpleCms.ModuleZero.OrgUnits
@@ -15,5 +16,7 @@ namespace SimpleCms.ModuleZero.OrgUnits
         Task DeleteUnit(long unitId);
         Task EditUnit(OrganizationUnitDto model);
         Task TurnToRoot(OrganizationUnitDto model);
+        Task<OrganizationUnit> GetOrganizationUnitAsync(long orgId);
+        OrganizationUnit GetOrganizationUnitByName(string name, int? tenantId);
     }
 }

@@ -9,30 +9,9 @@ namespace SimpleCms.ModuleCms
 {
     public class ModuleCmsMenuProvider : NavigationProvider
     {
-        private readonly IPageService _pageService;
-
-        public ModuleCmsMenuProvider(IPageService pageService)
-        {
-            _pageService = pageService;
-        }
-
 
         public override void SetNavigation(INavigationProviderContext context)
         {
-            var categories = _pageService.GetCategories();
-            foreach (var model in categories.Categories)
-            {
-                var menu = new MenuItemDefinition(model.Name,
-                    new LocalizableString(model.Name, ModuleCmsConstants.Source), url: "/Pages/" + model.Name,
-                    order: 4, customData: "IsCategoriesMenu");
-                    
-                if (!model.Pages.Any()) continue;
-                foreach (var principalPage in model.Pages)
-                {
-                    menu.AddItem(new MenuItemDefinition(principalPage.Name,new LocalizableString(principalPage.Name,ModuleCmsConstants.Source)));
-                }
-                context.Manager.MainMenu.AddItem(menu);
-            }
             context.Manager.Menus["ZeroMenu"].
                 AddItem(
                 new MenuItemDefinition("Pages",

@@ -10,7 +10,7 @@ using SimpleCms.ModuleCms.Managers;
 
 namespace SimpleCms.ModuleCms.Services
 {
-    public class PagesService :ApplicationService, IPagesService
+    public class PagesService : SimpleCmsAppServiceBase, IPagesService
     {
         private readonly IPagesManager _pagesManager;
 

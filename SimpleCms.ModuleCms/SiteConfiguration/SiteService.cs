@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using Abp.Domain.Uow;
 using Abp.UI;
 using SimpleCms.ModuleCms.Entities;
 using SimpleCms.ModuleCms.Inputs;
@@ -11,7 +12,7 @@ using SimpleCms.ModuleCms.SiteConfiguration.Dto;
 
 namespace SimpleCms.ModuleCms.SiteConfiguration
 {
-    public class SiteService : ISiteService
+    public class SiteService : SimpleCmsAppServiceBase, ISiteService
     {
         private readonly ISiteManager _siteManager;
         private const string IconRoute = "/Content/Images/Icons/{0}/";
@@ -178,7 +179,7 @@ namespace SimpleCms.ModuleCms.SiteConfiguration
                 SiteTitle = info.SiteTitle
             };
         }
-
+        [UnitOfWork(IsDisabled = true)]
         private string SaveImageInRoute(string route, HttpPostedFileBase image)
         {
             var localRoute = _server.MapPath(route);
