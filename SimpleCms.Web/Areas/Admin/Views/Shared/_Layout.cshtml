@@ -13,7 +13,7 @@
 
         <title>SimpleCms</title>*@
 
-    @{Html.RenderAction("SiteInformationHeader", "Layout",new { Area="Admin"});}
+    @{Html.RenderAction("SiteInformationHeader", "Layout", new { Area = "Admin" });}
 
     @*@Styles.Render("~/Bundles/vendor/css")
         @Styles.Render("~/Bundles/css")*@
@@ -188,14 +188,21 @@
         //Localizing momentjs
         moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
     </script>
-
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
     <script src="~/api/AbpServiceProxies/GetAll"></script>
     <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.signalr.js"></script>
+    <script>
+        abp.signalr = abp.signalr || {};
+    </script>
+
+    <script src="~/Scripts/Admin/GlobalPermissions.js"></script>
     <script src="~/Scripts/Admin/GlobalConfigs.js"></script>
     <script src="~/Scripts/Admin/GlobalModal.js"></script>
     <!-- View specific scripts -->
     <script>
-       
+
         //window.moduleZeroLocalizationConstant = "ModuleZero";
         //window.modal = $("#modal");
 
@@ -212,6 +219,23 @@
         //}
     </script>
     @RenderSection("scripts", required: false)
-
+    <script>
+        $(document).ready(function () {
+            abp.ajax({
+                url: "/Admin/Layout/Notifications"
+            }).done(function (d) {
+                $.each(d, function (i, d) {
+                    if (d.notification.notificationName === "CreatedRole") {
+                        $("#notifications").append("<li><a>" + d.notification.data.creatorName + " has created a new Role: " + d.notification.data.roleName + "</a></li>");
+                    }
+                    //Notificaciónes
+                    
+                });
+            });
+        });
+        abp.event.on('abp.notifications.CreatedRole', function (data) {
+            console.log(data);
+        });
+    </script>
 </body>
 </html>

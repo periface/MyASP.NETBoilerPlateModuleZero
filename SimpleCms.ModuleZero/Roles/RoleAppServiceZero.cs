@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Authorization;
 using Abp.Localization;
+using Abp.Notifications;
 using Abp.UI;
 using SimpleCms.Authorization.Roles;
 using SimpleCms.ModuleZero.Roles.Dto;
@@ -18,15 +20,25 @@ namespace SimpleCms.ModuleZero.Roles
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;
+        
         private readonly IPermissionManager _permissionManager;
         private readonly ILocalizationManager _localizationManager;
+        private readonly IUserNotificationManager _userNotificationManager;
+        private readonly IRealTimeNotifier _realTimeNotifier;
         private const string ProhibitedAdminVar = "Admin";
-        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager)
+        private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
+        private readonly INotificationPublisher _notificationPublisher;
+
+        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager, INotificationSubscriptionManager notificationSubscriptionManager, INotificationPublisher notificationPublisher, IUserNotificationManager userNotificationManager, IRealTimeNotifier realTimeNotifier)
         {
             _roleManager = roleVimeManager;
             _permissionManager = permissionManager;
             _localizationManager = localizationManager;
             _userManager = userManager;
+            _notificationSubscriptionManager = notificationSubscriptionManager;
+            _notificationPublisher = notificationPublisher;
+            _userNotificationManager = userNotificationManager;
+            _realTimeNotifier = realTimeNotifier;
         }
 
         public async Task CreateRole(NewRoleInput roleInput)
@@ -38,7 +50,25 @@ namespace SimpleCms.ModuleZero.Roles
                 IsDefault = roleInput.IsDefault,
                 TenantId = roleInput.TenantId
             };
-            await _roleManager.CreateAsync(role);
+            var result = await _roleManager.CreateAsync(role);
+            if (result.Succeeded)
+            {
+                var user = new User();
+                if (roleInput.UserId != null)
+                {
+                    user = await _userManager.GetUserByIdAsync((long)roleInput.UserId);
+                }
+                await _notificationPublisher.PublishAsync("CreatedRole", new NewRoleNotificationData()
+                {
+                    RoleName = role.Name,
+                    CreatorName = user.UserName
+                });
+                //if (roleInput.UserId != null)
+                //{
+                //    var notifications = await _userNotificationManager.GetUserNotificationsAsync((long) roleInput.UserId);
+                //    await _realTimeNotifier.SendNotificationsAsync(notifications.ToArray());
+                //}
+            }
         }
 
         public async Task EditRole(NewRoleInput roleInput)
@@ -98,6 +128,13 @@ namespace SimpleCms.ModuleZero.Roles
             return roleInPut;
         }
 
+        public async Task RegisterToRoleCreatedNotification(long userId, int? tenantId)
+        {
+            await _notificationSubscriptionManager.SubscribeAsync(tenantId, userId, "CreatedRole");
+        }
+
+
+
         public async Task AssignPermissions(List<string> permissions, string name)
         {
 
@@ -148,7 +185,7 @@ namespace SimpleCms.ModuleZero.Roles
         Granted = a.IsGranted,
         DbName = a.Name,
         Id = a.Id,
-        PermissionName = firstOrDefault.DisplayName.Localize(new LocalizationContext(_localizationManager),new CultureInfo(_localizationManager.CurrentLanguage.Name))
+        PermissionName = firstOrDefault.DisplayName.Localize(new LocalizationContext(_localizationManager), new CultureInfo(_localizationManager.CurrentLanguage.Name))
     } : null;
 }).ToList(),
                     RoleName = role.Name

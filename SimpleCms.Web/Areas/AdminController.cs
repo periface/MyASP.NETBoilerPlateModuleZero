@@ -1,11 +1,7 @@
-﻿using System.Linq;
-using Abp.Dependency;
-using Abp.Extensions;
-using Abp.IdentityFramework;
+﻿using Abp.IdentityFramework;
 using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
-using SimpleCms.ModuleZero.Tenancy;
 
 namespace SimpleCms.Web.Areas
 {

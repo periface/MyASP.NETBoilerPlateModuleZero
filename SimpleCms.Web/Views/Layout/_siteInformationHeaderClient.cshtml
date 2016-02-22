@@ -1,4 +1,5 @@
-﻿@model SimpleCms.ModuleCms.SiteConfiguration.Dto.SiteInfoDto
+﻿@using System
+@model SimpleCms.ModuleCms.SiteConfiguration.Dto.SiteInfoDto
 @{
     Layout = null;
 }
@@ -10,9 +11,13 @@
 
 <link rel="shortcut icon" href="@Model.SiteIcon">
 @{
-    if (String.IsNullOrEmpty(ViewBag.Title))
+    if (string.IsNullOrEmpty(ViewBag.Title))
     {
-        ViewBag.Title = Model.SiteTitle;
+        <title>@Model.SiteTitle</title>
+    }
+    else
+    {
+       <title>@ViewBag.Title</title> 
     }
 }
 

@@ -146,19 +146,23 @@ $(window).on('resize.jqGrid', function () {
     $("#usersTable").jqGrid('setGridWidth', $("#tableContainer").width());
 });
 window.removeFromUnit = function (id, unitId) {
-    var data = {
-        IdMember: id,
-        IdOrganizationSection: unitId
+    if (isGranted(zeroPermissions.ManageUnits_Modify)) {
+        var data = {
+            IdMember: id,
+            IdOrganizationSection: unitId
+        }
+        abp.ui.setBusy($("#usersTable"), abp.ajax({
+            url: urls.OrgUnits + "RemoveFromUnit",
+            datatype: "json",
+            data: JSON.stringify(data)
+        }).done(function () {
+            window.refreshTable();
+            updateTree();
+            abp.notify.success(L("Removed"));
+        }));
+    } else {
+        abp.message.warn("You have no permissions for this operation");
     }
-    abp.ui.setBusy($("#usersTable"), abp.ajax({
-        url: urls.OrgUnits + "RemoveFromUnit",
-        datatype: "json",
-        data: JSON.stringify(data)
-    }).done(function () {
-        window.refreshTable();
-        updateTree();
-        abp.notify.success(L("Removed"));
-    }));
 }
 
 $(function () {
@@ -168,27 +172,35 @@ $(function () {
         var callBack = function () {
             $('#modal').unbind().modal();
         }
-        modal.loadModal(urls.OrgUnits + "LoadAllUsers/" + id, callBack);
+        if (isGranted(zeroPermissions.ManageUsers_ViewUsers)) {
+            modal.loadModal(urls.OrgUnits + "LoadAllUsers/" + id, callBack);
+
+        } else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
         //window.modalContent.load("LoadAllUsers/" + id, function () {
 
         //});
     });
     var deleteUnit = function (id) {
-        var model = {
-            Id: id
+        if (isGranted(zeroPermissions.ManageUnits_Delete)) {
+            var model = {
+                Id: id
+            }
+            console.log(model);
+            abp.ui.setBusy($("body"), abp.ajax({
+                url: urls.OrgUnits + "DeleteUnit",
+                data: JSON.stringify(model),
+                contentType: "application/json"
+            }).done(function () {
+                abp.notify.success(L("Removed"));
+
+                updateTree();
+
+            }));
+        } else {
+            abp.message.warn("You have no permissions to perform this operation");
         }
-        console.log(model);
-        abp.ui.setBusy($("body"), abp.ajax({
-            url: urls.OrgUnits + "DeleteUnit",
-            data: JSON.stringify(model),
-            contentType: "application/json"
-        }).done(function () {
-            abp.notify.success(L("Removed"));
-
-            updateTree();
-
-        }));
-
     }
     $("body").on("click", ".delete", function () {
         var id = $(this).data("id");
@@ -211,39 +223,55 @@ $(function () {
 
     });
     $("body").on("click", ".removeFromUnit", function () {
-        var id = $(this).data("id");
-        var unitId = $(this).data("unit");
-        abp.message.confirm(
-            L("OrgUnits_AdviseRemoveUser"),
-             L("OrgUnits_ConfirmQuestion"),
-            function (isConfirmed) {
-                if (isConfirmed) {
-                    removeFromUnit(id, unitId);
+        if (isGranted(zeroPermissions.ManageUnits_Modify)) {
+            var id = $(this).data("id");
+            var unitId = $(this).data("unit");
+            abp.message.confirm(
+                L("OrgUnits_AdviseRemoveUser"),
+                 L("OrgUnits_ConfirmQuestion"),
+                function (isConfirmed) {
+                    if (isConfirmed) {
+                        removeFromUnit(id, unitId);
+                    }
                 }
-            }
-        );
+            );
+        }
+        else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
     });
     $("body").on("click", ".addChild", function () {
-        var id = $(this).data("id");
-        modal.loadModal(urls.OrgUnits + "AddChild/" + id, "");
+        if (isGranted(zeroPermissions.ManageUnits_Create)) {
+            var id = $(this).data("id");
+            modal.loadModal(urls.OrgUnits + "AddChild/" + id, "");
+        } else {
+            abp.message.warn("You have no permissions for this operation");
+        }
     });
     var updateOutput = function (e) {
-        console.log(e);
-        var list = e.length ? e : $(e.target),
-            output = list.data('output');
-        if (window.JSON) {
-            var model = window.JSON.stringify(list.nestable('serialize'));
-            console.log(model); //, null, 2));
-            abp.ajax({
-                url: urls.OrgUnits + "ChangeOrderOfUnits",
-                data: model,
-                contentType: "application/json"
-            }).done(function () {
-                updateTree();
-            });
-        } else {
-            output.val('JSON browser support required.');
+        if (isGranted(zeroPermissions.ManageUnits_Modify)) {
+            console.log(e);
+            var list = e.length ? e : $(e.target),
+                output = list.data('output');
+            if (window.JSON) {
+                var model = window.JSON.stringify(list.nestable('serialize'));
+                console.log(model); //, null, 2));
+                abp.ajax({
+                    url: urls.OrgUnits + "ChangeOrderOfUnits",
+                    data: model,
+                    contentType: "application/json"
+                }).done(function () {
+                    updateTree();
+                });
+            } else {
+                output.val('JSON browser support required.');
+            }
         }
+        else {
+            abp.message.warn("You have no permissions to perform this operation");
+            updateTree();
+        }
+
     };
     $(document).ready(function () {
 
@@ -253,14 +281,19 @@ $(function () {
     });
     $("body").on("change", "#nestable3", updateOutput);
     var guardarUnidad = function (unidad) {
-        abp.ui.setBusy($("body"), abp.ajax({
-            url: urls.OrgUnits + 'Create',
-            data: JSON.stringify(unidad)
-        }).done(function () {
-            var message = L("OrgUnits_UnitSaved");
-            abp.message.success(message + unidad.Name);
-            updateTree();
-        }));
+        if (isGranted(zeroPermissions.ManageUnits_Create)) {
+            abp.ui.setBusy($("body"), abp.ajax({
+                url: urls.OrgUnits + 'Create',
+                data: JSON.stringify(unidad)
+            }).done(function () {
+                var message = L("OrgUnits_UnitSaved");
+                abp.message.success(message + unidad.Name);
+                updateTree();
+            }));
+        }
+        else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
     }
     $("#newOrgUnit").on("submit", function (e) {
         e.preventDefault();
@@ -273,24 +306,29 @@ $(function () {
         guardarUnidad(newOrganization);
     });
     $("body").on("click", ".convertToRoot", function () {
-        var id = $(this).data("id");
-        var data = {
-            Id: id
-        }
-        abp.message.confirm(
-            L("OrgUnits_ConfirmQuestion"),
-            L("OrgUnits_ConfirmQuestion_Root"),
-            function (isConfirmed) {
-                if (isConfirmed) {
-                    abp.ui.setBusy($("#nestable3"), abp.ajax({
-                        url: urls.OrgUnits + "ConvertToRoot",
-                        data: JSON.stringify(data)
-                    }).done(function () {
-                        window.updateTree();
-                    }));
-                }
+        if (isGranted(zeroPermissions.ManageUnits_Modify)) {
+            var id = $(this).data("id");
+            var data = {
+                Id: id
             }
-        );
+            abp.message.confirm(
+                L("OrgUnits_ConfirmQuestion"),
+                L("OrgUnits_ConfirmQuestion_Root"),
+                function (isConfirmed) {
+                    if (isConfirmed) {
+                        abp.ui.setBusy($("#nestable3"), abp.ajax({
+                            url: urls.OrgUnits + "ConvertToRoot",
+                            data: JSON.stringify(data)
+                        }).done(function () {
+                            window.updateTree();
+                        }));
+                    }
+                }
+            );
+        }
+        else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
 
     });
 });

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-
+    
     $("#createRoleForm").on("submit", function (e) {
         e.preventDefault();
         var permissions = [];

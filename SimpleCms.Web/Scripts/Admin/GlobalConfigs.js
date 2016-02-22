@@ -39,5 +39,5 @@ var globalConfigs = function (constant) {
     return globalConfigs;
 };
 
-Window.globalVariables = globalVariables;
+window.globalVariables = globalVariables;
 window.globalConfigs = globalConfigs;

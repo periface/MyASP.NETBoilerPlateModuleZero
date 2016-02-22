@@ -54,6 +54,10 @@
       <HintPath>..\packages\Abp.EntityFramework.0.8.1.0\lib\net461\Abp.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Abp.Owin, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Owin.0.8.1.0\lib\net461\Abp.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Abp.Web, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.0.8.1.0\lib\net461\Abp.Web.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +68,10 @@
     </Reference>
     <Reference Include="Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.Mvc.0.8.1.0\lib\net461\Abp.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.SignalR.0.8.1.0\lib\net461\Abp.Web.SignalR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Zero, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -120,6 +128,14 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -261,6 +277,7 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css" />
     <Content Include="Abp\Framework\styles\abp.mixings.min.css" />
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
+    <Content Include="Areas\Admin\Scripts\_bootstrap-checkbox.js" />
     <Content Include="Areas\Admin\Scripts\_languages.js" />
     <Content Include="Areas\Admin\Scripts\_languages_Create.js" />
     <Content Include="Areas\Admin\Scripts\_languages_EditTexts.js" />
@@ -595,6 +612,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Scripts\Admin\GlobalPermissions.js" />
     <Content Include="Scripts\app.config.js" />
     <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -610,6 +628,8 @@
     <Content Include="Scripts\jquery.blockUI.js" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -851,7 +871,6 @@
     <Folder Include="Content\fonts\" />
     <Folder Include="Content\Images\Profiles\" />
     <Folder Include="Content\sound\" />
-    <Folder Include="Scripts\Admin\" />
     <Folder Include="Scripts\bootstrap\" />
     <Folder Include="Scripts\jqplot\plugins\" />
     <Folder Include="Scripts\libs\" />

@@ -69,32 +69,56 @@ window.populateTableRoles = function () {
     });
 }
 $(document).ready(function () {
+
     window.populateTableRoles();
+    $("#initSub").click(function () {
+        abp.ajax({
+            url: urls.Roles + "SubscribeToCreatedRole"
+        }).done(function (d) {
+            abp.message.success("Subscribed!");
+        });
+    });
+
     $("#tableWidget").on("click", ".editRole", function () {
-        var id = $(this).data("id");
-        modal.loadModal(urls.Roles + "EditRole/" + id, "");
+        if (isGranted(zeroPermissions.ManageRoles_Edit)) {
+
+            var id = $(this).data("id");
+            modal.loadModal(urls.Roles + "EditRole/" + id, "");
+        } else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
 
     });
     $(".create").click(function () {
-        modal.loadModal(urls.Roles + "CreateRole", "");
+        if (isGranted(zeroPermissions.ManageRoles_Create)) {
+
+            modal.loadModal(urls.Roles + "CreateRole", "");
+        } else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
     });
 
     $("body").on("click", ".deleteRole", function () {
-        var id = $(this).data("id");
-        abp.message.confirm(
-            L("MessageDeleteQRole"),
-            L("MessageDeleteQ"),
-            function (isConfirmed) {
-                if (isConfirmed) {
-                    var role = {
-                        RoleId: id
+        if (isGranted(zeroPermissions.ManageRoles_Create)) {
+            var id = $(this).data("id");
+            abp.message.confirm(
+                L("MessageDeleteQRole"),
+                L("MessageDeleteQ"),
+                function (isConfirmed) {
+                    if (isConfirmed) {
+                        var role = {
+                            RoleId: id
+                        }
+                        //abp.message.success(localize("MessageDeleted", localizationConstant));
+                        //deleteUnit(id);
+                        window.removeRole(role);
                     }
-                    //abp.message.success(localize("MessageDeleted", localizationConstant));
-                    //deleteUnit(id);
-                    window.removeRole(role);
                 }
-            }
-        );
+            );
+        }
+        else {
+            abp.message.warn("You have no permissions to perform this operation");
+        }
     });
 
 });

@@ -1,4 +1,5 @@
 ﻿using System;
+using Abp.Owin;
 using System.Configuration;
 using SimpleCms.Api.Controllers;
 using SimpleCms.Web;
@@ -11,13 +12,14 @@ using Microsoft.Owin.Security.Twitter;
 using Owin;
 
 [assembly: OwinStartup(typeof(Startup))]
-
 namespace SimpleCms.Web
 {
     public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseAbp();
+            app.MapSignalR();
             app.UseOAuthBearerAuthentication(AccountController.OAuthBearerOptions);
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions

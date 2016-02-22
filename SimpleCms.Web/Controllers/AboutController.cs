@@ -7,6 +7,7 @@ namespace SimpleCms.Web.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "About";
             return View();
         }
 	}

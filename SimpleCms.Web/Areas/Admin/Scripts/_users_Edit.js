@@ -1,4 +1,4 @@
-﻿$("#image").on("change", function (e) {
+﻿$("#image").on("change", function () {
     $(".fileMsgSuccess").fadeOut();
     if (CheckSize()) {
         var form = $("#imageSubmit");
@@ -88,6 +88,11 @@ $("#CreateRandomPassword").change(function () {
     }
 });
 $(document).ready(function () {
+    if (!isGranted(zeroPermissions.ManageUsers_ChangeRoles)) {
+        $(".checks input").each(function () {
+            $(this).attr("disabled", "disabled");
+        });
+    }
     if ($(this).is(":checked")) {
         $("#ps").fadeOut();
     } else {

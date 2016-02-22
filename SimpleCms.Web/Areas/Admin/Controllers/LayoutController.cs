@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.Configuration.Startup;
 using Abp.Localization;
+using Abp.Notifications;
 using Abp.Threading;
 using SimpleCms.ModuleCms.SiteConfiguration;
 using SimpleCms.Sessions;
@@ -18,13 +19,15 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         private readonly ISessionAppService _sessionAppService;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
         private readonly ISiteService _siteService;
-        public LayoutController(IUserNavigationManager userNavigationManager, ILocalizationManager localizationManager, ISessionAppService sessionAppService, IMultiTenancyConfig multiTenancyConfig, ISiteService siteService)
+        private readonly IUserNotificationManager _userNotificationManager;
+        public LayoutController(IUserNavigationManager userNavigationManager, ILocalizationManager localizationManager, ISessionAppService sessionAppService, IMultiTenancyConfig multiTenancyConfig, ISiteService siteService, IUserNotificationManager userNotificationManager)
         {
             _userNavigationManager = userNavigationManager;
             _localizationManager = localizationManager;
             _sessionAppService = sessionAppService;
             _multiTenancyConfig = multiTenancyConfig;
             _siteService = siteService;
+            _userNotificationManager = userNotificationManager;
         }
         [ChildActionOnly]
         public PartialViewResult AdminTopMenu(string activeMenu = "")
@@ -85,6 +88,14 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             }
 
             return PartialView("_UserMenuOrLoginLinkAdmin", model);
+        }
+        
+        public JsonResult Notifications()
+        {
+            if (AbpSession.UserId == null) return Json(null);
+            var notifications =
+                AsyncHelper.RunSync(()=>_userNotificationManager.GetUserNotificationsAsync((long) AbpSession.UserId)); 
+            return Json(notifications);
         }
     }
 }

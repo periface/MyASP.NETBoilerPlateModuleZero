@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Abp.Dependency;
 using Abp.Extensions;
 using Abp.IdentityFramework;
+using Abp.Threading;
 using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
@@ -98,12 +99,12 @@ namespace SimpleCms.Web.Controllers
             get
             {
                 var container = IocManager.Instance;
-                var instance = container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl());
+                var instance = AsyncHelper.RunSync(() => container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl()));
                 if (instance == null)
                 {
-                    return false;
-                };
-                return true;
+                    return true;
+                }
+                return false;
             }
         }
         /// <summary>
@@ -116,8 +117,8 @@ namespace SimpleCms.Web.Controllers
             {
 
                 var container = IocManager.Instance;
-                var instance = container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl());
-                return instance?.Id;
+                var instance = AsyncHelper.RunSync(() => container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl()));
+                return instance;
             }
         }
     }

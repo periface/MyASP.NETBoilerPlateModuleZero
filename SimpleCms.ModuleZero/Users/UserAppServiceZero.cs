@@ -265,7 +265,10 @@ namespace SimpleCms.ModuleZero.Users
                 {
                     if (roleInput.Granted)
                     {
-                        user.Roles = await GetConvertedRoles(input.Roles);
+
+                        await _userManager.AddToRoleAsync(user.Id, roleInput.RoleName);
+
+                        //user.Roles = await GetConvertedRoles(input.Roles);
                     }
                     else
                     {
@@ -312,7 +315,7 @@ namespace SimpleCms.ModuleZero.Users
                 {
                     rolesCreated.Add(new UserRole()
                     {
-                        RoleId = role.Id
+                        RoleId = role.Id,
                     });
                 }
             }

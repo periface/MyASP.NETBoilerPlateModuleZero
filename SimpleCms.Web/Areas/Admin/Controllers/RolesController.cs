@@ -71,9 +71,17 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         public async Task<JsonResult> CreateRole([Bind(Exclude = "TenantId")]NewRoleInput input)
         {
             input.TenantId = AbpSession.TenantId;
+            input.UserId = AbpSession.UserId;
             await _roleAppServiceZero.CreateRole(input);
             await _roleAppServiceZero.AssignPermissions(input.CreatePermissions(),input.RoleName);
             return Json(new { ok = true }, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<JsonResult> SubscribeToCreatedRole()
+        {
+            if (AbpSession.UserId != null)
+                await _roleAppServiceZero.RegisterToRoleCreatedNotification((long)AbpSession.UserId,AbpSession.TenantId);
+            return Json(new {ok = true});
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using Abp.BackgroundJobs;
+using Abp.UI;
 using Abp.Web.Mvc.Authorization;
 using GoogleRecaptchaDotNetMvc;
 using GoogleRecaptchaDotNetMvc.Attribute;
@@ -10,7 +12,7 @@ namespace SimpleCms.Web.Controllers
 {
     public class HomeController : SimpleCmsControllerBase
     {
-       
+
         public ActionResult Index()
         {
             ViewBag.Message = IsHostSite ? "Greetings from host!" : "Greetings from tenant!";
@@ -23,5 +25,7 @@ namespace SimpleCms.Web.Controllers
         {
             return View("_ok");
         }
+
+       
 	}
 }

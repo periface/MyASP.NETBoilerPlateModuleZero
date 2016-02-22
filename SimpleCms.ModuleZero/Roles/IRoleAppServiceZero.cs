@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using SimpleCms.ModuleZero.Roles.Dto;
@@ -10,7 +11,7 @@ namespace SimpleCms.ModuleZero.Roles
     {
         Task CreateRole(NewRoleInput roleInput);
         Task UpdateRolePermissions(UpdateRolesPermisionsInput roleInput);
-        Task AssignPermissions(List<string> permissions,string name);
+        Task AssignPermissions(List<string> permissions, string name);
         RoleListOutPut GetRoles();
         Task<NewRoleInput> GetRole(int id);
         List<Permissions> GetAllPermissions();
@@ -19,5 +20,6 @@ namespace SimpleCms.ModuleZero.Roles
         Task DeleteRole(DeleteRoleInput input);
         List<RoleInput> GetAllRoles();
         Task<List<RoleInput>> GetAllRolesFromUser(long userId);
+        Task RegisterToRoleCreatedNotification(long userId, int? tenantId);
     }
 }
