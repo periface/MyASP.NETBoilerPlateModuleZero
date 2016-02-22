@@ -1,23 +1,19 @@
 ﻿using System.Globalization;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using Abp.Threading;
 using Abp.Web.Models;
 using SimpleCms.ModuleZero.LanguageTexts;
 using SimpleCms.ModuleZero.LanguageTexts.Dto;
-using SimpleCms.ModuleZero.Tenancy;
-using SimpleCms.Web.Controllers;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
     public class LanguagesController : AdminController
     {
         private readonly ILanguageService _languageService;
-        private readonly ITenancyService _tenancyService;
-        public LanguagesController(ILanguageService languageService, ITenancyService tenancyService)
+
+        public LanguagesController(ILanguageService languageService)
         {
             _languageService = languageService;
-            _tenancyService = tenancyService;
         }
 
         // GET: Admin/Languages
@@ -28,8 +24,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         [WrapResult(false)]
         public async Task<JsonResult> LoadLanguages()
         {
-            var tenancy = await _tenancyService.GetTenantByName(ActiveTenantName);
-            var data = await _languageService.GetLanguages((int)tenancy);
+            var data = await _languageService.GetLanguages(AbpSession.TenantId);
             return Json(data, JsonRequestBehavior.AllowGet);
         }
         public ActionResult CreateLanguage()
@@ -42,7 +37,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         {
             CheckModelState();
             input.DisplayText = new CultureInfo(input.Name).DisplayName;
-            input.TenantId = TenantId;
+            input.TenantId = AbpSession.TenantId;
             await _languageService.CreateLanguage(input);
             return Json(new {ok = true});
         }
@@ -59,7 +54,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
 
         public async Task<JsonResult> GetTenancyLanguages(string activeLang)
         {
-            var languages = await _languageService.GetLanguages(TenantId,activeLang);
+            var languages = await _languageService.GetLanguages(AbpSession.TenantId,activeLang);
             return Json(languages);
         }
         [WrapResult(false)]
@@ -78,15 +73,11 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonResult> EditLanguage(NewLanguageInputDto input)
         {
-            input.TenantId = TenantId;
+            input.TenantId = AbpSession.TenantId;
             await _languageService.EditLanguage(input);
             return Json(new {ok = true});
         }
-        private int? TenantId
-        {
-            get { return AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName)); }
-        }
-
+        
         public ViewResult EditText(GetLanguageForEditInput input)
         {
             var text = _languageService.GetLanguageTextForEdit(input);
@@ -95,7 +86,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonResult> EditTextValue(ApplicationTextInput input)
         {
-            input.TenantId = TenantId;
+            input.TenantId = AbpSession.TenantId;
             await _languageService.EditText(input);
             return Json(input,JsonRequestBehavior.AllowGet);
         }
@@ -103,7 +94,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonResult> EditTextValueGetNext(ApplicationTextInput input)
         {
-            input.TenantId = TenantId;
+            input.TenantId = AbpSession.TenantId;
             var next = await _languageService.EditTextGetNext(input);
             return next == null ? Json(new {ok = true}) : Json(next);
         }

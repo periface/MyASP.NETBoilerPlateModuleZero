@@ -13,8 +13,10 @@ namespace SimpleCms.Web.Controllers
        
         public ActionResult Index()
         {
+            ViewBag.Message = IsHostSite ? "Greetings from host!" : "Greetings from tenant!";
             return View();
         }
+
         [CheckRecaptcha]
         [HttpPost]
         public ActionResult Index(string text)

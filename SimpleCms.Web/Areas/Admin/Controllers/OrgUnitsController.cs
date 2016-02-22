@@ -39,7 +39,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         {
             await _ajaxPermissionHelper.CheckPermission("Administration.OrgUnits.Create");
             if (!TryValidateModel(input)) { throw new UserFriendlyException(); }
-            input.TenantId = AbpSession.GetTenantId();
+            input.TenantId = AbpSession.TenantId;
             var id = await _organizationUnitService.CreateUnitGetId(input);
             return Json(new { createdId = id, Mensaje = "¡Unidad Creada!" });
         }

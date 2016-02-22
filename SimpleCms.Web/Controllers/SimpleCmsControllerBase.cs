@@ -8,6 +8,7 @@ using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
 using SimpleCms.ModuleCms.Themes;
+using SimpleCms.ModuleZero.Tenancy;
 using SimpleCms.Web.ViewEngines;
 
 namespace SimpleCms.Web.Controllers
@@ -50,6 +51,8 @@ namespace SimpleCms.Web.Controllers
         /// </summary>
         private void InsertViewEngine()
         {
+            //If is host there is not need of obtain the current theme
+            if (IsHostSite) return;
             string activeThemeName;
             if (Session[KeySession] == null)
             {
@@ -72,14 +75,50 @@ namespace SimpleCms.Web.Controllers
                 System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(activeThemeName));
 
             }
-
         }
+        /// <summary>
+        /// Gets the current tenant name based on the current url
+        /// <para>Test in production.</para>
+        /// <para>Not available in AdminController since tenant info can be obtained from te AbpSession</para>
+        /// </summary>
+        /// <returns></returns>
         private string GetTenancyNameByUrl()
         {
             if (Request.Url == null) return string.Empty;
             var tenancyName = Request.Url.AbsoluteUri.Split(".").First();
             tenancyName = tenancyName.Split("//").Last();
             return tenancyName;
+        }
+        /// <summary>
+        /// Detects if the site url belongs to a tenant website
+        /// <para>Not available in AdminController since tenantId can be obtained from te AbpSession</para>
+        /// </summary>
+        public bool IsHostSite
+        {
+            get
+            {
+                var container = IocManager.Instance;
+                var instance = container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl());
+                if (instance == null)
+                {
+                    return false;
+                };
+                return true;
+            }
+        }
+        /// <summary>
+        /// Gets the current active tenantId
+        /// <para>Not available in AdminController since tenantId can be obtained from te AbpSession</para>
+        /// </summary>
+        public int? ActiveTenantId
+        {
+            get
+            {
+
+                var container = IocManager.Instance;
+                var instance = container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl());
+                return instance?.Id;
+            }
         }
     }
 }
