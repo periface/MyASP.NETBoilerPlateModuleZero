@@ -9,7 +9,7 @@
             IsActive: $("#IsActive").is(":checked")
         }
         abp.ui.setBusy($(modal), abp.ajax({
-            url: "/Admin/SiteConfig/CreateInfo",
+            url: urls.SiteConfig+"CreateInfo",
             data: JSON.stringify(newInfo)
 
         }).done(function () {

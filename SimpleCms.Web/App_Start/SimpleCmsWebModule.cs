@@ -27,7 +27,6 @@ namespace SimpleCms.Web
     {
         public override void PreInitialize()
         {
-            Configuration.Notifications.Providers.Add<MyAppNotificationProvider>();
             //Enable database based localization
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
 
@@ -48,16 +47,5 @@ namespace SimpleCms.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
         
-    }
-    public class MyAppNotificationProvider : NotificationProvider
-    {
-        public override void SetNotifications(INotificationDefinitionContext context)
-        {
-            context.Manager.Add(
-                new NotificationDefinition(
-                    "CreatedRole"
-                    )
-                );
-        }
     }
 }

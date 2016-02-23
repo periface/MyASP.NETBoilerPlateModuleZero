@@ -4,8 +4,8 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.Authorization;
+using Abp.Domain.Uow;
 using Abp.Localization;
-using Abp.Notifications;
 using Abp.UI;
 using SimpleCms.Authorization.Roles;
 using SimpleCms.ModuleZero.Notifications;
@@ -20,29 +20,33 @@ namespace SimpleCms.ModuleZero.Roles
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;
-
+        private readonly IUnitOfWorkManager _unitOfWork;
         private const string ProhibitedAdminVar = "Admin";
 
         private readonly IPermissionManager _permissionManager;
         private readonly ILocalizationManager _localizationManager;
-        private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
         private readonly INotificationsService _notificationsService;
-        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager, INotificationSubscriptionManager notificationSubscriptionManager, INotificationsService notificationsService)
+        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager, INotificationsService notificationsService, IUnitOfWorkManager unitOfWork)
         {
             _roleManager = roleVimeManager;
             _permissionManager = permissionManager;
             _localizationManager = localizationManager;
             _userManager = userManager;
-            _notificationSubscriptionManager = notificationSubscriptionManager;
             _notificationsService = notificationsService;
+            _unitOfWork = unitOfWork;
         }
 
+        public string CleanText(string text)
+        {
+            return text.Replace(" ", string.Empty);
+        }
         public async Task CreateRole(NewRoleInput roleInput)
         {
+
             var role = new Role()
             {
-                Name =  roleInput.RoleName.Replace(" ", string.Empty),
-                DisplayName = roleInput.RoleName,
+                Name = CleanText(roleInput.DisplayName),
+                DisplayName = roleInput.DisplayName,
                 IsDefault = roleInput.IsDefault,
                 TenantId = roleInput.TenantId
             };
@@ -50,20 +54,26 @@ namespace SimpleCms.ModuleZero.Roles
             if (result.Succeeded)
             {
                 //Notify user registered
-                await _notificationsService.TriggerRoleCreatedNotification(roleInput.UserId,roleInput.RoleName.Replace(" ", string.Empty));
+                await _notificationsService.TriggerRoleCreatedNotification(roleInput.UserId, roleInput.DisplayName,role.Name);
             }
         }
 
         public async Task EditRole(NewRoleInput roleInput)
         {
             var role = await _roleManager.GetRoleByIdAsync(roleInput.Id);
-            if (role == null) throw new UserFriendlyException("Role not found");
+            //For notification pruposes
+            var originalName = role.DisplayName;
 
-            role.Name = roleInput.RoleName.Replace(" ", string.Empty);
-            role.DisplayName = roleInput.RoleName;
+            if (role == null) throw new UserFriendlyException("Role not found");
+            role.Name = CleanText(roleInput.DisplayName);
+            role.DisplayName = roleInput.DisplayName;
             role.IsDefault = roleInput.IsDefault;
-            await _roleManager.UpdateAsync(role);
+            var result = await _roleManager.UpdateAsync(role);
             await _roleManager.SetGrantedPermissionsAsync(roleInput.Id, PermissionsAssigned(roleInput.CreatePermissions()));
+            if (result.Succeeded)
+            {
+                await _notificationsService.TriggerRoleEditedNotification(roleInput.UserId, originalName,role.Name);
+            }
         }
 
         public async Task DeleteRole(DeleteRoleInput input)
@@ -71,7 +81,11 @@ namespace SimpleCms.ModuleZero.Roles
             var role = await _roleManager.GetRoleByIdAsync(input.RoleId);
             if (role == null) throw new UserFriendlyException("Role not found");
             if (role.Name == ProhibitedAdminVar) throw new UserFriendlyException("Admin role cannot be deleted!");
-            await _roleManager.DeleteAsync(role);
+            var result = await _roleManager.DeleteAsync(role);
+            if (result.Succeeded)
+            {
+                await _notificationsService.TriggerRoleDeletedNotification(input.UserId, role.DisplayName,role.Name);
+            }
         }
 
         public List<RoleInput> GetAllRoles()
@@ -143,7 +157,7 @@ namespace SimpleCms.ModuleZero.Roles
 
         public async Task AssignPermissions(List<string> permissions, string name)
         {
-            var role = await _roleManager.GetRoleByNameAsync(name.Replace(" ", string.Empty));
+            var role = await _roleManager.GetRoleByNameAsync(CleanText(name));
             await _roleManager.SetGrantedPermissionsAsync(role.Id, PermissionsAssigned(permissions));
         }
         //NotUsed
@@ -163,7 +177,7 @@ namespace SimpleCms.ModuleZero.Roles
                 Roles = roles.Select(r => new Dto.Role()
                 {
                     RoleName = r.Name,
-                   DisplayName = r.DisplayName,
+                    DisplayName = r.DisplayName,
                     Id = r.Id,
                     Permissions = r.Permissions.Select(a => new Permissions() { Granted = a.IsGranted, PermissionName = a.Name }).ToList(),
                     Type = r.IsStatic ? "Static" : "Default",
@@ -190,7 +204,7 @@ namespace SimpleCms.ModuleZero.Roles
         Granted = a.IsGranted,
         DbName = a.Name,
         Id = a.Id,
-       
+
         PermissionName = firstOrDefault.DisplayName.Localize(new LocalizationContext(_localizationManager), new CultureInfo(_localizationManager.CurrentLanguage.Name))
     } : null;
 }).ToList(),
@@ -207,7 +221,7 @@ namespace SimpleCms.ModuleZero.Roles
             {
                 PermissionName = a.DisplayName.Localize(new LocalizationContext(_localizationManager), new CultureInfo(_localizationManager.CurrentLanguage.Name)),
                 DbName = a.Name,
-               
+
             }).ToList();
         }
 

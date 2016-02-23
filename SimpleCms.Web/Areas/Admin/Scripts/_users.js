@@ -88,12 +88,21 @@ $(window).on('resize.jqGrid', function () {
     $("#usersTable").jqGrid('setGridWidth', $("#tableContainer").width());
 });
 $(".create").click(function () {
-    modal.loadModal(urls.Users + "CreateUser", "");
+    if (isGranted(zeroPermissions.ManageUsers_Create)) {
+        modal.loadModal(urls.Users + "CreateUser", "");
 
+    } else {
+        abp.message.warn("You have no permissions to perform this operation");
+    }
+    
 });
 $("body").on("click", ".editUser", function () {
-    var id = $(this).data("id");
-    modal.loadModal(urls.Users + "EditUser/" + id, "");
+    if (isGranted(zeroPermissions.ManageUsers_Edit)) {
+        var id = $(this).data("id");
+        modal.loadModal(urls.Users + "EditUser/" + id, "");
+    } else {
+        abp.message.warn("You have no permissions to perform this operation");
+    }
 });
 $("body").on("click", ".removeUser", function () {
     var id = $(this).data("id");

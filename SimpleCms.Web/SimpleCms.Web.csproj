@@ -627,6 +627,7 @@
     <Content Include="Scripts\Admin\GlobalConfigs.js" />
     <Content Include="Scripts\Admin\GlobalModal.js" />
     <Content Include="Scripts\Admin\GlobalPermissions.js" />
+    <Content Include="Scripts\Admin\MessageInterceptor.js" />
     <Content Include="Scripts\app.config.js" />
     <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -655,6 +656,7 @@
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\notification\SmartNotification.min.js" />
     <Content Include="Scripts\others\html5shiv.js" />
     <Content Include="Scripts\others\respond.min.js" />
     <Content Include="Scripts\others\respond.src.js" />
@@ -726,6 +728,11 @@
     <Content Include="Scripts\plugin\bootstrapselect\js\i18n\defaults-zh_CN.min.js" />
     <Content Include="Scripts\plugin\bootstrapselect\js\i18n\defaults-zh_TW.js" />
     <Content Include="Scripts\plugin\bootstrapselect\js\i18n\defaults-zh_TW.min.js" />
+    <Content Include="Scripts\plugin\fastclick\fastclick.min.js" />
+    <Content Include="Scripts\plugin\jquery-touch\jquery.ui.touch-punch.min.js" />
+    <Content Include="Scripts\plugin\masked-input\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\plugin\msie-fix\jquery.mb.browser.min.js" />
+    <Content Include="Scripts\smartwidgets\jarvis.widget.min.js" />
     <Content Include="Scripts\sweetalert\ie9.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.html" />
@@ -888,9 +895,7 @@
     <Folder Include="Scripts\bootstrap\" />
     <Folder Include="Scripts\jqplot\plugins\" />
     <Folder Include="Scripts\libs\" />
-    <Folder Include="Scripts\notification\" />
     <Folder Include="Scripts\smart-chat-ui\" />
-    <Folder Include="Scripts\smartwidgets\" />
     <Folder Include="Scripts\speech\" />
     <Folder Include="Views\AdminController\" />
     <Folder Include="Views\Themes\Eshopper\Content\" />

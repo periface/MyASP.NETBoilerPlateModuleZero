@@ -8,7 +8,7 @@ var globalModal = function (container, wrapper) {
     };
     globalModal.execute = function () {
         if (globalModal.sourceUrl) {
-            globalModal.container.load(globalModal.sourceUrl, globalModal.callback);
+            globalModal.container.load(globalModal.sourceUrl, globalModal.callBack);
             globalModal.wrappElement.modal("show");
         } else {
             console.error("No source url defined!");

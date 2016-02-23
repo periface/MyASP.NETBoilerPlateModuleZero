@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-<input type="hidden" id="rolePetition" value="@ViewBag.role"/>
+<input type="hidden" id="rolePetition" value="@ViewBag.role" />
 <div id="ribbon">
 
     <span class="ribbon-button-alignment">
@@ -47,7 +47,7 @@
 </div>
 <section id="widget-grid">
     <article class="col-sm-12 sortable-grid ui-sortable">
-        <button class="btn btn-primary create" type="button">CREATE NEW ROLE</button> 
+        <button class="btn btn-primary create" type="button">CREATE NEW ROLE</button>
         <div class="jarviswidget jarviswidget-sortable" id="wid-id-4" role="widget">
             <header role="heading">
 
@@ -64,7 +64,32 @@
                         <div class="col-sm-12">
                             <table id="tableRoles"></table>
                             <div id="paginationRoles"></div>
-                            <a id="initSub" >Subscribe to notifications</a>
+                            @if ((bool)ViewBag.IsSubscribedCreate)
+                            {
+                                <a id="initUnSub" class="btn btn-xs btn-default">Unsubscribe to notifications</a>
+                            }
+                            else
+                            {
+
+                                <a id="initSub" class="btn btn-xs btn-default">Subscribe to create notifications</a>
+                            }
+                            @if ((bool)ViewBag.IsSubscribedEdit)
+                            {
+                                <a id="initUnSubEdit" class="btn btn-xs btn-default">Unsubscribe to edit notifications</a>
+                            }
+                            else
+                            {
+                                <a id="initSubEdit" class="btn btn-xs btn-default">Subscribe to edit notifications</a>
+                            }
+                            @if ((bool)ViewBag.IsSubscribedDelete)
+                            {
+                                <a id="initUnSubDelete" class="btn btn-xs btn-default">Unubscribe to delete notifications</a>
+
+                            }
+                            else
+                            {
+                                <a id="initSubDelete" class="btn btn-xs btn-default">Subscribe to delete notifications</a>
+                            }
                         </div>
                     </div>
 

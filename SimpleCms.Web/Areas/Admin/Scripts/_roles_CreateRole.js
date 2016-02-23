@@ -16,7 +16,7 @@
         });
         var newRole = {
             PermisionList: permissions,
-            RoleName: $("#RoleName").val(),
+            DisplayName: $("#DisplayName").val(),
             IsDefault: $("#IsDefault").is(":checked")
         }
         abp.ui.setBusy($("#myTabContent1"), abp.ajax({

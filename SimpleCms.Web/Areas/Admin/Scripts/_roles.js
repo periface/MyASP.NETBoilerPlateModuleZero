@@ -70,7 +70,14 @@ window.populateTableRoles = function () {
 }
 $(document).ready(function () {
     var seeRole = function (roleName) {
-        modal.loadModal(urls.Roles + "EditRole?roleName=" + roleName);
+        var errorFunc = function (response, status) {
+            if (status === "error") {
+                modal.close();
+                abp.notify.error("Role not found!");
+            }
+        }
+        modal.loadModal(urls.Roles + "EditRole?roleName=" + roleName,errorFunc);
+
     }
     var rolePetition = $("#rolePetition");
     if (rolePetition.val()) {
@@ -79,12 +86,25 @@ $(document).ready(function () {
     window.populateTableRoles();
     $("#initSub").click(function () {
         abp.ajax({
-            url:  "/Admin/Layout/SubscribeToCreatedRole"
+            url: "/Admin/Layout/SubscribeToCreatedRole"
         }).done(function (d) {
             abp.message.success("Subscribed!");
         });
     });
-
+    $("#initSubEdit").click(function () {
+        abp.ajax({
+            url: "/Admin/Layout/SubscribeToEditedRole"
+        }).done(function (d) {
+            abp.message.success("Subscribed!");
+        });
+    });
+    $("#initSubDelete").click(function () {
+        abp.ajax({
+            url: "/Admin/Layout/SubscribeToDeletedRole"
+        }).done(function (d) {
+            abp.message.success("Subscribed!");
+        });
+    });
     $("#tableWidget").on("click", ".editRole", function () {
         if (isGranted(zeroPermissions.ManageRoles_Edit)) {
 

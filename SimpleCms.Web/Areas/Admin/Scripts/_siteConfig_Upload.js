@@ -32,7 +32,7 @@
         var id = $("#IdConfig").val();
         abp.ui.setBusy($("#container"), abp.ajax({
             type: "POST",
-            url: "/Admin/SiteConfig/UploadImageToInfo/?discriminator=" + discriminator + "&id=" + id,
+            url: urls.SiteConfig + "UploadImageToInfo/?discriminator=" + discriminator + "&id=" + id,
             data: data,
             contentType: false,
             cache: false,

@@ -8,10 +8,6 @@ namespace SimpleCms.ModuleZero
     {
         public override void SetNavigation(INavigationProviderContext context)
         {
-            //context.Manager.Menus.Add("ZeroMenu",new MenuDefinition("ZeroMainMenu",new LocalizableString("Menu","")).AddItem(new MenuItemDefinition(
-            //    "Roles_Menu",
-            //    new LocalizableString()
-            //    )));
             context.Manager.Menus.Add("ZeroMenu",
                 new MenuDefinition(
                     "ZeroMenu",
@@ -20,7 +16,8 @@ namespace SimpleCms.ModuleZero
                     new LocalizableString("Menu_ControlPanel", ModuleZeroConstants.Source),
                     "fa fa-lg fa-fw fa-bar-chart txt-color-blue",
                     "/Admin/ControlPanel",
-                    requiresAuthentication: true
+                    requiresAuthentication: true,
+                    requiredPermissionName: "DashBoard"
                     )
                     )
                 .AddItem(new MenuItemDefinition(
@@ -34,7 +31,7 @@ namespace SimpleCms.ModuleZero
                     url: "/Admin/OrgUnits",
                     icon: "fa fa-list-alt",
                     requiresAuthentication: true,
-                    requiredPermissionName: "Administration.OrgUnits"))
+                    requiredPermissionName: "Administration.OrgUnits.Menu"))
 
                 .AddItem(
                     new MenuItemDefinition(
@@ -42,14 +39,14 @@ namespace SimpleCms.ModuleZero
                     L("Roles"),
                     requiresAuthentication: true,
                      url: "/Admin/Roles",
-                    requiredPermissionName: "Administration.ManageRoles",
+                    requiredPermissionName: "Administration.ManageRoles.Menu",
                     icon: "fa fa-cube"))
                     .AddItem(
                     new MenuItemDefinition(
                         "Users",
                     L("Users"),
                     requiresAuthentication: true,
-                    requiredPermissionName: "Administration.ManageUsers",
+                    requiredPermissionName: "Administration.ManageUsers.Menu",
                     url: "/Admin/Users",
                     icon: "fa fa-users"))
                     .AddItem(
@@ -57,6 +54,7 @@ namespace SimpleCms.ModuleZero
                         "Languages",
                     L("Languages"),
                     requiresAuthentication: true,
+                    requiredPermissionName: "Administration.ManageLanguages.Menu",
                     url: "/Admin/Languages",
                     icon: "fa fa-flag"))
                     .AddItem(
@@ -64,7 +62,8 @@ namespace SimpleCms.ModuleZero
                         "Config",
                     L("Config"),
                     requiresAuthentication: true,
-                    url: "/Admin/Users",
+                    requiredPermissionName: "Administration.ManageConfiguration.Menu",
+                    url: "/Admin/Configuration",
                     icon: "fa fa-gear")))
                 );
 

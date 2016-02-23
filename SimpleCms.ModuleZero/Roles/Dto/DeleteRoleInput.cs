@@ -4,5 +4,6 @@
     {
         public int RoleId { get; set; }
         public int? TenantId { get; set; }
+        public long UserId { get; set; }
     }
 }

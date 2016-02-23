@@ -24,9 +24,14 @@ namespace SimpleCms.Web.Controllers
         /// Gets the active tenancy, usefull for anon users
         /// </summary>
         public string ActiveTenantName => GetTenancyNameByUrl();
-
+        
+        private readonly IThemeService _themeService;
+        private readonly ITenancyService _tenancyService;
         protected SimpleCmsControllerBase()
         {
+            var iocManager = IocManager.Instance;
+            _themeService = iocManager.Resolve<IThemeService>();
+            _tenancyService= iocManager.Resolve<ITenancyService>();
             LocalizationSourceName = SimpleCmsConsts.LocalizationSourceName;
         }
 
@@ -57,8 +62,7 @@ namespace SimpleCms.Web.Controllers
             string activeThemeName;
             if (Session[KeySession] == null)
             {
-                var container = IocManager.Instance;
-                var instance = container.Resolve<IThemeService>().GetCurrentActiveThemeFromTenant(GetTenancyNameByUrl());
+                var instance = _themeService.GetCurrentActiveThemeFromTenant(GetTenancyNameByUrl());
                 if (instance == null)
                 {
                     Session[KeySession] = "";
@@ -98,13 +102,8 @@ namespace SimpleCms.Web.Controllers
         {
             get
             {
-                var container = IocManager.Instance;
-                var instance = AsyncHelper.RunSync(() => container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl()));
-                if (instance == null)
-                {
-                    return true;
-                }
-                return false;
+                var instance =AsyncHelper.RunSync(()=>_tenancyService.GetTenantByName(GetTenancyNameByUrl()));
+                return instance == null;
             }
         }
         /// <summary>
@@ -115,9 +114,7 @@ namespace SimpleCms.Web.Controllers
         {
             get
             {
-
-                var container = IocManager.Instance;
-                var instance = AsyncHelper.RunSync(() => container.Resolve<ITenancyService>().GetTenantByName(GetTenancyNameByUrl()));
+                var instance = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(GetTenancyNameByUrl()));
                 return instance;
             }
         }

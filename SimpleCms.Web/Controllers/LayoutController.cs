@@ -60,7 +60,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult GetSiteInformation()
         {
-            var info = _siteService.GetCurrentInfo(TenantId);
+            var info = _siteService.GetCurrentInfo(ActiveTenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -75,7 +75,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult RenderMySiteName()
         {
-            var info = _siteService.GetCurrentInfo(TenantId);
+            var info = _siteService.GetCurrentInfo(ActiveTenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -86,7 +86,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult RenderMySiteLogo()
         {
-            var info = _siteService.GetCurrentInfo(TenantId);
+            var info = _siteService.GetCurrentInfo(ActiveTenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -100,7 +100,7 @@ namespace SimpleCms.Web.Controllers
         [ChildActionOnly]
         public PartialViewResult RenderMySiteSlogan()
         {
-            var info = _siteService.GetCurrentInfo(TenantId);
+            var info = _siteService.GetCurrentInfo(ActiveTenantId);
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
@@ -133,11 +133,6 @@ namespace SimpleCms.Web.Controllers
             }
 
             return PartialView("_UserMenuOrLoginLink", model);
-        }
-
-        private int? TenantId
-        {
-            get { return AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(ActiveTenantName)); }
         }
     }
 }

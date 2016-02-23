@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
@@ -108,10 +109,28 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             return Json(new { ok = true });
         }
 
+        public async Task<JsonResult> MarkAsReaded(Guid id)
+        {
+             await _notificationsService.MarkAsReaded(id);
+            return Json(new {ok = true});
+        }
         public async Task<JsonResult> SubscribeToCreatedRole()
         {
             if (AbpSession.UserId != null)
                 await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.CreatedRoleNotificationName);
+            return Json(new { ok = true });
+        }
+
+        public async Task<JsonResult> SubscribeToEditedRole()
+        {
+            if (AbpSession.UserId != null)
+                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.EditedRoleNotificationName);
+            return Json(new { ok = true });
+        }
+        public async Task<JsonResult> SubscribeToDeletedRole()
+        {
+            if (AbpSession.UserId != null)
+                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.DeletedRoleNotificationName);
             return Json(new { ok = true });
         }
     }

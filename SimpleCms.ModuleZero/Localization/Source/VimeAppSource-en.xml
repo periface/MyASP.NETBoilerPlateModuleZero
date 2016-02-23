@@ -42,6 +42,9 @@
     <text name="IsDefault" value="Is asigned by default?"/>
     <text name="Themes" value="Themes"/>
     <text name="RolesWarning" value="Warning Modify the admin role can cause unexpected behaviour."/>
+    <text name="RoleCreatedByUser" value="{userName} created a new role: {role}"/>
+    <text name="RoleEditedByUser" value="{userName} edited the role: {role}"/>
+    <text name="RoleDeletedByUser" value="{userName} deleted the role: {role}"/>
     <!--Other-->
     <text name="MessageOk" value="Unit Saved " />
     <text name="MessageDeleted" value="Unit Deleted " />

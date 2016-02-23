@@ -15,7 +15,7 @@
         });
         var newRole = {
             PermisionList: permissions,
-            RoleName: $("#RoleName").val(),
+            DisplayName: $("#DisplayName").val(),
             IsDefault: $("#IsDefault").is(":checked"),
             Id: $("#Id").val()
         }

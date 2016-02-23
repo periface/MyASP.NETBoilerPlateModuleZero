@@ -12,7 +12,7 @@ using SimpleCms.Web.Controllers;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
 {
-    [AbpMvcAuthorize("Administration.ManageUsers")]
+    
     public class UsersController : AdminController
     {
         private readonly IUserAppServiceZero _userAppServiceZero;
@@ -22,7 +22,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             _userAppServiceZero = userAppServiceZero;
             _roleAppServiceZero = roleAppServiceZero;
         }
-
+        
         // GET: Admin/Users
         public virtual ActionResult Index()
         {
@@ -34,6 +34,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             var model = _userAppServiceZero.GetUsersJqGridObject(searchString, rows, page, sidx, sord);
             return Json(model, JsonRequestBehavior.AllowGet);
         }
+        [AbpMvcAuthorize("Administration.ManageUsers.Create")]
         public virtual ActionResult CreateUser()
         {
             var user = new NewUserInput()
@@ -46,6 +47,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             return View(user);
         }
         [HttpPost]
+        [AbpMvcAuthorize("Administration.ManageUsers.Create")]
         public virtual async Task<ActionResult> CreateUser(NewUserInput input)
         {
             await _userAppServiceZero.CreateUser(input);
@@ -72,6 +74,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
                 return roles;
             }
         }
+        [AbpMvcAuthorize("Administration.ManageUsers.Edit")]
         public virtual async Task<ActionResult> EditUser(long id)
         {
             var user = await _userAppServiceZero.GetUser(id);
@@ -82,6 +85,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [AbpMvcAuthorize("Administration.ManageUsers.Edit")]
         public virtual async Task<ActionResult> EditUser(NewUserInput input)
         {
             await _userAppServiceZero.EditUser(input);
@@ -94,7 +98,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             await _userAppServiceZero.AddImageToUser(image, id);
             return null;
         }
-
+        [AbpMvcAuthorize("Administration.ManageUsers.Delete")]
         public virtual async Task<JsonResult> DeleteUser(long id)
         {
             if (id == AbpSession.UserId)

@@ -11,7 +11,7 @@
             Id: $("#Id").val()
         }
         abp.ui.setBusy($(modal), abp.ajax({
-            url: "/Admin/SiteConfig/EditInfo",
+            url: urls.SiteConfig + "EditInfo",
             data: JSON.stringify(newInfo)
 
         }).done(function () {

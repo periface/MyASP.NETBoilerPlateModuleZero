@@ -197,38 +197,8 @@
     <script src="~/Scripts/Admin/GlobalPermissions.js"></script>
     <script src="~/Scripts/Admin/GlobalConfigs.js"></script>
     <script src="~/Scripts/Admin/GlobalModal.js"></script>
+    <script src="~/Scripts/Admin/MessageInterceptor.js"></script>
     <!-- View specific scripts -->
     @RenderSection("scripts", required: false)
-    <script>
-        var reloadNotifications = function () {
-            $("#notifications").empty();
-            abp.ajax({
-                url: "/Admin/Layout/Notifications"
-            }).done(function (d) {
-                var count = d.length;
-                $.each(d, function (i, d) {
-                    if (d.notification.notificationName === "CreatedRole") {
-                        $("#notifications").append("<li><a href='/Admin/Roles?role=" + d.notification.data.roleName + "' class='notification'>" + d.notification.data.creatorName + " has created a new Role: " + d.notification.data.roleName + "</a></li>");
-                    }
-                });
-                $("#notifications").append("<li><hr></li>");
-                $("#notifications").append("<li><a  class='checkAll'>Clear</a></li>");
-            });
-        }
-        $("body").on("click", ".checkAll", function() {
-            abp.ajax({
-                url: "/Admin/Layout/MarkAllAsReaded"
-            }).done(function() {
-                reloadNotifications();
-            });
-        });
-        $(document).ready(function () {
-            reloadNotifications();
-        });
-        abp.event.on('abp.notifications.received', function (data) {
-            abp.notify.success("one new notification");
-            reloadNotifications();
-        });
-    </script>
 </body>
 </html>

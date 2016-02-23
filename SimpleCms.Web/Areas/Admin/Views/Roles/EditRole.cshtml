@@ -8,7 +8,7 @@
 
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit Role @Model.RoleName</h4>
+        <h4 class="modal-title" id="myModalLabel">Edit Role @Model.DisplayName</h4>
     </div>
     <div class="modal-body">
         @if (Model.RoleName == "Admin")
@@ -41,7 +41,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    @Html.TextBoxFor(a => a.RoleName, new {@class = "form-control", placeholder = "Role Name"})
+                                    @Html.TextBoxFor(a => a.DisplayName, new {@class = "form-control", placeholder = "Role Name"})
                                 </div>
                                 <div class="checkbox">
 
