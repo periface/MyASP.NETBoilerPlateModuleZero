@@ -20,6 +20,5 @@ namespace SimpleCms.ModuleZero.Roles
         Task DeleteRole(DeleteRoleInput input);
         List<RoleInput> GetAllRoles();
         Task<List<RoleInput>> GetAllRolesFromUser(long userId);
-        Task RegisterToRoleCreatedNotification(long userId, int? tenantId);
     }
 }

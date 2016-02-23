@@ -49,7 +49,7 @@ namespace SimpleCms.ModuleZero.Roles
             if (result.Succeeded)
             {
                 //Notify user registered
-                await _notificationsService.RoleCreatedNotification(roleInput.UserId,roleInput.RoleName);
+                await _notificationsService.TriggerRoleCreatedNotification(roleInput.UserId,roleInput.RoleName);
             }
         }
 
@@ -109,13 +109,7 @@ namespace SimpleCms.ModuleZero.Roles
             }
             return roleInPut;
         }
-
-        public async Task RegisterToRoleCreatedNotification(long userId, int? tenantId)
-        {
-            await _notificationSubscriptionManager.SubscribeAsync(tenantId, userId, "CreatedRole");
-        }
-
-
+        
 
         public async Task AssignPermissions(List<string> permissions, string name)
         {

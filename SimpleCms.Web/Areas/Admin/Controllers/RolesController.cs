@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using Abp.UI;
 using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
+using SimpleCms.ModuleZero.Constants;
+using SimpleCms.ModuleZero.Notifications;
 using SimpleCms.ModuleZero.Roles;
 using SimpleCms.ModuleZero.Roles.Dto;
 using SimpleCms.ModuleZero.Services;
@@ -18,10 +20,11 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
     public class RolesController : AdminController
     {
         private readonly IRoleAppServiceZero _roleAppServiceZero;
-
-        public RolesController(IRoleAppServiceZero roleAppServiceZero)
+        private readonly INotificationsService _notificationsService;
+        public RolesController(IRoleAppServiceZero roleAppServiceZero, INotificationsService notificationsService)
         {
             _roleAppServiceZero = roleAppServiceZero;
+            _notificationsService = notificationsService;
         }
 
         // GET: Admin/Roles
@@ -80,7 +83,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         public async Task<JsonResult> SubscribeToCreatedRole()
         {
             if (AbpSession.UserId != null)
-                await _roleAppServiceZero.RegisterToRoleCreatedNotification((long)AbpSession.UserId,AbpSession.TenantId);
+                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId,AbpSession.TenantId,ModuleZeroConstants.CreatedRoleNotificationName);
             return Json(new {ok = true});
         }
     }

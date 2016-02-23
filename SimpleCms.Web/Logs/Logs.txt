@@ -2924,3 +2924,251 @@ WARN  2016-02-23 11:07:55,214 [46   ] Abp.Logging.LogHelper                    -
 WARN  2016-02-23 11:07:55,214 [46   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsEdit' in localization source 'ModuleZero'!
 WARN  2016-02-23 11:07:55,214 [46   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsDelete' in localization source 'ModuleZero'!
 WARN  2016-02-23 11:07:55,215 [46   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsModify' in localization source 'ModuleZero'!
+WARN  2016-02-23 11:10:28,927 [50   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 11:10:28,978 [50   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 05cba7be-e3a0-4943-b338-0b26e4ba78e5
+WARN  2016-02-23 11:10:29,278 [50   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 11:10:29,279 [50   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 11:10:30,224 [130  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"5685ea98-a736-4ec6-84f7-55ccb512deca","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-23T11:10:30.2248788+08:00","Properties":{}}
+DEBUG 2016-02-23 11:10:30,278 [50   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 5685ea98-a736-4ec6-84f7-55ccb512deca
+WARN  2016-02-23 11:10:55,418 [50   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 11:10:55,470 [85   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 5685ea98-a736-4ec6-84f7-55ccb512deca
+WARN  2016-02-23 11:10:55,794 [130  ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 11:10:55,795 [130  ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 11:10:56,893 [130  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"4c873df6-cc6c-4571-9ad9-5214f1c6a76a","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-23T11:10:56.8934042+08:00","Properties":{}}
+DEBUG 2016-02-23 11:10:56,930 [15   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 4c873df6-cc6c-4571-9ad9-5214f1c6a76a
+DEBUG 2016-02-23 11:11:08,627 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:16:08,630 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:21:08,632 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:26:08,634 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:31:08,636 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:36:08,638 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:41:08,645 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:46:08,648 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:51:08,658 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:56:08,660 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 11:58:42,193 [168  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f9f41a5c-c108-4370-8a62-07c504705e45
+DEBUG 2016-02-23 11:59:02,585 [164  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 4c873df6-cc6c-4571-9ad9-5214f1c6a76a
+DEBUG 2016-02-23 12:01:08,634 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-02-23 12:01:08,635 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-02-23 12:01:08,635 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-02-23 12:01:08,636 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-02-23 12:01:08,636 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-02-23 12:01:08,662 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 12:06:08,671 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 12:11:08,673 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 12:16:08,676 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 12:21:08,678 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 12:26:02,397 [75   ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-23 12:26:02,398 [d9f68] Hangfire.Server.Worker                   - Background process 'Worker #0acd9f68' stopped.
+DEBUG 2016-02-23 12:26:02,399 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-02-23 12:26:02,399 [74868] Hangfire.Server.Worker                   - Background process 'Worker #c4b74868' stopped.
+DEBUG 2016-02-23 12:26:02,399 [45991] Hangfire.Server.Worker                   - Background process 'Worker #67345991' stopped.
+DEBUG 2016-02-23 12:26:02,399 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-02-23 12:26:02,399 [0fc7d] Hangfire.Server.Worker                   - Background process 'Worker #c050fc7d' stopped.
+DEBUG 2016-02-23 12:26:02,400 [8910e] Hangfire.Server.Worker                   - Background process 'Worker #8a78910e' stopped.
+DEBUG 2016-02-23 12:26:02,400 [2b5a6] Hangfire.Server.Worker                   - Background process 'Worker #2ab2b5a6' stopped.
+DEBUG 2016-02-23 12:26:02,400 [af7bd] Hangfire.Server.Worker                   - Background process 'Worker #a5faf7bd' stopped.
+DEBUG 2016-02-23 12:26:02,400 [1489f] Hangfire.Server.Worker                   - Background process 'Worker #d7b1489f' stopped.
+DEBUG 2016-02-23 12:26:02,401 [84374] Hangfire.Server.Worker                   - Background process 'Worker #b9184374' stopped.
+DEBUG 2016-02-23 12:26:02,401 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-02-23 12:26:02,401 [c000c] Hangfire.Server.Worker                   - Background process 'Worker #588c000c' stopped.
+DEBUG 2016-02-23 12:26:02,402 [80fe0] Hangfire.Server.Worker                   - Background process 'Worker #a0f80fe0' stopped.
+DEBUG 2016-02-23 12:26:02,403 [2ee01] Hangfire.Server.Worker                   - Background process 'Worker #3652ee01' stopped.
+DEBUG 2016-02-23 12:26:02,403 [63843] Hangfire.Server.Worker                   - Background process 'Worker #cbd63843' stopped.
+DEBUG 2016-02-23 12:26:02,403 [f3b13] Hangfire.Server.Worker                   - Background process 'Worker #a08f3b13' stopped.
+DEBUG 2016-02-23 12:26:02,410 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-02-23 12:26:02,410 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-02-23 12:26:02,410 [16435] Hangfire.Server.Worker                   - Background process 'Worker #9de16435' stopped.
+DEBUG 2016-02-23 12:26:02,411 [30cbb] Hangfire.Server.Worker                   - Background process 'Worker #6b930cbb' stopped.
+DEBUG 2016-02-23 12:26:02,411 [76f19] Hangfire.Server.Worker                   - Background process 'Worker #83976f19' stopped.
+DEBUG 2016-02-23 12:26:02,411 [7fd12] Hangfire.Server.Worker                   - Background process 'Worker #5827fd12' stopped.
+DEBUG 2016-02-23 12:26:02,412 [0f66b] Hangfire.Server.Worker                   - Background process 'Worker #d4b0f66b' stopped.
+DEBUG 2016-02-23 12:26:02,412 [e05c2] Hangfire.Server.Worker                   - Background process 'Worker #2d7e05c2' stopped.
+DEBUG 2016-02-23 12:26:02,412 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-02-23 12:26:02,419 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-02-23 12:26:02,419 [75   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-02-23 12:26:02,420 [75   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-23 12:26:16,071 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-23 12:26:21,386 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2016-02-23 12:26:21,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,395 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,395 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-23 12:26:21,400 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-23 12:26:21,452 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-02-23 12:26:21,586 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-02-23 12:26:21,676 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-02-23 12:26:26,917 [1    ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-23 12:26:26,922 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-23 12:26:26,922 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-23 12:26:26,934 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-23 12:26:26,935 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-23 12:26:26,936 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-23 12:26:26,936 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-23 12:26:26,937 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-23 12:26:26,944 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-02-23 12:26:26,954 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-02-23 12:26:26,956 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: usuario-pc@SimpleCms'.
+INFO  2016-02-23 12:26:26,956 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-02-23 12:26:26,956 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-02-23 12:26:26,956 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-02-23 12:26:26,956 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20.
+INFO  2016-02-23 12:26:26,957 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'.
+INFO  2016-02-23 12:26:26,957 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15.
+INFO  2016-02-23 12:26:26,957 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15.
+DEBUG 2016-02-23 12:26:26,968 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-02-23 12:26:27,151 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-02-23 12:26:27,152 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-02-23 12:26:27,152 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-02-23 12:26:27,155 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-02-23 12:26:27,155 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-02-23 12:26:27,156 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-23 12:26:27,157 [480a9] Hangfire.Server.Worker                   - Background process 'Worker #47f480a9' started.
+DEBUG 2016-02-23 12:26:27,159 [22b67] Hangfire.Server.Worker                   - Background process 'Worker #5f322b67' started.
+DEBUG 2016-02-23 12:26:27,166 [2b07b] Hangfire.Server.Worker                   - Background process 'Worker #4df2b07b' started.
+DEBUG 2016-02-23 12:26:27,167 [fda99] Hangfire.Server.Worker                   - Background process 'Worker #a1bfda99' started.
+DEBUG 2016-02-23 12:26:27,168 [50f34] Hangfire.Server.Worker                   - Background process 'Worker #6db50f34' started.
+DEBUG 2016-02-23 12:26:27,172 [13bf5] Hangfire.Server.Worker                   - Background process 'Worker #87713bf5' started.
+DEBUG 2016-02-23 12:26:27,172 [8ae43] Hangfire.Server.Worker                   - Background process 'Worker #2cd8ae43' started.
+DEBUG 2016-02-23 12:26:27,174 [7bc78] Hangfire.Server.Worker                   - Background process 'Worker #cae7bc78' started.
+DEBUG 2016-02-23 12:26:27,176 [1f210] Hangfire.Server.Worker                   - Background process 'Worker #32d1f210' started.
+DEBUG 2016-02-23 12:26:27,194 [f15fc] Hangfire.Server.Worker                   - Background process 'Worker #3f9f15fc' started.
+DEBUG 2016-02-23 12:26:27,194 [31599] Hangfire.Server.Worker                   - Background process 'Worker #05c31599' started.
+DEBUG 2016-02-23 12:26:27,195 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-02-23 12:26:27,203 [18c8c] Hangfire.Server.Worker                   - Background process 'Worker #3f218c8c' started.
+DEBUG 2016-02-23 12:26:27,211 [a613d] Hangfire.Server.Worker                   - Background process 'Worker #16ea613d' started.
+DEBUG 2016-02-23 12:26:27,219 [4918d] Hangfire.Server.Worker                   - Background process 'Worker #cb24918d' started.
+DEBUG 2016-02-23 12:26:27,220 [ee622] Hangfire.Server.Worker                   - Background process 'Worker #985ee622' started.
+DEBUG 2016-02-23 12:26:27,224 [6aa76] Hangfire.Server.Worker                   - Background process 'Worker #0d96aa76' started.
+DEBUG 2016-02-23 12:26:27,227 [d50a8] Hangfire.Server.Worker                   - Background process 'Worker #7c9d50a8' started.
+DEBUG 2016-02-23 12:26:27,229 [288f6] Hangfire.Server.Worker                   - Background process 'Worker #c32288f6' started.
+DEBUG 2016-02-23 12:26:27,233 [e0a68] Hangfire.Server.Worker                   - Background process 'Worker #cd3e0a68' started.
+DEBUG 2016-02-23 12:26:27,233 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-02-23 12:26:27,234 [7fa98] Hangfire.Server.Worker                   - Background process 'Worker #bc37fa98' started.
+DEBUG 2016-02-23 12:26:27,236 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-02-23 12:26:27,237 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-02-23 12:26:27,238 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-02-23 12:26:27,241 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-02-23 12:26:31,521 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-23 12:26:31,521 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-23 12:26:31,688 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-23 12:26:31,693 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-23 12:26:31,694 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-23 12:26:31,712 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-23 12:26:31,717 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-23 12:26:31,729 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-23 12:26:31,730 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-23 12:26:31,732 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-23 12:26:31,733 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-23 12:26:39,900 [159  ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:26:44,665 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:26:48,392 [73   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:26:48,982 [78   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:26:48,982 [78   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:26:50,565 [73   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:26:50,848 [45   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:26:50,848 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:26:55,403 [73   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:26:55,724 [75   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:26:55,724 [75   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 12:26:57,991 [78   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b72e3249-c9c2-4fe6-815d-5c51f9ce7964","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-23T12:26:57.9862838+08:00","Properties":{}}
+DEBUG 2016-02-23 12:26:58,128 [45   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b72e3249-c9c2-4fe6-815d-5c51f9ce7964
+WARN  2016-02-23 12:26:59,493 [75   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 12:26:59,558 [78   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: b72e3249-c9c2-4fe6-815d-5c51f9ce7964
+WARN  2016-02-23 12:26:59,820 [45   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:26:59,820 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-23 12:27:00,486 [73   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"bcdff4c3-685b-474f-b636-2d9b75cc6ab0","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-23T12:27:00.4864268+08:00","Properties":{}}
+DEBUG 2016-02-23 12:27:00,512 [78   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: bcdff4c3-685b-474f-b636-2d9b75cc6ab0
+WARN  2016-02-23 12:27:03,873 [75   ] Abp.Logging.LogHelper                    - Can not find 'Pages' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:27:03,873 [75   ] Abp.Logging.LogHelper                    - Can not find 'Administration_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,873 [75   ] Abp.Logging.LogHelper                    - Can not find 'Administration_DashBoard' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,873 [75   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,874 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,874 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,874 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,874 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,875 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersViewUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,875 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersChangeRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,875 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,875 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,876 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,876 [75   ] Abp.Logging.LogHelper                    - Can not find 'ManageDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,877 [75   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,877 [75   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,877 [75   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:03,877 [75   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsModify' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,632 [78   ] Abp.Logging.LogHelper                    - Can not find 'Pages' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:27:12,633 [78   ] Abp.Logging.LogHelper                    - Can not find 'Administration_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,634 [78   ] Abp.Logging.LogHelper                    - Can not find 'Administration_DashBoard' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,635 [78   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,637 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,638 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,640 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,641 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,641 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersViewUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,642 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersChangeRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,643 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,644 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,645 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,646 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,648 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,648 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,649 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,650 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsModify' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,659 [78   ] Abp.Logging.LogHelper                    - Can not find 'Pages' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:27:12,659 [78   ] Abp.Logging.LogHelper                    - Can not find 'Administration_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,659 [78   ] Abp.Logging.LogHelper                    - Can not find 'Administration_DashBoard' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,660 [78   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,660 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,660 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,661 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,661 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,661 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersViewUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,662 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersChangeRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,662 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,662 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,663 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,663 [78   ] Abp.Logging.LogHelper                    - Can not find 'ManageDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,663 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,664 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,664 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:12,664 [78   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsModify' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,305 [73   ] Abp.Logging.LogHelper                    - Can not find 'Pages' in localization source 'SimpleCms'!
+WARN  2016-02-23 12:27:18,305 [73   ] Abp.Logging.LogHelper                    - Can not find 'Administration_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,305 [73   ] Abp.Logging.LogHelper                    - Can not find 'Administration_DashBoard' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,305 [73   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,306 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,306 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,306 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,306 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,307 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersViewUsers' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,307 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageUsersChangeRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,307 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageRoles' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,307 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,307 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageRolesEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,308 [73   ] Abp.Logging.LogHelper                    - Can not find 'ManageDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,308 [73   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsCreate' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,308 [73   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsEdit' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,309 [73   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsDelete' in localization source 'ModuleZero'!
+WARN  2016-02-23 12:27:18,309 [73   ] Abp.Logging.LogHelper                    - Can not find 'OrgUnitsModify' in localization source 'ModuleZero'!

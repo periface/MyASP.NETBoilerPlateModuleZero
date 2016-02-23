@@ -9,5 +9,6 @@ namespace SimpleCms.ModuleZero.Constants
     public class ModuleZeroConstants
     {
         public const string Source = "ModuleZero";
+        public const string CreatedRoleNotificationName = "CreatedRole";
     }
 }
