@@ -35,8 +35,8 @@ window.populateTableRoles = function () {
 
             },
             {
-                name: "RoleName",
-                index: "RoleName",
+                name: "DisplayName",
+                index: "DisplayName",
                 align: "center"
             },
             {
@@ -69,11 +69,17 @@ window.populateTableRoles = function () {
     });
 }
 $(document).ready(function () {
-
+    var seeRole = function (roleName) {
+        modal.loadModal(urls.Roles + "EditRole?roleName=" + roleName);
+    }
+    var rolePetition = $("#rolePetition");
+    if (rolePetition.val()) {
+        seeRole(rolePetition.val());
+    }
     window.populateTableRoles();
     $("#initSub").click(function () {
         abp.ajax({
-            url: urls.Roles + "SubscribeToCreatedRole"
+            url:  "/Admin/Layout/SubscribeToCreatedRole"
         }).done(function (d) {
             abp.message.success("Subscribed!");
         });

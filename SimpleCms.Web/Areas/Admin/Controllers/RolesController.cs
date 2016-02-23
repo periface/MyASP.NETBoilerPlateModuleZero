@@ -28,8 +28,12 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles
-        public ActionResult Index()
+        public ActionResult Index(string role)
         {
+            if (!string.IsNullOrEmpty(role))
+            {
+                ViewBag.role = role;
+            }
             return View();
         }
         [WrapResult(false)]
@@ -39,11 +43,20 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             return Json(roles.Roles, JsonRequestBehavior.AllowGet);
         }
 
-        public async Task<ViewResult> EditRole(int id)
+        public async Task<ViewResult> EditRole(int? id,string roleName)
         {
-            var role = await _roleAppServiceZero.GetRole(id);
-            role.PermisionList =await _roleAppServiceZero.GetAssignedPermissions(id);
-            return View(role);
+            if (id.HasValue && string.IsNullOrEmpty(roleName))
+            {
+                var role = await _roleAppServiceZero.GetRole(id.Value);
+                role.PermisionList = await _roleAppServiceZero.GetAssignedPermissions(id.Value);
+                return View(role);
+            }
+            if (!string.IsNullOrEmpty(roleName) && !id.HasValue)
+            {
+                var role =await _roleAppServiceZero.GetRoleByName(roleName);
+                return View(role);
+            }
+            throw new UserFriendlyException("Not found");
         }
         [HttpPost]
         public async Task<JsonResult> EditRole([Bind(Exclude = "TenantId")]NewRoleInput input)
@@ -80,11 +93,6 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             return Json(new { ok = true }, JsonRequestBehavior.AllowGet);
         }
 
-        public async Task<JsonResult> SubscribeToCreatedRole()
-        {
-            if (AbpSession.UserId != null)
-                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId,AbpSession.TenantId,ModuleZeroConstants.CreatedRoleNotificationName);
-            return Json(new {ok = true});
-        }
+        
     }
 }

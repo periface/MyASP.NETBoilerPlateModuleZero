@@ -34,6 +34,7 @@ namespace SimpleCms.ModuleZero.Users.Dto
 
     public class RoleInput
     {
+        public string DisplayName { get; set; }
         public string RoleName { get; set; }
         public bool Granted { get; set; }
     }

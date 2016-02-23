@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.Configuration.Startup;
@@ -6,6 +7,8 @@ using Abp.Localization;
 using Abp.Notifications;
 using Abp.Threading;
 using SimpleCms.ModuleCms.SiteConfiguration;
+using SimpleCms.ModuleZero.Constants;
+using SimpleCms.ModuleZero.Notifications;
 using SimpleCms.Sessions;
 using SimpleCms.Web.Controllers;
 using SimpleCms.Web.Models.Layout;
@@ -20,7 +23,8 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         private readonly IMultiTenancyConfig _multiTenancyConfig;
         private readonly ISiteService _siteService;
         private readonly IUserNotificationManager _userNotificationManager;
-        public LayoutController(IUserNavigationManager userNavigationManager, ILocalizationManager localizationManager, ISessionAppService sessionAppService, IMultiTenancyConfig multiTenancyConfig, ISiteService siteService, IUserNotificationManager userNotificationManager)
+        private readonly INotificationsService _notificationsService;
+        public LayoutController(IUserNavigationManager userNavigationManager, ILocalizationManager localizationManager, ISessionAppService sessionAppService, IMultiTenancyConfig multiTenancyConfig, ISiteService siteService, IUserNotificationManager userNotificationManager, INotificationsService notificationsService)
         {
             _userNavigationManager = userNavigationManager;
             _localizationManager = localizationManager;
@@ -28,6 +32,7 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
             _multiTenancyConfig = multiTenancyConfig;
             _siteService = siteService;
             _userNotificationManager = userNotificationManager;
+            _notificationsService = notificationsService;
         }
         [ChildActionOnly]
         public PartialViewResult AdminTopMenu(string activeMenu = "")
@@ -89,13 +94,25 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
 
             return PartialView("_UserMenuOrLoginLinkAdmin", model);
         }
-        
-        public JsonResult Notifications()
+
+        public async Task<JsonResult> Notifications()
         {
             if (AbpSession.UserId == null) return Json(null);
-            var notifications =
-                AsyncHelper.RunSync(()=>_userNotificationManager.GetUserNotificationsAsync((long) AbpSession.UserId)); 
-            return Json(notifications);
+            var notifications =await _userNotificationManager.GetUserNotificationsAsync((long)AbpSession.UserId);
+            return Json(notifications.Where(a=>a.State==UserNotificationState.Unread));
+        }
+
+        public async Task<JsonResult> MarkAllAsReaded()
+        {
+            if (AbpSession.UserId != null) await _notificationsService.CheckAll((long) AbpSession.UserId);
+            return Json(new { ok = true });
+        }
+
+        public async Task<JsonResult> SubscribeToCreatedRole()
+        {
+            if (AbpSession.UserId != null)
+                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.CreatedRoleNotificationName);
+            return Json(new { ok = true });
         }
     }
 }

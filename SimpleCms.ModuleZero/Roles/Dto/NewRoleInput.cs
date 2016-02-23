@@ -17,6 +17,7 @@ namespace SimpleCms.ModuleZero.Roles.Dto
         }
         public int Id { get; set; }
         public string RoleName { get; set; }
+        public string DisplayName { get; set; }
         public List<Permissions> PermisionList { get; set; } 
         public bool IsDefault { get; set; }
         public int? TenantId { get; set; }

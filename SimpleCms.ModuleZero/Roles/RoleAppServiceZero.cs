@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
@@ -40,7 +41,7 @@ namespace SimpleCms.ModuleZero.Roles
         {
             var role = new Role()
             {
-                Name = roleInput.RoleName,
+                Name =  roleInput.RoleName.Replace(" ", string.Empty),
                 DisplayName = roleInput.RoleName,
                 IsDefault = roleInput.IsDefault,
                 TenantId = roleInput.TenantId
@@ -49,7 +50,7 @@ namespace SimpleCms.ModuleZero.Roles
             if (result.Succeeded)
             {
                 //Notify user registered
-                await _notificationsService.TriggerRoleCreatedNotification(roleInput.UserId,roleInput.RoleName);
+                await _notificationsService.TriggerRoleCreatedNotification(roleInput.UserId,roleInput.RoleName.Replace(" ", string.Empty));
             }
         }
 
@@ -58,7 +59,8 @@ namespace SimpleCms.ModuleZero.Roles
             var role = await _roleManager.GetRoleByIdAsync(roleInput.Id);
             if (role == null) throw new UserFriendlyException("Role not found");
 
-            role.Name = roleInput.RoleName;
+            role.Name = roleInput.RoleName.Replace(" ", string.Empty);
+            role.DisplayName = roleInput.RoleName;
             role.IsDefault = roleInput.IsDefault;
             await _roleManager.UpdateAsync(role);
             await _roleManager.SetGrantedPermissionsAsync(roleInput.Id, PermissionsAssigned(roleInput.CreatePermissions()));
@@ -82,7 +84,8 @@ namespace SimpleCms.ModuleZero.Roles
                 roleList.Add(new RoleInput()
                 {
                     Granted = false,
-                    RoleName = role.Name
+                    RoleName = role.Name,
+                    DisplayName = role.DisplayName
                 });
 
             }
@@ -98,7 +101,8 @@ namespace SimpleCms.ModuleZero.Roles
             {
                 var roleObj = new RoleInput()
                 {
-                    RoleName = role.Name
+                    RoleName = role.Name,
+                    DisplayName = role.DisplayName
                 };
                 // ReSharper disable once UnusedVariable
                 foreach (var roleGranted in rolesOfUser.Where(roleGranted => roleGranted == role.Name))
@@ -109,13 +113,37 @@ namespace SimpleCms.ModuleZero.Roles
             }
             return roleInPut;
         }
-        
+
+        public async Task<NewRoleInput> GetRoleByName(string roleName)
+        {
+            var role = await _roleManager.GetRoleByNameAsync(roleName);
+            if (role != null)
+                return new NewRoleInput()
+                {
+                    IsDefault = role.IsDefault,
+                    Id = role.Id,
+                    PermisionList = role.Permissions.Select(a =>
+                    {
+                        var firstOrDefault = _permissionManager.GetAllPermissions().FirstOrDefault(p => p.Name == a.Name);
+                        return firstOrDefault != null ? new Permissions()
+                        {
+                            Granted = a.IsGranted,
+                            DbName = a.Name,
+                            Id = a.Id,
+                            PermissionName = firstOrDefault.DisplayName.Localize(new LocalizationContext(_localizationManager), new CultureInfo(_localizationManager.CurrentLanguage.Name))
+                        } : null;
+                    }).ToList(),
+                    RoleName = role.Name,
+                    DisplayName = role.DisplayName
+                };
+            throw new UserFriendlyException("Role not found!");
+
+        }
+
 
         public async Task AssignPermissions(List<string> permissions, string name)
         {
-
-            var role = await _roleManager.GetRoleByNameAsync(name);
-
+            var role = await _roleManager.GetRoleByNameAsync(name.Replace(" ", string.Empty));
             await _roleManager.SetGrantedPermissionsAsync(role.Id, PermissionsAssigned(permissions));
         }
         //NotUsed
@@ -135,6 +163,7 @@ namespace SimpleCms.ModuleZero.Roles
                 Roles = roles.Select(r => new Dto.Role()
                 {
                     RoleName = r.Name,
+                   DisplayName = r.DisplayName,
                     Id = r.Id,
                     Permissions = r.Permissions.Select(a => new Permissions() { Granted = a.IsGranted, PermissionName = a.Name }).ToList(),
                     Type = r.IsStatic ? "Static" : "Default",
@@ -161,10 +190,12 @@ namespace SimpleCms.ModuleZero.Roles
         Granted = a.IsGranted,
         DbName = a.Name,
         Id = a.Id,
+       
         PermissionName = firstOrDefault.DisplayName.Localize(new LocalizationContext(_localizationManager), new CultureInfo(_localizationManager.CurrentLanguage.Name))
     } : null;
 }).ToList(),
-                    RoleName = role.Name
+                    RoleName = role.Name,
+                    DisplayName = role.DisplayName
                 };
             throw new UserFriendlyException("Role not found!");
         }
@@ -176,6 +207,7 @@ namespace SimpleCms.ModuleZero.Roles
             {
                 PermissionName = a.DisplayName.Localize(new LocalizationContext(_localizationManager), new CultureInfo(_localizationManager.CurrentLanguage.Name)),
                 DbName = a.Name,
+               
             }).ToList();
         }
 
@@ -200,6 +232,7 @@ namespace SimpleCms.ModuleZero.Roles
         //Helper
         private IEnumerable<Permission> PermissionsAssigned(List<string> list)
         {
+            if (list == null) throw new ArgumentNullException(nameof(list));
             var permDb = _permissionManager.GetAllPermissions();
             var listPermissions = (from perm in permDb from p in list where p == perm.Name select perm).ToList();
             return listPermissions;

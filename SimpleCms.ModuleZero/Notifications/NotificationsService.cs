@@ -11,11 +11,13 @@ namespace SimpleCms.ModuleZero.Notifications
         private readonly INotificationPublisher _notificationPublisher;
         private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
         private readonly UserManager _userManager;
-        public NotificationsService(INotificationPublisher notificationPublisher, UserManager userManager, INotificationSubscriptionManager notificationSubscriptionManager)
+        private readonly IUserNotificationManager _userNotificationManager;
+        public NotificationsService(INotificationPublisher notificationPublisher, UserManager userManager, INotificationSubscriptionManager notificationSubscriptionManager, IUserNotificationManager userNotificationManager)
         {
             _notificationPublisher = notificationPublisher;
             _userManager = userManager;
             _notificationSubscriptionManager = notificationSubscriptionManager;
+            _userNotificationManager = userNotificationManager;
         }
 
         public async Task TriggerRoleCreatedNotification(long? userId, string roleName)
@@ -45,6 +47,10 @@ namespace SimpleCms.ModuleZero.Notifications
             await _notificationSubscriptionManager.SubscribeAsync(tenantId, userId, notificationName);
         }
 
+        public async Task CheckAll(long userId)
+        {
+          await _userNotificationManager.UpdateAllUserNotificationStatesAsync(userId,UserNotificationState.Read);
+        }
         public async Task<bool> IsSuscribed(string notificationName, long userId)
         {
             return await _notificationSubscriptionManager.IsSubscribedAsync(userId, notificationName);

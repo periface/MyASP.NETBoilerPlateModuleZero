@@ -16,6 +16,7 @@ namespace SimpleCms.ModuleZero.Roles.Dto
         public DateTime CreationTime { get; set; }
         public string Type { get; set; }
         public string CreationTimeString => CreationTime.ToShortDateString();
+        public string DisplayName { get; set; }
     }
 
     public class Permissions : EntityDto<long>
