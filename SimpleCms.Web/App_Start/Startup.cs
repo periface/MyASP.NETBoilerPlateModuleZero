@@ -19,7 +19,7 @@ namespace SimpleCms.Web
         public void Configuration(IAppBuilder app)
         {
             app.UseAbp();
-            app.MapSignalR();
+            
             app.UseOAuthBearerAuthentication(AccountController.OAuthBearerOptions);
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions
@@ -44,6 +44,7 @@ namespace SimpleCms.Web
             {
                 app.UseGoogleAuthentication(CreateGoogleAuthOptions());
             }
+            app.MapSignalR();
         }
 
         private static FacebookAuthenticationOptions CreateFacebookAuthOptions()

@@ -12,5 +12,6 @@ namespace SimpleCms.ModuleZero.Notifications
     public interface INotificationsService : IApplicationService
     {
         Task<IEnumerable<NotificationsOutputDto>> GetNotifications(long userId);
+        Task RoleCreatedNotification(long? userId,string roleName);
     }
 }

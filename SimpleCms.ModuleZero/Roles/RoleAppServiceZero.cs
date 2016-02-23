@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using Abp.Application.Services;
 using Abp.Authorization;
 using Abp.Localization;
 using Abp.Notifications;
 using Abp.UI;
 using SimpleCms.Authorization.Roles;
+using SimpleCms.ModuleZero.Notifications;
 using SimpleCms.ModuleZero.Roles.Dto;
 using SimpleCms.ModuleZero.Users.Dto;
 using SimpleCms.Users;
@@ -20,25 +19,21 @@ namespace SimpleCms.ModuleZero.Roles
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;
-        
+
+        private const string ProhibitedAdminVar = "Admin";
+
         private readonly IPermissionManager _permissionManager;
         private readonly ILocalizationManager _localizationManager;
-        private readonly IUserNotificationManager _userNotificationManager;
-        private readonly IRealTimeNotifier _realTimeNotifier;
-        private const string ProhibitedAdminVar = "Admin";
         private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
-        private readonly INotificationPublisher _notificationPublisher;
-
-        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager, INotificationSubscriptionManager notificationSubscriptionManager, INotificationPublisher notificationPublisher, IUserNotificationManager userNotificationManager, IRealTimeNotifier realTimeNotifier)
+        private readonly INotificationsService _notificationsService;
+        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager, INotificationSubscriptionManager notificationSubscriptionManager, INotificationsService notificationsService)
         {
             _roleManager = roleVimeManager;
             _permissionManager = permissionManager;
             _localizationManager = localizationManager;
             _userManager = userManager;
             _notificationSubscriptionManager = notificationSubscriptionManager;
-            _notificationPublisher = notificationPublisher;
-            _userNotificationManager = userNotificationManager;
-            _realTimeNotifier = realTimeNotifier;
+            _notificationsService = notificationsService;
         }
 
         public async Task CreateRole(NewRoleInput roleInput)
@@ -53,21 +48,8 @@ namespace SimpleCms.ModuleZero.Roles
             var result = await _roleManager.CreateAsync(role);
             if (result.Succeeded)
             {
-                var user = new User();
-                if (roleInput.UserId != null)
-                {
-                    user = await _userManager.GetUserByIdAsync((long)roleInput.UserId);
-                }
-                await _notificationPublisher.PublishAsync("CreatedRole", new NewRoleNotificationData()
-                {
-                    RoleName = role.Name,
-                    CreatorName = user.UserName
-                });
-                //if (roleInput.UserId != null)
-                //{
-                //    var notifications = await _userNotificationManager.GetUserNotificationsAsync((long) roleInput.UserId);
-                //    await _realTimeNotifier.SendNotificationsAsync(notifications.ToArray());
-                //}
+                //Notify user registered
+                await _notificationsService.RoleCreatedNotification(roleInput.UserId,roleInput.RoleName);
             }
         }
 

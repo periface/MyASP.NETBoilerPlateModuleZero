@@ -54,6 +54,10 @@
       <HintPath>..\packages\Abp.EntityFramework.0.8.1.0\lib\net461\Abp.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Abp.HangFire, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.HangFire.0.8.1.0\lib\net461\Abp.HangFire.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Abp.Owin, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Owin.0.8.1.0\lib\net461\Abp.Owin.dll</HintPath>
       <Private>True</Private>
@@ -117,6 +121,14 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.5.3\lib\net45\Hangfire.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.5.3\lib\net45\Hangfire.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
@@ -612,6 +624,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Scripts\Admin\GlobalConfigs.js" />
+    <Content Include="Scripts\Admin\GlobalModal.js" />
     <Content Include="Scripts\Admin\GlobalPermissions.js" />
     <Content Include="Scripts\app.config.js" />
     <Content Include="Scripts\app.min.js" />

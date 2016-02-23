@@ -20,7 +20,6 @@
 
     //Register to get notifications
     commonHub.client.getNotification = function (notification) {
-        console.log("Triggered!");
         abp.event.trigger('abp.notifications.received', notification);
     };
 

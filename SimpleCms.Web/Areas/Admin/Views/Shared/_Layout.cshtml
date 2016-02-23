@@ -152,6 +152,11 @@
 
     @Scripts.Render("~/Bundles/vendor/js/bottom")
     @Scripts.Render("~/Bundles/js")
+
+    <script src="~/api/AbpServiceProxies/GetAll"></script>
+    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.signalr.js"></script>
     <!-- IMPORTANT: APP CONFIG -->
     <script src="~/Scripts/app.config.js"></script>
 
@@ -188,39 +193,15 @@
         //Localizing momentjs
         moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
     </script>
-    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
-    <script src="~/api/AbpServiceProxies/GetAll"></script>
-    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
-    <script src="~/signalr/hubs"></script>
-    <script src="~/Abp/Framework/scripts/libs/abp.signalr.js"></script>
-    <script>
-        abp.signalr = abp.signalr || {};
-    </script>
 
     <script src="~/Scripts/Admin/GlobalPermissions.js"></script>
     <script src="~/Scripts/Admin/GlobalConfigs.js"></script>
     <script src="~/Scripts/Admin/GlobalModal.js"></script>
     <!-- View specific scripts -->
-    <script>
-
-        //window.moduleZeroLocalizationConstant = "ModuleZero";
-        //window.modal = $("#modal");
-
-        //window.modalContent = $("#modalContent");
-        //window.launchModal = function () {
-        //    window.modal.modal("show");
-        //}
-        //window.launchModalBg = function () {
-        //    $("#modalConfig").addClass("modal-lg");
-        //    window.modal.modal("show");
-        //}
-        //window.closeModal = function () {
-        //    window.modal.modal("hide");
-        //}
-    </script>
     @RenderSection("scripts", required: false)
     <script>
-        $(document).ready(function () {
+        var reloadNotifications = function () {
+            $("#notifications").text = "";
             abp.ajax({
                 url: "/Admin/Layout/Notifications"
             }).done(function (d) {
@@ -228,13 +209,15 @@
                     if (d.notification.notificationName === "CreatedRole") {
                         $("#notifications").append("<li><a>" + d.notification.data.creatorName + " has created a new Role: " + d.notification.data.roleName + "</a></li>");
                     }
-                    //Notificaciónes
-                    
                 });
             });
+        }
+        $(document).ready(function () {
+            reloadNotifications();
         });
-        abp.event.on('abp.notifications.CreatedRole', function (data) {
-            console.log(data);
+        abp.event.on('abp.notifications.received', function (data) {
+            abp.notify.success("one new notification");
+            reloadNotifications();
         });
     </script>
 </body>
