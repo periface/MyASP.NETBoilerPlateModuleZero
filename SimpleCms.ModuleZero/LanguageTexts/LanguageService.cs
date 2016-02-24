@@ -15,7 +15,7 @@ using SimpleCms.ModuleZero.LanguageTexts.Dto;
 
 namespace SimpleCms.ModuleZero.LanguageTexts
 {
-    public class LanguageService : SimpleCmsAppServiceBase, ILanguageService
+    public class LanguageService : ModuleZeroAppService, ILanguageService
     {
         private readonly IApplicationLanguageManager _languageManager;
         private readonly IApplicationLanguageTextManager _applicationLanguageTextManager;

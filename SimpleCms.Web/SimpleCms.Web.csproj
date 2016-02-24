@@ -289,6 +289,7 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css" />
     <Content Include="Abp\Framework\styles\abp.mixings.min.css" />
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
+    <Content Include="Areas\Admin\Scripts\SubscriptionManager.js" />
     <Content Include="Areas\Admin\Scripts\_bootstrap-checkbox.js" />
     <Content Include="Areas\Admin\Scripts\_languages.js" />
     <Content Include="Areas\Admin\Scripts\_languages_Create.js" />
@@ -729,6 +730,8 @@
     <Content Include="Scripts\plugin\bootstrapselect\js\i18n\defaults-zh_TW.js" />
     <Content Include="Scripts\plugin\bootstrapselect\js\i18n\defaults-zh_TW.min.js" />
     <Content Include="Scripts\plugin\fastclick\fastclick.min.js" />
+    <Content Include="Scripts\plugin\jqgrid\grid.locale-en.min.js" />
+    <Content Include="Scripts\plugin\jqgrid\jquery.jqGrid.min.js" />
     <Content Include="Scripts\plugin\jquery-touch\jquery.ui.touch-punch.min.js" />
     <Content Include="Scripts\plugin\masked-input\jquery.maskedinput.min.js" />
     <Content Include="Scripts\plugin\msie-fix\jquery.mb.browser.min.js" />
@@ -851,6 +854,10 @@
     <ProjectReference Include="..\GoogleRecaptchaDotNet\GoogleRecaptchaDotNetMvc.csproj">
       <Project>{0E677D88-E898-448E-9977-57ED01BA034B}</Project>
       <Name>GoogleRecaptchaDotNetMvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationSystem\NotificationSystem.csproj">
+      <Project>{1E530F2C-EECE-46E4-84F2-5F2D41B117F3}</Project>
+      <Name>NotificationSystem</Name>
     </ProjectReference>
     <ProjectReference Include="..\SimpleCms.Application\SimpleCms.Application.csproj">
       <Project>{edf5d964-4c0f-4f19-b674-58a38a5e5401}</Project>

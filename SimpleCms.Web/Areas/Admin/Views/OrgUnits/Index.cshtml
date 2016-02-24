@@ -74,7 +74,11 @@
                             <div class="row">
                                 <div class="col-lg-12 col-sm-12" id="tree">
                                     @{ Html.RenderAction("TreeView"); }
+                                    <a data-name="CreatedOrganization" data-activeMessage="Subscribe to created Organization" data-inActiveMessage="Unsubscribe to created Organization" class="btn btn-xs btn-default notificationButton">Getting data...</a>
+                                    <a data-name="EditedOrganization" data-activeMessage="Subscribe to edited Organization" data-inActiveMessage="Unsubscribe to edited Organization" class="btn btn-xs btn-default notificationButton">Getting data...</a>
+                                    <a data-name="DeletedOrganization" data-activeMessage="Subscribe to deleted Organization" data-inActiveMessage="Unsubscribe to deleted Organization" class="btn btn-xs btn-default notificationButton">Getting data...</a>
                                 </div>
+
                             </div>
                         </div>
 

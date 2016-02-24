@@ -3,8 +3,6 @@ using System.Web.Mvc;
 using Abp.UI;
 using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
-using SimpleCms.ModuleZero.Constants;
-using SimpleCms.ModuleZero.Notifications;
 using SimpleCms.ModuleZero.Roles;
 using SimpleCms.ModuleZero.Roles.Dto;
 
@@ -14,26 +12,15 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
     public class RolesController : AdminController
     {
         private readonly IRoleAppServiceZero _roleAppServiceZero;
-        private readonly INotificationsService _notificationsService;
-        public RolesController(IRoleAppServiceZero roleAppServiceZero, INotificationsService notificationsService)
+        public RolesController(IRoleAppServiceZero roleAppServiceZero)
         {
             _roleAppServiceZero = roleAppServiceZero;
-            _notificationsService = notificationsService;
         }
 
         // GET: Admin/Roles
-        public async Task<ActionResult> Index(string role)
+        public ActionResult Index(string role)
         {
-            if (AbpSession.UserId != null)
-            {
-                ViewBag.IsSubscribedCreate = await _notificationsService.IsSuscribed(ModuleZeroConstants.CreatedRoleNotificationName, (long)AbpSession.UserId);
-                ViewBag.IsSubscribedEdit = await _notificationsService.IsSuscribed(ModuleZeroConstants.EditedRoleNotificationName, (long)AbpSession.UserId);
-                ViewBag.IsSubscribedDelete = await _notificationsService.IsSuscribed(ModuleZeroConstants.DeletedRoleNotificationName, (long)AbpSession.UserId);
-            }   
-            if (!string.IsNullOrEmpty(role))
-            {
-                ViewBag.role = role;
-            }
+            ViewBag.role = role;
             return View();
         }
         [WrapResult(false)]

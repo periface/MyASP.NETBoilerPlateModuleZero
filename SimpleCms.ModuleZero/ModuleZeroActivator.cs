@@ -5,12 +5,13 @@ using Abp.Localization.Dictionaries.Xml;
 using Abp.Modules;
 using Abp.Notifications;
 using Abp.Web.SignalR;
+using NotificationSystem;
 using SimpleCms;
 using SimpleCms.ModuleZero.Constants;
 
 namespace SimpleCms.ModuleZero
 {
-    [DependsOn(typeof(SimpleCmsCoreModule), typeof(AbpAutoMapperModule))]
+    [DependsOn(typeof(SimpleCmsCoreModule), typeof(AbpAutoMapperModule),typeof(NotificationSystemActivator))]
     public class ModuleZeroActivator : AbpModule
     {
 

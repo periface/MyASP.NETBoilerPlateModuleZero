@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using Abp.Application.Services;
 using Abp.Authorization;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
@@ -20,7 +19,7 @@ using SimpleCms.Users;
 
 namespace SimpleCms.ModuleZero.Users
 {
-    public class UserAppServiceZero : SimpleCmsAppServiceBase, IUserAppServiceZero
+    public class UserAppServiceZero : ModuleZeroAppService, IUserAppServiceZero
     {
         private readonly IUserToUnitPolicies _userToUnitPolicies;
         private readonly UserManager _userManager;
@@ -213,7 +212,7 @@ namespace SimpleCms.ModuleZero.Users
                 Roles = roles,
                 UserName = input.UserName
             };
-            await _userManager.CreateAsync(user);
+            var result = await _userManager.CreateAsync(user);
         }
 
         public async Task<NewUserInput> GetUser(long id)

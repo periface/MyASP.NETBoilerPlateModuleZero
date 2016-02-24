@@ -10,7 +10,7 @@ using SimpleCms.MultiTenancy;
 
 namespace SimpleCms.ModuleZero.Tenancy
 {
-    public class TenancyService : SimpleCmsAppServiceBase, ITenancyService
+    public class TenancyService : ModuleZeroAppService, ITenancyService
     {
         private readonly TenantManager _tenantManager;
 

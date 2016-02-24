@@ -64,32 +64,10 @@
                         <div class="col-sm-12">
                             <table id="tableRoles"></table>
                             <div id="paginationRoles"></div>
-                            @if ((bool)ViewBag.IsSubscribedCreate)
-                            {
-                                <a id="initUnSub" class="btn btn-xs btn-default">Unsubscribe to notifications</a>
-                            }
-                            else
-                            {
-
-                                <a id="initSub" class="btn btn-xs btn-default">Subscribe to create notifications</a>
-                            }
-                            @if ((bool)ViewBag.IsSubscribedEdit)
-                            {
-                                <a id="initUnSubEdit" class="btn btn-xs btn-default">Unsubscribe to edit notifications</a>
-                            }
-                            else
-                            {
-                                <a id="initSubEdit" class="btn btn-xs btn-default">Subscribe to edit notifications</a>
-                            }
-                            @if ((bool)ViewBag.IsSubscribedDelete)
-                            {
-                                <a id="initUnSubDelete" class="btn btn-xs btn-default">Unubscribe to delete notifications</a>
-
-                            }
-                            else
-                            {
-                                <a id="initSubDelete" class="btn btn-xs btn-default">Subscribe to delete notifications</a>
-                            }
+                            <p>Notifications</p>
+                            <a data-name="CreatedRole" data-activeMessage="Subscribe to created role" data-inActiveMessage="Unsubscribe to created role" class="btn btn-xs btn-default notificationButton">Getting data...</a>
+                            <a data-name="EditedRole" data-activeMessage="Subscribe to edited role" data-inActiveMessage="Unsubscribe to edited role" class="btn btn-xs btn-default notificationButton">Getting data...</a>
+                            <a data-name="DeletedRole" data-activeMessage="Subscribe to deleted role" data-inActiveMessage="Unsubscribe to deleted role" class="btn btn-xs btn-default notificationButton">Getting data...</a>
                         </div>
                     </div>
 

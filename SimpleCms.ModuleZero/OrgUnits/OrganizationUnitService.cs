@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Abp.Application.Services;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using Abp.Organizations;
@@ -11,7 +10,7 @@ using SimpleCms.Users;
 
 namespace SimpleCms.ModuleZero.OrgUnits
 {
-    public class OrganizationUnitService : SimpleCmsAppServiceBase, IOrganizationUnitService
+    public class OrganizationUnitService : ModuleZeroAppService, IOrganizationUnitService
     {
         private readonly UserManager _manager;
         private readonly IOrganizationUnitsPolicies _organizationUnitsPolicies;

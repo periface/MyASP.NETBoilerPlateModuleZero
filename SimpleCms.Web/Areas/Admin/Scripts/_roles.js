@@ -1,4 +1,5 @@
-﻿var modal = new window.publicModal();
+﻿
+var modal = new window.publicModal();
 var nameSpace = new window.globalConfigs(window.globalVariables.Localization.ModuleZeroConstant);
 var urls = window.globalVariables.Url;
 var L = nameSpace.L;
@@ -84,25 +85,29 @@ $(document).ready(function () {
         seeRole(rolePetition.val());
     }
     window.populateTableRoles();
-    $("#initSub").click(function () {
+
+
+
+
+    $("#initUnSub").click(function() {
         abp.ajax({
-            url: "/Admin/Layout/SubscribeToCreatedRole"
-        }).done(function (d) {
-            abp.message.success("Subscribed!");
+            url: "/Admin/Layout/UnSubscribeToCreatedRole"
+        }).done(function() {
+            abp.message.success("Unsubscribed!");
         });
     });
-    $("#initSubEdit").click(function () {
+    $("#initUnSubEdit").click(function() {
         abp.ajax({
-            url: "/Admin/Layout/SubscribeToEditedRole"
-        }).done(function (d) {
-            abp.message.success("Subscribed!");
+            url: "/Admin/Layout/UnSubscribeToEditedRole"
+        }).done(function() {
+            abp.message.success("Unsubscribed!");
         });
     });
-    $("#initSubDelete").click(function () {
+    $("#initUnSubDelete").click(function() {
         abp.ajax({
-            url: "/Admin/Layout/SubscribeToDeletedRole"
-        }).done(function (d) {
-            abp.message.success("Subscribed!");
+            url: "/Admin/Layout/UnSubscribeToDeletedRole"
+        }).done(function () {
+            abp.message.success("Unsubscribed!");
         });
     });
     $("#tableWidget").on("click", ".editRole", function () {

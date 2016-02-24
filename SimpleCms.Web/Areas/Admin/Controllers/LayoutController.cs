@@ -7,11 +7,9 @@ using Abp.Configuration.Startup;
 using Abp.Localization;
 using Abp.Notifications;
 using Abp.Threading;
+using NotificationSystem.Notifications;
 using SimpleCms.ModuleCms.SiteConfiguration;
-using SimpleCms.ModuleZero.Constants;
-using SimpleCms.ModuleZero.Notifications;
 using SimpleCms.Sessions;
-using SimpleCms.Web.Controllers;
 using SimpleCms.Web.Models.Layout;
 
 namespace SimpleCms.Web.Areas.Admin.Controllers
@@ -99,39 +97,39 @@ namespace SimpleCms.Web.Areas.Admin.Controllers
         public async Task<JsonResult> Notifications()
         {
             if (AbpSession.UserId == null) return Json(null);
-            var notifications =await _userNotificationManager.GetUserNotificationsAsync((long)AbpSession.UserId);
-            return Json(notifications.Where(a=>a.State==UserNotificationState.Unread));
+            var notifications = await _userNotificationManager.GetUserNotificationsAsync((long)AbpSession.UserId);
+            return Json(notifications.Where(a => a.State == UserNotificationState.Unread));
         }
 
         public async Task<JsonResult> MarkAllAsReaded()
         {
-            if (AbpSession.UserId != null) await _notificationsService.CheckAll((long) AbpSession.UserId);
+            if (AbpSession.UserId != null) await _notificationsService.CheckAll((long)AbpSession.UserId);
             return Json(new { ok = true });
         }
 
         public async Task<JsonResult> MarkAsReaded(Guid id)
         {
-             await _notificationsService.MarkAsReaded(id);
-            return Json(new {ok = true});
-        }
-        public async Task<JsonResult> SubscribeToCreatedRole()
-        {
-            if (AbpSession.UserId != null)
-                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.CreatedRoleNotificationName);
+            await _notificationsService.MarkAsReaded(id);
             return Json(new { ok = true });
         }
-
-        public async Task<JsonResult> SubscribeToEditedRole()
+        public async Task<JsonResult> Subscribe(string serviceName)
         {
             if (AbpSession.UserId != null)
-                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.EditedRoleNotificationName);
+                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, serviceName);
             return Json(new { ok = true });
         }
-        public async Task<JsonResult> SubscribeToDeletedRole()
+        public async Task<JsonResult> UnSubscribe(string serviceName)
         {
             if (AbpSession.UserId != null)
-                await _notificationsService.RegisterToNotifications((long)AbpSession.UserId, AbpSession.TenantId, ModuleZeroConstants.DeletedRoleNotificationName);
+                await _notificationsService.UnRegisterToNotifications((long)AbpSession.UserId, serviceName);
             return Json(new { ok = true });
+        }
+        public async Task<JsonResult> IsSubscribed(string serviceName)
+        {
+            var isSubscribed = false;
+            if (AbpSession.UserId != null)
+                isSubscribed = await _notificationsService.IsSuscribed(serviceName, (long)AbpSession.UserId);
+            return Json(new { isSubscribed });
         }
     }
 }

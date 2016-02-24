@@ -1,5 +1,4 @@
-﻿@using GoogleRecaptchaDotNetMvc.Helper
-@{
+﻿@{
     ViewBag.ActiveMenu = "Home"; //The menu item will be active for this page.
 }
 <h1>@L("WellcomeMessage")</h1>
@@ -27,3 +26,6 @@
         <h4>Secondaty Content</h4>
     </div>
 </div>
+@section Scripts{
+    <script src="~/Scripts/Admin/MessageInterceptor.js"></script>
+}

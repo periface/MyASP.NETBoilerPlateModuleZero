@@ -16,6 +16,11 @@ namespace SimpleCms.ModuleZero.Constants
         public const string DeletedRoleNotificationName = "DeletedRole";
         //-Roles
 
+        //Users
+        public const string CreatedUserNotificationName = "CreatedUser";
+        public const string EditedUserNotificationName = "EditedUser";
+        public const string DeletedUserNotificationName = "DeletedUser";
+        //-Users
 
     }
 }

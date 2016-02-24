@@ -4,7 +4,7 @@ using Abp.UI;
 
 namespace SimpleCms.ModuleZero.Helpers
 {
-    public class AjaxPermissionHelper : SimpleCmsAppServiceBase, IAjaxPermissionHelper
+    public class AjaxPermissionHelper : ModuleZeroAppService, IAjaxPermissionHelper
     {
         private readonly IPermissionChecker _checker;
 

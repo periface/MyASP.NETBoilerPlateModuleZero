@@ -132,13 +132,11 @@
     <Compile Include="LanguageTexts\ILanguageService.cs" />
     <Compile Include="LanguageTexts\LanguageService.cs" />
     <Compile Include="ModuleZeroActivator.cs" />
+    <Compile Include="ModuleZeroAppService.cs" />
     <Compile Include="ModuleZeroMenuProvider.cs" />
     <Compile Include="ModuleZeroPermissionsProvider.cs" />
     <Compile Include="GenericOutPuts\AuditLogOutPut.cs" />
     <Compile Include="GenericOutPuts\JqGridObject.cs" />
-    <Compile Include="Notifications\Dto\NotificationsOutputDto.cs" />
-    <Compile Include="Notifications\INotificationsService.cs" />
-    <Compile Include="Notifications\NotificationsService.cs" />
     <Compile Include="OrgUnits\Dto\OrganizationUnitOutPut.cs" />
     <Compile Include="Roles\Dto\NewRoleNotificationData.cs" />
     <Compile Include="Roles\Dto\RoleListOutPut.cs" />
@@ -174,12 +172,18 @@
     <Compile Include="Roles\Dto\UpdateRolesPermisionsInput.cs" />
     <Compile Include="Users\Dto\UserOutPut.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CustomInterfaces\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NotificationSystem\NotificationSystem.csproj">
+      <Project>{1E530F2C-EECE-46E4-84F2-5F2D41B117F3}</Project>
+      <Name>NotificationSystem</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleCms.Application\SimpleCms.Application.csproj">
       <Project>{EDF5D964-4C0F-4F19-B674-58A38A5E5401}</Project>
       <Name>SimpleCms.Application</Name>

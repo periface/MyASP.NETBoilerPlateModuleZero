@@ -4,11 +4,11 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.Authorization;
-using Abp.Domain.Uow;
 using Abp.Localization;
+using Abp.Notifications;
 using Abp.UI;
 using SimpleCms.Authorization.Roles;
-using SimpleCms.ModuleZero.Notifications;
+using SimpleCms.ModuleZero.Constants;
 using SimpleCms.ModuleZero.Roles.Dto;
 using SimpleCms.ModuleZero.Users.Dto;
 using SimpleCms.Users;
@@ -16,24 +16,20 @@ using Role = SimpleCms.Authorization.Roles.Role;
 
 namespace SimpleCms.ModuleZero.Roles
 {
-    public class RoleAppServiceZero : SimpleCmsAppServiceBase, IRoleAppServiceZero
+    public class RoleAppServiceZero : ModuleZeroAppService, IRoleAppServiceZero
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;
-        private readonly IUnitOfWorkManager _unitOfWork;
         private const string ProhibitedAdminVar = "Admin";
 
         private readonly IPermissionManager _permissionManager;
         private readonly ILocalizationManager _localizationManager;
-        private readonly INotificationsService _notificationsService;
-        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager, INotificationsService notificationsService, IUnitOfWorkManager unitOfWork)
+        public RoleAppServiceZero(RoleManager roleVimeManager, IPermissionManager permissionManager, ILocalizationManager localizationManager, UserManager userManager)
         {
             _roleManager = roleVimeManager;
             _permissionManager = permissionManager;
             _localizationManager = localizationManager;
             _userManager = userManager;
-            _notificationsService = notificationsService;
-            _unitOfWork = unitOfWork;
         }
 
         public string CleanText(string text)
@@ -53,10 +49,11 @@ namespace SimpleCms.ModuleZero.Roles
             var result = await _roleManager.CreateAsync(role);
             if (result.Succeeded)
             {
-                //Notify user registered
-                await _notificationsService.TriggerRoleCreatedNotification(roleInput.UserId, roleInput.DisplayName,role.Name);
+                await SendCreatedNotification(roleInput.UserId, role.DisplayName, role.Name);
             }
         }
+
+
 
         public async Task EditRole(NewRoleInput roleInput)
         {
@@ -72,7 +69,7 @@ namespace SimpleCms.ModuleZero.Roles
             await _roleManager.SetGrantedPermissionsAsync(roleInput.Id, PermissionsAssigned(roleInput.CreatePermissions()));
             if (result.Succeeded)
             {
-                await _notificationsService.TriggerRoleEditedNotification(roleInput.UserId, originalName,role.Name);
+                await SendEditedNotification(roleInput.UserId, originalName, role.Name);
             }
         }
 
@@ -84,7 +81,7 @@ namespace SimpleCms.ModuleZero.Roles
             var result = await _roleManager.DeleteAsync(role);
             if (result.Succeeded)
             {
-                await _notificationsService.TriggerRoleDeletedNotification(input.UserId, role.DisplayName,role.Name);
+                await SendDeletedNotification(input.UserId, role.DisplayName, role.Name);
             }
         }
 
@@ -251,5 +248,67 @@ namespace SimpleCms.ModuleZero.Roles
             var listPermissions = (from perm in permDb from p in list where p == perm.Name select perm).ToList();
             return listPermissions;
         }
+        #region Notification Helpers
+        private async Task SendCreatedNotification(long? userId, string displayName, string name)
+        {
+            var user = new User();
+            if (userId != null)
+            {
+                user = await _userManager.GetUserByIdAsync((long)userId);
+            }
+            var data =
+            new LocalizableMessageNotificationData(new LocalizableString("RoleCreatedByUser",
+                ModuleZeroConstants.Source))
+            {
+                ["role"] = displayName,
+                ["userName"] = user.UserName,
+                ["uniqueRoleName"] = name
+            };
+            //Notify user registered
+            await
+                SendNotification(
+                    data, ModuleZeroConstants.CreatedRoleNotificationName, NotificationSeverity.Success);
+        }
+
+        private async Task SendEditedNotification(long? userId, string displayName, string name)
+        {
+            var user = new User();
+            if (userId != null)
+            {
+                user = await _userManager.GetUserByIdAsync((long)userId);
+            }
+            var data =
+            new LocalizableMessageNotificationData(new LocalizableString("RoleEditedByUser",
+                ModuleZeroConstants.Source))
+            {
+                ["role"] = displayName,
+                ["userName"] = user.UserName,
+                ["uniqueRoleName"] = name
+            };
+            //Notify user registered
+            await
+                SendNotification(
+                    data, ModuleZeroConstants.EditedRoleNotificationName, NotificationSeverity.Info);
+        }
+
+        private async Task SendDeletedNotification(long? userId, string displayName, string name)
+        {
+            var user = new User();
+            if (userId != null)
+            {
+                user = await _userManager.GetUserByIdAsync((long)userId);
+            }
+            var data =
+                new LocalizableMessageNotificationData(new LocalizableString("RoleDeletedByUser",
+                    ModuleZeroConstants.Source))
+                {
+                    ["role"] = displayName,
+                    ["userName"] = user.UserName,
+                    ["uniqueRoleName"] = name
+                };
+            await SendNotification(
+                   data, ModuleZeroConstants.DeletedRoleNotificationName, NotificationSeverity.Warn);
+        }
+        #endregion
     }
 }

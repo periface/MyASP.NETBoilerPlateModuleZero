@@ -10,7 +10,7 @@ using SimpleCms.Users;
 
 namespace SimpleCms.ModuleZero.Services
 {
-    public class AuditLogService : SimpleCmsAppServiceBase, IAuditLogService
+    public class AuditLogService : ModuleZeroAppService, IAuditLogService
     {
         private readonly IRepository<AuditLog, long> _repository;
         private readonly UserManager _userManager;

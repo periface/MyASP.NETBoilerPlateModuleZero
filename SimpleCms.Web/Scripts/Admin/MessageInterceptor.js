@@ -8,7 +8,6 @@
             $("#notifications").append("<li><a  class='checkAll'>Not a single notification...</a></li>");
         }
         $.each(d, function (i, userNotification) {
-            console.log(userNotification);
             if (userNotification.notification.data.type === 'Abp.Notifications.LocalizableMessageNotificationData') {
                 var localizedText = abp.localization.localize(
                     userNotification.notification.data.message.name,
