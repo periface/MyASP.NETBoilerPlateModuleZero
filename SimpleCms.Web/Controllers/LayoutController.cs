@@ -5,7 +5,6 @@ using Abp.Localization;
 using Abp.Threading;
 using SimpleCms.ModuleCms.SiteConfiguration;
 using SimpleCms.ModuleCms.SiteConfiguration.Dto;
-using SimpleCms.ModuleZero.Tenancy;
 using SimpleCms.Sessions;
 using SimpleCms.Web.Models.Layout;
 
@@ -18,19 +17,17 @@ namespace SimpleCms.Web.Controllers
         private readonly ISessionAppService _sessionAppService;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
         private readonly ISiteService _siteService;
-        private readonly ITenancyService _tenancyService;
         public LayoutController(
             IUserNavigationManager userNavigationManager,
             ILocalizationManager localizationManager,
             ISessionAppService sessionAppService,
-            IMultiTenancyConfig multiTenancyConfig, ISiteService siteService, ITenancyService tenancyService)
+            IMultiTenancyConfig multiTenancyConfig, ISiteService siteService)
         {
             _userNavigationManager = userNavigationManager;
             _localizationManager = localizationManager;
             _sessionAppService = sessionAppService;
             _multiTenancyConfig = multiTenancyConfig;
             _siteService = siteService;
-            _tenancyService = tenancyService;
         }
 
 

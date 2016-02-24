@@ -45,6 +45,7 @@
     <text name="RoleCreatedByUser" value="{userName} created a new role: {role}"/>
     <text name="RoleEditedByUser" value="{userName} edited the role: {role}"/>
     <text name="RoleDeletedByUser" value="{userName} deleted the role: {role}"/>
+    <text name="UserCreatedByUser" value ="{creator} created a new user: {created}"/>
     <!--Other-->
     <text name="MessageOk" value="Unit Saved " />
     <text name="MessageDeleted" value="Unit Deleted " />

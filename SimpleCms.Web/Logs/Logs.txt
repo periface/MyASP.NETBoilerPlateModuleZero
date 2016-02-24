@@ -4593,3 +4593,787 @@ WARN  2016-02-24 12:48:10,263 [87   ] Abp.Logging.LogHelper                    -
 DEBUG 2016-02-24 12:48:10,535 [94   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e6cad897-c608-4432-bdb4-fd835dee4606","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:48:10.5299024-06:00","Properties":{}}
 DEBUG 2016-02-24 12:48:10,576 [79   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e6cad897-c608-4432-bdb4-fd835dee4606
 DEBUG 2016-02-24 12:52:58,897 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+WARN  2016-02-24 12:55:50,851 [55   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:50,893 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e6cad897-c608-4432-bdb4-fd835dee4606
+WARN  2016-02-24 12:55:50,960 [108  ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 12:55:50,960 [108  ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:51,451 [112  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"5bb0ec83-2fd7-4612-bebb-94da4747103c","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:55:51.4513355-06:00","Properties":{}}
+DEBUG 2016-02-24 12:55:51,477 [106  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 5bb0ec83-2fd7-4612-bebb-94da4747103c
+WARN  2016-02-24 12:55:54,264 [79   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:54,297 [81   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 5bb0ec83-2fd7-4612-bebb-94da4747103c
+WARN  2016-02-24 12:55:54,363 [73   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 12:55:54,363 [73   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:54,845 [75   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"349bd20f-3e02-4b57-a58b-259567c17b9d","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:55:54.8456596-06:00","Properties":{}}
+DEBUG 2016-02-24 12:55:54,854 [55   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 349bd20f-3e02-4b57-a58b-259567c17b9d
+WARN  2016-02-24 12:55:57,392 [112  ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:57,426 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 349bd20f-3e02-4b57-a58b-259567c17b9d
+WARN  2016-02-24 12:55:57,490 [55   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 12:55:57,490 [55   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:57,959 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"33a990c4-e92f-4ea0-b493-39d3ff337a0d","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:55:57.9598396-06:00","Properties":{}}
+DEBUG 2016-02-24 12:55:57,974 [106  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 33a990c4-e92f-4ea0-b493-39d3ff337a0d
+WARN  2016-02-24 12:55:59,021 [88   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:59,053 [94   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 33a990c4-e92f-4ea0-b493-39d3ff337a0d
+WARN  2016-02-24 12:55:59,107 [81   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 12:55:59,107 [81   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:55:59,588 [94   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"8eeeb46b-8832-48b6-92e2-242935d7de97","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:55:59.5870023-06:00","Properties":{}}
+DEBUG 2016-02-24 12:55:59,595 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 8eeeb46b-8832-48b6-92e2-242935d7de97
+WARN  2016-02-24 12:56:00,833 [87   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:56:00,864 [83   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 8eeeb46b-8832-48b6-92e2-242935d7de97
+WARN  2016-02-24 12:56:00,924 [95   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 12:56:00,924 [95   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:56:01,420 [79   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"011aa8f2-b92a-458b-b74e-0f9125855a58","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:56:01.4201613-06:00","Properties":{}}
+DEBUG 2016-02-24 12:56:01,429 [97   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 011aa8f2-b92a-458b-b74e-0f9125855a58
+WARN  2016-02-24 12:56:01,790 [73   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:56:01,822 [79   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 011aa8f2-b92a-458b-b74e-0f9125855a58
+WARN  2016-02-24 12:56:01,887 [52   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 12:56:01,887 [52   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 12:56:02,341 [88   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c89d89a0-11cc-4e3b-9ad4-657763d998ab","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T12:56:02.3412534-06:00","Properties":{}}
+DEBUG 2016-02-24 12:56:02,350 [112  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: c89d89a0-11cc-4e3b-9ad4-657763d998ab
+DEBUG 2016-02-24 12:57:58,932 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:02:58,921 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:04:12,481 [26   ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:04:12,482 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-02-24 13:04:12,482 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-02-24 13:04:12,482 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-02-24 13:04:12,482 [f8196] Hangfire.Server.Worker                   - Background process 'Worker #2adf8196' stopped.
+DEBUG 2016-02-24 13:04:12,482 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-02-24 13:04:12,482 [863de] Hangfire.Server.Worker                   - Background process 'Worker #39e863de' stopped.
+DEBUG 2016-02-24 13:04:12,482 [8fc6e] Hangfire.Server.Worker                   - Background process 'Worker #64d8fc6e' stopped.
+DEBUG 2016-02-24 13:04:12,482 [a6bb1] Hangfire.Server.Worker                   - Background process 'Worker #ed8a6bb1' stopped.
+DEBUG 2016-02-24 13:04:12,482 [7c301] Hangfire.Server.Worker                   - Background process 'Worker #d6a7c301' stopped.
+DEBUG 2016-02-24 13:04:12,483 [69365] Hangfire.Server.Worker                   - Background process 'Worker #73a69365' stopped.
+DEBUG 2016-02-24 13:04:12,483 [206ee] Hangfire.Server.Worker                   - Background process 'Worker #a0a206ee' stopped.
+DEBUG 2016-02-24 13:04:12,483 [1933d] Hangfire.Server.Worker                   - Background process 'Worker #fff1933d' stopped.
+DEBUG 2016-02-24 13:04:12,483 [da3dc] Hangfire.Server.Worker                   - Background process 'Worker #9b8da3dc' stopped.
+DEBUG 2016-02-24 13:04:12,483 [7ea7a] Hangfire.Server.Worker                   - Background process 'Worker #7e87ea7a' stopped.
+DEBUG 2016-02-24 13:04:12,483 [e5816] Hangfire.Server.Worker                   - Background process 'Worker #628e5816' stopped.
+DEBUG 2016-02-24 13:04:12,483 [e0eda] Hangfire.Server.Worker                   - Background process 'Worker #f5ce0eda' stopped.
+DEBUG 2016-02-24 13:04:12,483 [8bab6] Hangfire.Server.Worker                   - Background process 'Worker #0068bab6' stopped.
+DEBUG 2016-02-24 13:04:12,483 [237f2] Hangfire.Server.Worker                   - Background process 'Worker #0a2237f2' stopped.
+DEBUG 2016-02-24 13:04:12,483 [7c330] Hangfire.Server.Worker                   - Background process 'Worker #c7d7c330' stopped.
+DEBUG 2016-02-24 13:04:12,483 [ef78d] Hangfire.Server.Worker                   - Background process 'Worker #f2eef78d' stopped.
+DEBUG 2016-02-24 13:04:12,483 [1625e] Hangfire.Server.Worker                   - Background process 'Worker #8691625e' stopped.
+DEBUG 2016-02-24 13:04:12,483 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-02-24 13:04:12,484 [c0a84] Hangfire.Server.Worker                   - Background process 'Worker #089c0a84' stopped.
+DEBUG 2016-02-24 13:04:12,484 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-02-24 13:04:12,484 [14210] Hangfire.Server.Worker                   - Background process 'Worker #75814210' stopped.
+DEBUG 2016-02-24 13:04:12,483 [345f1] Hangfire.Server.Worker                   - Background process 'Worker #55a345f1' stopped.
+DEBUG 2016-02-24 13:04:12,488 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-02-24 13:04:12,488 [26   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-02-24 13:04:12,489 [26   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:04:18,748 [84   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:04:21,776 [84   ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:04:21,780 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,782 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,782 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,782 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,782 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,782 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,782 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,783 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,784 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,784 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,784 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,784 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,784 [84   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:04:21,789 [84   ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:04:21,828 [84   ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-02-24 13:04:21,879 [84   ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-02-24 13:04:21,918 [84   ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-02-24 13:04:25,012 [84   ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-24 13:04:25,017 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-24 13:04:25,017 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-24 13:04:25,018 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-24 13:04:25,019 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-24 13:04:25,019 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-24 13:04:25,019 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-24 13:04:25,019 [84   ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-24 13:04:25,028 [84   ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-02-24 13:04:25,040 [84   ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-02-24 13:04:25,043 [84   ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: cinotam25@SimpleCms'.
+INFO  2016-02-24 13:04:25,043 [84   ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-02-24 13:04:25,044 [84   ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-02-24 13:04:25,044 [84   ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-02-24 13:04:25,044 [84   ] Hangfire.BackgroundJobServer             -     Worker count: 20.
+INFO  2016-02-24 13:04:25,044 [84   ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'.
+INFO  2016-02-24 13:04:25,044 [84   ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15.
+INFO  2016-02-24 13:04:25,044 [84   ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15.
+DEBUG 2016-02-24 13:04:25,056 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-02-24 13:04:25,267 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-02-24 13:04:25,269 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-02-24 13:04:25,274 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-02-24 13:04:25,276 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-02-24 13:04:25,280 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-02-24 13:04:25,281 [94690] Hangfire.Server.Worker                   - Background process 'Worker #d3694690' started.
+DEBUG 2016-02-24 13:04:25,283 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:04:25,293 [8871e] Hangfire.Server.Worker                   - Background process 'Worker #6a08871e' started.
+DEBUG 2016-02-24 13:04:25,301 [nager] Hangfire.SqlServer.ExpirationManager     - Removed 1 outdated record(s) from 'AggregatedCounter' table.
+DEBUG 2016-02-24 13:04:25,305 [2e800] Hangfire.Server.Worker                   - Background process 'Worker #51f2e800' started.
+DEBUG 2016-02-24 13:04:25,316 [4e5ee] Hangfire.Server.Worker                   - Background process 'Worker #25e4e5ee' started.
+DEBUG 2016-02-24 13:04:25,321 [5c179] Hangfire.Server.Worker                   - Background process 'Worker #9df5c179' started.
+DEBUG 2016-02-24 13:04:25,323 [ee0ec] Hangfire.Server.Worker                   - Background process 'Worker #8d0ee0ec' started.
+DEBUG 2016-02-24 13:04:25,325 [4bad1] Hangfire.Server.Worker                   - Background process 'Worker #76b4bad1' started.
+DEBUG 2016-02-24 13:04:25,329 [11826] Hangfire.Server.Worker                   - Background process 'Worker #a8011826' started.
+DEBUG 2016-02-24 13:04:25,332 [58ed1] Hangfire.Server.Worker                   - Background process 'Worker #c2a58ed1' started.
+DEBUG 2016-02-24 13:04:25,334 [d70ba] Hangfire.Server.Worker                   - Background process 'Worker #44bd70ba' started.
+DEBUG 2016-02-24 13:04:25,337 [bdcc6] Hangfire.Server.Worker                   - Background process 'Worker #916bdcc6' started.
+DEBUG 2016-02-24 13:04:25,341 [a02a7] Hangfire.Server.Worker                   - Background process 'Worker #bb0a02a7' started.
+DEBUG 2016-02-24 13:04:25,342 [03653] Hangfire.Server.Worker                   - Background process 'Worker #07503653' started.
+DEBUG 2016-02-24 13:04:25,345 [0858f] Hangfire.Server.Worker                   - Background process 'Worker #d9f0858f' started.
+DEBUG 2016-02-24 13:04:25,348 [48dc8] Hangfire.Server.Worker                   - Background process 'Worker #0b548dc8' started.
+DEBUG 2016-02-24 13:04:25,352 [f7b9e] Hangfire.Server.Worker                   - Background process 'Worker #907f7b9e' started.
+DEBUG 2016-02-24 13:04:25,353 [2cafb] Hangfire.Server.Worker                   - Background process 'Worker #13f2cafb' started.
+DEBUG 2016-02-24 13:04:25,357 [c57a9] Hangfire.Server.Worker                   - Background process 'Worker #a3fc57a9' started.
+DEBUG 2016-02-24 13:04:25,359 [1803c] Hangfire.Server.Worker                   - Background process 'Worker #3531803c' started.
+DEBUG 2016-02-24 13:04:25,363 [30b88] Hangfire.Server.Worker                   - Background process 'Worker #fcb30b88' started.
+DEBUG 2016-02-24 13:04:25,365 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-02-24 13:04:25,367 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-02-24 13:04:26,308 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-02-24 13:04:26,350 [nager] Hangfire.SqlServer.ExpirationManager     - Removed 7 outdated record(s) from 'Job' table.
+DEBUG 2016-02-24 13:04:27,350 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-02-24 13:04:27,355 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-02-24 13:04:27,358 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-02-24 13:04:28,286 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-24 13:04:28,286 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-24 13:04:28,405 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-24 13:04:28,409 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-24 13:04:28,409 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-24 13:04:28,423 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-24 13:04:28,427 [84   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-24 13:04:28,457 [84   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-24 13:04:28,458 [84   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-24 13:04:28,459 [84   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-24 13:04:28,460 [84   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-24 13:04:37,488 [41   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:04:38,774 [70   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c89d89a0-11cc-4e3b-9ad4-657763d998ab
+WARN  2016-02-24 13:04:39,361 [61   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:04:39,361 [61   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:04:39,754 [62   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c9981f0c-38ba-4fdc-8e3f-bc98899aee72","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:04:39.7487565-06:00","Properties":{}}
+DEBUG 2016-02-24 13:04:39,838 [41   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: c9981f0c-38ba-4fdc-8e3f-bc98899aee72
+DEBUG 2016-02-24 13:06:28,528 [60   ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:06:28,528 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-02-24 13:06:28,528 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-02-24 13:06:28,528 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-02-24 13:06:28,528 [03653] Hangfire.Server.Worker                   - Background process 'Worker #07503653' stopped.
+DEBUG 2016-02-24 13:06:28,528 [bdcc6] Hangfire.Server.Worker                   - Background process 'Worker #916bdcc6' stopped.
+DEBUG 2016-02-24 13:06:28,528 [8871e] Hangfire.Server.Worker                   - Background process 'Worker #6a08871e' stopped.
+DEBUG 2016-02-24 13:06:28,529 [f7b9e] Hangfire.Server.Worker                   - Background process 'Worker #907f7b9e' stopped.
+DEBUG 2016-02-24 13:06:28,529 [4e5ee] Hangfire.Server.Worker                   - Background process 'Worker #25e4e5ee' stopped.
+DEBUG 2016-02-24 13:06:28,529 [5c179] Hangfire.Server.Worker                   - Background process 'Worker #9df5c179' stopped.
+DEBUG 2016-02-24 13:06:28,529 [48dc8] Hangfire.Server.Worker                   - Background process 'Worker #0b548dc8' stopped.
+DEBUG 2016-02-24 13:06:28,529 [d70ba] Hangfire.Server.Worker                   - Background process 'Worker #44bd70ba' stopped.
+DEBUG 2016-02-24 13:06:28,529 [2cafb] Hangfire.Server.Worker                   - Background process 'Worker #13f2cafb' stopped.
+DEBUG 2016-02-24 13:06:28,529 [11826] Hangfire.Server.Worker                   - Background process 'Worker #a8011826' stopped.
+DEBUG 2016-02-24 13:06:28,529 [0858f] Hangfire.Server.Worker                   - Background process 'Worker #d9f0858f' stopped.
+DEBUG 2016-02-24 13:06:28,529 [58ed1] Hangfire.Server.Worker                   - Background process 'Worker #c2a58ed1' stopped.
+DEBUG 2016-02-24 13:06:28,529 [30b88] Hangfire.Server.Worker                   - Background process 'Worker #fcb30b88' stopped.
+DEBUG 2016-02-24 13:06:28,529 [4bad1] Hangfire.Server.Worker                   - Background process 'Worker #76b4bad1' stopped.
+DEBUG 2016-02-24 13:06:28,529 [ee0ec] Hangfire.Server.Worker                   - Background process 'Worker #8d0ee0ec' stopped.
+DEBUG 2016-02-24 13:06:28,529 [2e800] Hangfire.Server.Worker                   - Background process 'Worker #51f2e800' stopped.
+DEBUG 2016-02-24 13:06:28,529 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-02-24 13:06:28,529 [94690] Hangfire.Server.Worker                   - Background process 'Worker #d3694690' stopped.
+DEBUG 2016-02-24 13:06:28,529 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-02-24 13:06:28,529 [1803c] Hangfire.Server.Worker                   - Background process 'Worker #3531803c' stopped.
+DEBUG 2016-02-24 13:06:28,529 [c57a9] Hangfire.Server.Worker                   - Background process 'Worker #a3fc57a9' stopped.
+DEBUG 2016-02-24 13:06:28,529 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-02-24 13:06:28,529 [a02a7] Hangfire.Server.Worker                   - Background process 'Worker #bb0a02a7' stopped.
+DEBUG 2016-02-24 13:06:28,532 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-02-24 13:06:28,532 [60   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-02-24 13:06:28,532 [60   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:06:34,312 [113  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:06:37,574 [113  ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:06:37,578 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,580 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,580 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,580 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,581 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,582 [113  ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:06:37,587 [113  ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:06:37,629 [113  ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-02-24 13:06:37,687 [113  ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-02-24 13:06:37,727 [113  ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-02-24 13:06:40,726 [113  ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-24 13:06:40,732 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-24 13:06:40,732 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-24 13:06:40,733 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-24 13:06:40,734 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-24 13:06:40,734 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-24 13:06:40,734 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-24 13:06:40,734 [113  ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-24 13:06:40,742 [113  ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-02-24 13:06:40,755 [113  ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-02-24 13:06:40,757 [113  ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: cinotam25@SimpleCms'.
+INFO  2016-02-24 13:06:40,757 [113  ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-02-24 13:06:40,758 [113  ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-02-24 13:06:40,758 [113  ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-02-24 13:06:40,758 [113  ] Hangfire.BackgroundJobServer             -     Worker count: 20.
+INFO  2016-02-24 13:06:40,758 [113  ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'.
+INFO  2016-02-24 13:06:40,758 [113  ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15.
+INFO  2016-02-24 13:06:40,758 [113  ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15.
+DEBUG 2016-02-24 13:06:40,770 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-02-24 13:06:40,973 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-02-24 13:06:40,975 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-02-24 13:06:40,981 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-02-24 13:06:40,984 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-02-24 13:06:40,986 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-02-24 13:06:40,986 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:06:40,990 [347e2] Hangfire.Server.Worker                   - Background process 'Worker #4ff347e2' started.
+DEBUG 2016-02-24 13:06:40,994 [16c55] Hangfire.Server.Worker                   - Background process 'Worker #66f16c55' started.
+DEBUG 2016-02-24 13:06:41,025 [4e74f] Hangfire.Server.Worker                   - Background process 'Worker #cd04e74f' started.
+DEBUG 2016-02-24 13:06:41,034 [773ee] Hangfire.Server.Worker                   - Background process 'Worker #49c773ee' started.
+DEBUG 2016-02-24 13:06:41,041 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-02-24 13:06:41,042 [91550] Hangfire.Server.Worker                   - Background process 'Worker #e7f91550' started.
+DEBUG 2016-02-24 13:06:41,049 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-02-24 13:06:41,050 [97be5] Hangfire.Server.Worker                   - Background process 'Worker #27897be5' started.
+DEBUG 2016-02-24 13:06:41,053 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-02-24 13:06:41,053 [fe000] Hangfire.Server.Worker                   - Background process 'Worker #2e4fe000' started.
+DEBUG 2016-02-24 13:06:41,055 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-02-24 13:06:41,057 [8ad68] Hangfire.Server.Worker                   - Background process 'Worker #48b8ad68' started.
+DEBUG 2016-02-24 13:06:41,061 [dab9b] Hangfire.Server.Worker                   - Background process 'Worker #36edab9b' started.
+DEBUG 2016-02-24 13:06:41,065 [f26d9] Hangfire.Server.Worker                   - Background process 'Worker #f96f26d9' started.
+DEBUG 2016-02-24 13:06:41,067 [cab03] Hangfire.Server.Worker                   - Background process 'Worker #350cab03' started.
+DEBUG 2016-02-24 13:06:41,070 [76b40] Hangfire.Server.Worker                   - Background process 'Worker #1e076b40' started.
+DEBUG 2016-02-24 13:06:41,072 [1ac24] Hangfire.Server.Worker                   - Background process 'Worker #d1c1ac24' started.
+DEBUG 2016-02-24 13:06:41,075 [6aa99] Hangfire.Server.Worker                   - Background process 'Worker #73a6aa99' started.
+DEBUG 2016-02-24 13:06:41,079 [55e0a] Hangfire.Server.Worker                   - Background process 'Worker #27255e0a' started.
+DEBUG 2016-02-24 13:06:41,081 [a0726] Hangfire.Server.Worker                   - Background process 'Worker #6e7a0726' started.
+DEBUG 2016-02-24 13:06:41,084 [fc67a] Hangfire.Server.Worker                   - Background process 'Worker #a45fc67a' started.
+DEBUG 2016-02-24 13:06:41,087 [f00bc] Hangfire.Server.Worker                   - Background process 'Worker #115f00bc' started.
+DEBUG 2016-02-24 13:06:41,090 [36581] Hangfire.Server.Worker                   - Background process 'Worker #67a36581' started.
+DEBUG 2016-02-24 13:06:41,093 [a85f8] Hangfire.Server.Worker                   - Background process 'Worker #66ca85f8' started.
+DEBUG 2016-02-24 13:06:41,096 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-02-24 13:06:41,119 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-02-24 13:06:43,684 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-24 13:06:43,685 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-24 13:06:43,815 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-24 13:06:43,819 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-24 13:06:43,820 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-24 13:06:43,889 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-24 13:06:43,906 [113  ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-24 13:06:44,009 [113  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-24 13:06:44,010 [113  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-24 13:06:44,011 [113  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-24 13:06:44,012 [113  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-24 13:06:51,964 [60   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:06:53,155 [60   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c9981f0c-38ba-4fdc-8e3f-bc98899aee72
+WARN  2016-02-24 13:06:53,414 [28   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:06:53,415 [28   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:06:53,741 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"de6f4aea-f6e8-40ed-ae49-bc1da5fc000e","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:06:53.737337-06:00","Properties":{}}
+DEBUG 2016-02-24 13:06:53,783 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: de6f4aea-f6e8-40ed-ae49-bc1da5fc000e
+WARN  2016-02-24 13:07:05,611 [27   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:07:05,648 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: de6f4aea-f6e8-40ed-ae49-bc1da5fc000e
+WARN  2016-02-24 13:07:05,723 [27   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:07:05,723 [27   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:07:06,204 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"500213b3-d487-421a-b7fe-8bc0369a61af","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:07:06.204229-06:00","Properties":{}}
+DEBUG 2016-02-24 13:07:06,222 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 500213b3-d487-421a-b7fe-8bc0369a61af
+WARN  2016-02-24 13:07:51,731 [27   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:07:51,766 [62   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 500213b3-d487-421a-b7fe-8bc0369a61af
+WARN  2016-02-24 13:07:51,842 [66   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:07:51,843 [66   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:07:52,318 [57   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"875352ce-be7d-4c9f-a653-98a0ed0bcf41","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:07:52.318981-06:00","Properties":{}}
+DEBUG 2016-02-24 13:07:52,332 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 875352ce-be7d-4c9f-a653-98a0ed0bcf41
+WARN  2016-02-24 13:09:15,879 [70   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:09:15,916 [70   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 875352ce-be7d-4c9f-a653-98a0ed0bcf41
+WARN  2016-02-24 13:09:16,091 [70   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:09:16,092 [70   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:09:16,608 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"af64e1a8-917b-4efb-a47d-06af4277c221","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:09:16.6085279-06:00","Properties":{}}
+DEBUG 2016-02-24 13:09:16,619 [50   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: af64e1a8-917b-4efb-a47d-06af4277c221
+WARN  2016-02-24 13:11:21,767 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:11:21,806 [46   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: af64e1a8-917b-4efb-a47d-06af4277c221
+WARN  2016-02-24 13:11:22,056 [42   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:11:22,056 [42   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:11:22,528 [48   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"50232cf5-a8ed-4894-9067-5dcef2b3d877","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:11:22.5284729-06:00","Properties":{}}
+DEBUG 2016-02-24 13:11:22,539 [71   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 50232cf5-a8ed-4894-9067-5dcef2b3d877
+DEBUG 2016-02-24 13:11:41,034 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:16:41,020 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+WARN  2016-02-24 13:19:04,180 [91   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:19:04,216 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 50232cf5-a8ed-4894-9067-5dcef2b3d877
+WARN  2016-02-24 13:19:04,266 [93   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:19:04,266 [93   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:19:04,668 [105  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e8e9935a-fea7-4cdf-92a3-89cc6ff1885f","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:19:04.6689454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:19:04,676 [89   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e8e9935a-fea7-4cdf-92a3-89cc6ff1885f
+WARN  2016-02-24 13:19:17,643 [52   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:19:17,675 [93   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e8e9935a-fea7-4cdf-92a3-89cc6ff1885f
+WARN  2016-02-24 13:19:17,726 [68   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:19:17,726 [68   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:19:18,065 [95   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0ebbba24-b501-417b-ad80-e3dba7ed5edd","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:19:18.0659454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:19:18,073 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0ebbba24-b501-417b-ad80-e3dba7ed5edd
+WARN  2016-02-24 13:19:22,044 [95   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:19:22,084 [68   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 0ebbba24-b501-417b-ad80-e3dba7ed5edd
+WARN  2016-02-24 13:19:22,141 [89   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:19:22,141 [89   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:19:22,482 [88   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b79f2044-1ce9-4b12-9d28-ff11d12508c2","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:19:22.4829454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:19:22,489 [68   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b79f2044-1ce9-4b12-9d28-ff11d12508c2
+WARN  2016-02-24 13:21:22,769 [119  ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:21:22,809 [93   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: b79f2044-1ce9-4b12-9d28-ff11d12508c2
+WARN  2016-02-24 13:21:22,887 [119  ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:21:23,261 [90   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:21:23,422 [81   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1cec6a5e-74b1-4eaf-8819-b592be13d064","IpAddress":"::1","TenantId":null,"UserId":null,"ConnectTime":"2016-02-24T13:21:23.4229454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:21:23,439 [80   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1cec6a5e-74b1-4eaf-8819-b592be13d064
+DEBUG 2016-02-24 13:21:25,356 [105  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1cec6a5e-74b1-4eaf-8819-b592be13d064
+WARN  2016-02-24 13:21:25,389 [88   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:21:31,285 [81   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:21:31,977 [80   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:21:32,094 [95   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:21:32,094 [95   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:21:32,355 [68   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:21:32,355 [68   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:21:41,059 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+WARN  2016-02-24 13:22:29,621 [74   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:22:33,108 [95   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:26:39,244 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:26:41,868 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:26:41,872 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:26:41,883 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:26:41,938 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:22,400 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:27:23,978 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:27:23,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:23,992 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:24,042 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:56,087 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:27:57,805 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:27:57,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,814 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,814 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,814 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,814 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:27:57,819 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:27:57,865 [1    ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-02-24 13:27:57,938 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-02-24 13:27:58,006 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-02-24 13:27:59,795 [1    ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-24 13:27:59,802 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-24 13:27:59,803 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-24 13:27:59,804 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-24 13:27:59,804 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-24 13:27:59,805 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-24 13:27:59,805 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-24 13:27:59,805 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-24 13:27:59,813 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-02-24 13:27:59,825 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: cinotam25@SimpleCms'.
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20.
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'.
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15.
+INFO  2016-02-24 13:27:59,828 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15.
+DEBUG 2016-02-24 13:27:59,839 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-02-24 13:28:00,038 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-02-24 13:28:00,039 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-02-24 13:28:00,039 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-02-24 13:28:00,042 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2016-02-24 13:28:00,042 [a90bb] Hangfire.Server.Worker                   - Background process 'Worker #622a90bb' started.
+DEBUG 2016-02-24 13:28:00,043 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:28:00,043 [fb363] Hangfire.Server.Worker                   - Background process 'Worker #932fb363' started.
+DEBUG 2016-02-24 13:28:00,045 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-02-24 13:28:00,045 [c4581] Hangfire.Server.Worker                   - Background process 'Worker #7b0c4581' started.
+DEBUG 2016-02-24 13:28:00,049 [0e73b] Hangfire.Server.Worker                   - Background process 'Worker #3ac0e73b' started.
+DEBUG 2016-02-24 13:28:00,050 [2674f] Hangfire.Server.Worker                   - Background process 'Worker #3912674f' started.
+DEBUG 2016-02-24 13:28:00,051 [d01d1] Hangfire.Server.Worker                   - Background process 'Worker #c20d01d1' started.
+DEBUG 2016-02-24 13:28:00,051 [3080e] Hangfire.Server.Worker                   - Background process 'Worker #97a3080e' started.
+DEBUG 2016-02-24 13:28:00,053 [a55e8] Hangfire.Server.Worker                   - Background process 'Worker #93ca55e8' started.
+DEBUG 2016-02-24 13:28:00,053 [cf912] Hangfire.Server.Worker                   - Background process 'Worker #866cf912' started.
+DEBUG 2016-02-24 13:28:00,054 [710b0] Hangfire.Server.Worker                   - Background process 'Worker #7d1710b0' started.
+DEBUG 2016-02-24 13:28:00,054 [eabde] Hangfire.Server.Worker                   - Background process 'Worker #234eabde' started.
+DEBUG 2016-02-24 13:28:00,055 [cbfea] Hangfire.Server.Worker                   - Background process 'Worker #b4bcbfea' started.
+DEBUG 2016-02-24 13:28:00,056 [0eb88] Hangfire.Server.Worker                   - Background process 'Worker #6230eb88' started.
+DEBUG 2016-02-24 13:28:00,056 [f1d42] Hangfire.Server.Worker                   - Background process 'Worker #491f1d42' started.
+DEBUG 2016-02-24 13:28:00,057 [0c61b] Hangfire.Server.Worker                   - Background process 'Worker #aa50c61b' started.
+DEBUG 2016-02-24 13:28:00,058 [65d5b] Hangfire.Server.Worker                   - Background process 'Worker #19765d5b' started.
+DEBUG 2016-02-24 13:28:00,061 [1754a] Hangfire.Server.Worker                   - Background process 'Worker #6c41754a' started.
+DEBUG 2016-02-24 13:28:00,062 [e07d3] Hangfire.Server.Worker                   - Background process 'Worker #d5de07d3' started.
+DEBUG 2016-02-24 13:28:00,063 [48275] Hangfire.Server.Worker                   - Background process 'Worker #62448275' started.
+DEBUG 2016-02-24 13:28:00,063 [5071a] Hangfire.Server.Worker                   - Background process 'Worker #92a5071a' started.
+DEBUG 2016-02-24 13:28:00,064 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-02-24 13:28:00,068 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-02-24 13:28:00,098 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-02-24 13:28:00,112 [nager] Hangfire.SqlServer.ExpirationManager     - Removed 12 outdated record(s) from 'Job' table.
+DEBUG 2016-02-24 13:28:00,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-24 13:28:00,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-24 13:28:01,112 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-02-24 13:28:01,115 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-02-24 13:28:01,118 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-02-24 13:28:01,126 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-24 13:28:01,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-24 13:28:01,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-24 13:28:01,149 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-24 13:28:01,153 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-24 13:28:01,172 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-24 13:28:01,173 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-24 13:28:01,173 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-24 13:28:01,174 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-24 13:28:11,142 [9    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:28:26,030 [5    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:28:48,989 [9    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:29:01,007 [49   ] pleCms.Web.Controllers.AccountController - Form is not valid. Please check and fix errors.
+Abp.UI.UserFriendlyException: Form is not valid. Please check and fix errors.
+   at SimpleCms.Web.Controllers.SimpleCmsControllerBase.CheckModelState() in C:\Users\CINOTAM25\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Controllers\SimpleCmsControllerBase.cs:line 43
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at SimpleCms.Web.Controllers.AccountController.<Login>d__9.MoveNext() in C:\Users\CINOTAM25\Documents\GitHub\MyASP.NETBoilerPlateModuleZero\SimpleCms.Web\Controllers\AccountController.cs:line 80
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2016-02-24 13:29:18,881 [49   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:29:36,203 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:29:47,290 [5    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:29:58,960 [13   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:30:31,538 [54   ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:30:31,538 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-02-24 13:30:31,538 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-02-24 13:30:31,538 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-02-24 13:30:31,538 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-02-24 13:30:31,538 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-02-24 13:30:31,543 [5071a] Hangfire.Server.Worker                   - Background process 'Worker #92a5071a' stopped.
+DEBUG 2016-02-24 13:30:31,543 [48275] Hangfire.Server.Worker                   - Background process 'Worker #62448275' stopped.
+DEBUG 2016-02-24 13:30:31,544 [e07d3] Hangfire.Server.Worker                   - Background process 'Worker #d5de07d3' stopped.
+DEBUG 2016-02-24 13:30:31,544 [0c61b] Hangfire.Server.Worker                   - Background process 'Worker #aa50c61b' stopped.
+DEBUG 2016-02-24 13:30:31,543 [1754a] Hangfire.Server.Worker                   - Background process 'Worker #6c41754a' stopped.
+DEBUG 2016-02-24 13:30:31,543 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-02-24 13:30:31,544 [eabde] Hangfire.Server.Worker                   - Background process 'Worker #234eabde' stopped.
+DEBUG 2016-02-24 13:30:31,545 [710b0] Hangfire.Server.Worker                   - Background process 'Worker #7d1710b0' stopped.
+DEBUG 2016-02-24 13:30:31,544 [65d5b] Hangfire.Server.Worker                   - Background process 'Worker #19765d5b' stopped.
+DEBUG 2016-02-24 13:30:31,561 [cbfea] Hangfire.Server.Worker                   - Background process 'Worker #b4bcbfea' stopped.
+DEBUG 2016-02-24 13:30:31,561 [2674f] Hangfire.Server.Worker                   - Background process 'Worker #3912674f' stopped.
+DEBUG 2016-02-24 13:30:31,561 [f1d42] Hangfire.Server.Worker                   - Background process 'Worker #491f1d42' stopped.
+DEBUG 2016-02-24 13:30:31,561 [fb363] Hangfire.Server.Worker                   - Background process 'Worker #932fb363' stopped.
+DEBUG 2016-02-24 13:30:31,561 [d01d1] Hangfire.Server.Worker                   - Background process 'Worker #c20d01d1' stopped.
+DEBUG 2016-02-24 13:30:31,562 [a55e8] Hangfire.Server.Worker                   - Background process 'Worker #93ca55e8' stopped.
+DEBUG 2016-02-24 13:30:31,562 [c4581] Hangfire.Server.Worker                   - Background process 'Worker #7b0c4581' stopped.
+DEBUG 2016-02-24 13:30:31,563 [0eb88] Hangfire.Server.Worker                   - Background process 'Worker #6230eb88' stopped.
+DEBUG 2016-02-24 13:30:31,563 [cf912] Hangfire.Server.Worker                   - Background process 'Worker #866cf912' stopped.
+DEBUG 2016-02-24 13:30:31,572 [a90bb] Hangfire.Server.Worker                   - Background process 'Worker #622a90bb' stopped.
+DEBUG 2016-02-24 13:30:31,572 [0e73b] Hangfire.Server.Worker                   - Background process 'Worker #3ac0e73b' stopped.
+DEBUG 2016-02-24 13:30:31,572 [3080e] Hangfire.Server.Worker                   - Background process 'Worker #97a3080e' stopped.
+DEBUG 2016-02-24 13:30:31,577 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-02-24 13:30:31,577 [54   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-02-24 13:30:31,578 [54   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:30:34,665 [59   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:30:39,489 [59   ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:30:39,494 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,496 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,496 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,497 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,498 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,499 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,499 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:30:39,504 [59   ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:30:39,553 [59   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:30:39,553 [59   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:30:39,553 [59   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:30:39,554 [59   ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:30:39,554 [59   ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:30:39,554 [59   ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:30:39,554 [59   ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2016-02-24 13:30:39,617 [59   ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2016-02-24 13:30:39,660 [59   ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2016-02-24 13:30:42,403 [59   ] Abp.Localization.LocalizationManager     - Initializing 7 localization sources.
+DEBUG 2016-02-24 13:30:42,409 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2016-02-24 13:30:42,410 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2016-02-24 13:30:42,410 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2016-02-24 13:30:42,411 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: SimpleCms
+DEBUG 2016-02-24 13:30:42,411 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleZero
+DEBUG 2016-02-24 13:30:42,412 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: ModuleCms
+DEBUG 2016-02-24 13:30:42,412 [59   ] Abp.Localization.LocalizationManager     - Initialized localization source: EcommerceModule
+DEBUG 2016-02-24 13:30:42,421 [59   ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2016-02-24 13:30:42,438 [59   ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: cinotam25@SimpleCms'.
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             -     Worker count: 20.
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'.
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15.
+INFO  2016-02-24 13:30:42,441 [59   ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15.
+DEBUG 2016-02-24 13:30:42,476 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2016-02-24 13:30:42,782 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2016-02-24 13:30:42,783 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2016-02-24 13:30:42,792 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2016-02-24 13:30:42,794 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+INFO  2016-02-24 13:30:42,794 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+DEBUG 2016-02-24 13:30:42,796 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:30:42,796 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'AggregatedCounter'...
+DEBUG 2016-02-24 13:30:42,798 [107c9] Hangfire.Server.Worker                   - Background process 'Worker #d4f107c9' started.
+DEBUG 2016-02-24 13:30:42,805 [b807f] Hangfire.Server.Worker                   - Background process 'Worker #c9fb807f' started.
+DEBUG 2016-02-24 13:30:42,842 [c329b] Hangfire.Server.Worker                   - Background process 'Worker #a42c329b' started.
+DEBUG 2016-02-24 13:30:42,855 [5f013] Hangfire.Server.Worker                   - Background process 'Worker #55d5f013' started.
+DEBUG 2016-02-24 13:30:42,857 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Job'...
+DEBUG 2016-02-24 13:30:42,865 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'List'...
+DEBUG 2016-02-24 13:30:42,868 [cc166] Hangfire.Server.Worker                   - Background process 'Worker #bc7cc166' started.
+DEBUG 2016-02-24 13:30:42,869 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Set'...
+DEBUG 2016-02-24 13:30:42,875 [3e573] Hangfire.Server.Worker                   - Background process 'Worker #5dc3e573' started.
+DEBUG 2016-02-24 13:30:42,878 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from table 'Hash'...
+DEBUG 2016-02-24 13:30:42,881 [814ff] Hangfire.Server.Worker                   - Background process 'Worker #47b814ff' started.
+DEBUG 2016-02-24 13:30:42,884 [fcb41] Hangfire.Server.Worker                   - Background process 'Worker #fb8fcb41' started.
+DEBUG 2016-02-24 13:30:42,890 [33e85] Hangfire.Server.Worker                   - Background process 'Worker #63333e85' started.
+DEBUG 2016-02-24 13:30:42,912 [e0245] Hangfire.Server.Worker                   - Background process 'Worker #018e0245' started.
+DEBUG 2016-02-24 13:30:42,916 [cc5a5] Hangfire.Server.Worker                   - Background process 'Worker #1cfcc5a5' started.
+DEBUG 2016-02-24 13:30:42,918 [fceab] Hangfire.Server.Worker                   - Background process 'Worker #de7fceab' started.
+DEBUG 2016-02-24 13:30:42,923 [6cdbc] Hangfire.Server.Worker                   - Background process 'Worker #3186cdbc' started.
+DEBUG 2016-02-24 13:30:42,945 [22f3c] Hangfire.Server.Worker                   - Background process 'Worker #03422f3c' started.
+DEBUG 2016-02-24 13:30:42,972 [74105] Hangfire.Server.Worker                   - Background process 'Worker #27a74105' started.
+DEBUG 2016-02-24 13:30:42,976 [e1503] Hangfire.Server.Worker                   - Background process 'Worker #3abe1503' started.
+DEBUG 2016-02-24 13:30:42,978 [30fb7] Hangfire.Server.Worker                   - Background process 'Worker #8c030fb7' started.
+DEBUG 2016-02-24 13:30:42,980 [d807b] Hangfire.Server.Worker                   - Background process 'Worker #00ad807b' started.
+DEBUG 2016-02-24 13:30:42,984 [309e8] Hangfire.Server.Worker                   - Background process 'Worker #efd309e8' started.
+DEBUG 2016-02-24 13:30:42,989 [89495] Hangfire.Server.Worker                   - Background process 'Worker #dfc89495' started.
+DEBUG 2016-02-24 13:30:42,991 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2016-02-24 13:30:42,993 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2016-02-24 13:30:45,304 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 6 classes defines auto mapping attributes
+DEBUG 2016-02-24 13:30:45,305 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2016-02-24 13:30:45,461 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Sessions.Dto.UserLoginInfoDto
+DEBUG 2016-02-24 13:30:45,466 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.MultiTenancy.Dto.TenantListDto
+DEBUG 2016-02-24 13:30:45,468 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.Users.Dto.UserDto
+DEBUG 2016-02-24 13:30:45,488 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.ModuleZero.OrgUnits.Dto.OrganizationUnitDto
+DEBUG 2016-02-24 13:30:45,492 [59   ] Abp.AutoMapper.AbpAutoMapperModule       - SimpleCms.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2016-02-24 13:30:45,511 [59   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2016-02-24 13:30:45,513 [59   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2016-02-24 13:30:45,514 [59   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2016-02-24 13:30:45,514 [59   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'SimpleCms.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+WARN  2016-02-24 13:30:51,177 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:30:51,321 [54   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:30:58,459 [7    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:31:04,621 [56   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:31:04,879 [5    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:31:36,737 [57   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:31:43,292 [58   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:31:43,623 [45   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:31:43,624 [45   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:31:46,456 [46   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:31:46,583 [56   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:31:46,583 [56   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:31:47,842 [56   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e8b68dcf-1e8d-4501-808b-76333624575f","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:31:47.8389454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:31:47,897 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e8b68dcf-1e8d-4501-808b-76333624575f
+WARN  2016-02-24 13:31:57,518 [56   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:31:57,560 [57   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e8b68dcf-1e8d-4501-808b-76333624575f
+WARN  2016-02-24 13:31:57,617 [56   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:31:57,617 [56   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:31:57,925 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"3c1a98f9-3ada-4731-9c16-87a205b6bace","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:31:57.9259454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:31:57,932 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 3c1a98f9-3ada-4731-9c16-87a205b6bace
+WARN  2016-02-24 13:32:32,606 [56   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+WARN  2016-02-24 13:32:33,858 [5    ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:32:33,894 [56   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 3c1a98f9-3ada-4731-9c16-87a205b6bace
+WARN  2016-02-24 13:32:33,957 [53   ] Abp.Logging.LogHelper                    - Can not find 'Admin_Mo' in localization source 'SimpleCms'!
+WARN  2016-02-24 13:32:33,957 [53   ] Abp.Logging.LogHelper                    - Can not find 'Zero_Menu' in localization source 'ModuleZero'!
+DEBUG 2016-02-24 13:32:34,269 [46   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"278720f4-cdbe-4055-a53e-c6abd3dfdc6b","IpAddress":"::1","TenantId":2,"UserId":3,"ConnectTime":"2016-02-24T13:32:34.2694454-06:00","Properties":{}}
+DEBUG 2016-02-24 13:32:34,285 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 278720f4-cdbe-4055-a53e-c6abd3dfdc6b
+DEBUG 2016-02-24 13:35:42,829 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:40:42,906 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2016-02-24 13:44:28,505 [7    ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:44:28,505 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2016-02-24 13:44:28,505 [fceab] Hangfire.Server.Worker                   - Background process 'Worker #de7fceab' stopped.
+DEBUG 2016-02-24 13:44:28,505 [30fb7] Hangfire.Server.Worker                   - Background process 'Worker #8c030fb7' stopped.
+DEBUG 2016-02-24 13:44:28,505 [5f013] Hangfire.Server.Worker                   - Background process 'Worker #55d5f013' stopped.
+DEBUG 2016-02-24 13:44:28,505 [309e8] Hangfire.Server.Worker                   - Background process 'Worker #efd309e8' stopped.
+DEBUG 2016-02-24 13:44:28,505 [107c9] Hangfire.Server.Worker                   - Background process 'Worker #d4f107c9' stopped.
+DEBUG 2016-02-24 13:44:28,505 [e1503] Hangfire.Server.Worker                   - Background process 'Worker #3abe1503' stopped.
+DEBUG 2016-02-24 13:44:28,505 [e0245] Hangfire.Server.Worker                   - Background process 'Worker #018e0245' stopped.
+DEBUG 2016-02-24 13:44:28,505 [3e573] Hangfire.Server.Worker                   - Background process 'Worker #5dc3e573' stopped.
+DEBUG 2016-02-24 13:44:28,505 [74105] Hangfire.Server.Worker                   - Background process 'Worker #27a74105' stopped.
+DEBUG 2016-02-24 13:44:28,505 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2016-02-24 13:44:28,505 [22f3c] Hangfire.Server.Worker                   - Background process 'Worker #03422f3c' stopped.
+DEBUG 2016-02-24 13:44:28,505 [cc166] Hangfire.Server.Worker                   - Background process 'Worker #bc7cc166' stopped.
+DEBUG 2016-02-24 13:44:28,505 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2016-02-24 13:44:28,505 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2016-02-24 13:44:28,505 [814ff] Hangfire.Server.Worker                   - Background process 'Worker #47b814ff' stopped.
+DEBUG 2016-02-24 13:44:28,505 [6cdbc] Hangfire.Server.Worker                   - Background process 'Worker #3186cdbc' stopped.
+DEBUG 2016-02-24 13:44:28,505 [33e85] Hangfire.Server.Worker                   - Background process 'Worker #63333e85' stopped.
+DEBUG 2016-02-24 13:44:28,505 [cc5a5] Hangfire.Server.Worker                   - Background process 'Worker #1cfcc5a5' stopped.
+DEBUG 2016-02-24 13:44:28,505 [c329b] Hangfire.Server.Worker                   - Background process 'Worker #a42c329b' stopped.
+DEBUG 2016-02-24 13:44:28,505 [b807f] Hangfire.Server.Worker                   - Background process 'Worker #c9fb807f' stopped.
+DEBUG 2016-02-24 13:44:28,505 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2016-02-24 13:44:28,505 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2016-02-24 13:44:28,505 [89495] Hangfire.Server.Worker                   - Background process 'Worker #dfc89495' stopped.
+DEBUG 2016-02-24 13:44:28,505 [d807b] Hangfire.Server.Worker                   - Background process 'Worker #00ad807b' stopped.
+DEBUG 2016-02-24 13:44:28,505 [fcb41] Hangfire.Server.Worker                   - Background process 'Worker #fb8fcb41' stopped.
+DEBUG 2016-02-24 13:44:28,505 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2016-02-24 13:44:28,505 [7    ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2016-02-24 13:44:28,505 [7    ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2016-02-24 13:44:31,265 [59   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:44:33,820 [59   ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:44:33,820 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:33,830 [59   ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:33,880 [59   ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:37,128 [59   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2016-02-24 13:44:38,702 [59   ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2016-02-24 13:44:38,705 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,711 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,711 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,711 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,711 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Owin.AbpOwinModule, Abp.Owin, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,711 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,711 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.8.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: NotificationSystem.NotificationSystemActivator, NotificationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsApplicationModule, SimpleCms.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,712 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsCoreModule, SimpleCms.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,713 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.SimpleCmsDataModule, SimpleCms.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,713 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleCms.ModuleCmsActivator, SimpleCms.ModuleCms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,713 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleEcommerce.ModuleEcommerceActivator, SimpleCms.ModuleEcommerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,713 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.ModuleZero.ModuleZeroActivator, SimpleCms.ModuleZero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,713 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Web.SimpleCmsWebModule, SimpleCms.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,713 [59   ] Abp.Modules.AbpModuleManager             - Loaded module: SimpleCms.Api.SimpleCmsWebApiModule, SimpleCms.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2016-02-24 13:44:38,727 [59   ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted SimpleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted ModuleZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted ModuleCms (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2016-02-24 13:44:38,767 [59   ] o.Configuration.LanguageManagementConfig - Converted EcommerceModule (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource

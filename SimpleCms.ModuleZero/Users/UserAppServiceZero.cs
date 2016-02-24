@@ -8,9 +8,12 @@ using System.Web;
 using Abp.Authorization;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
+using Abp.Localization;
+using Abp.Notifications;
 using Abp.UI;
 using Microsoft.AspNet.Identity;
 using SimpleCms.Authorization.Roles;
+using SimpleCms.ModuleZero.Constants;
 using SimpleCms.ModuleZero.GenericOutPuts;
 using SimpleCms.ModuleZero.OrgUnits;
 using SimpleCms.ModuleZero.Policies;
@@ -213,6 +216,17 @@ namespace SimpleCms.ModuleZero.Users
                 UserName = input.UserName
             };
             var result = await _userManager.CreateAsync(user);
+            //With this we can get the created user id
+            //See http://aspnetboilerplate.com/Pages/Documents/Unit-Of-Work
+            await CurrentUnitOfWork.SaveChangesAsync();
+            if (result.Succeeded)
+            {
+                if (user.CreatorUserId != null)
+                {
+                    var creator = await _userManager.GetUserByIdAsync((long) user.CreatorUserId);
+                    await SendUserCreatedNotification(creator.UserName, user.UserName, user.Id);
+                }
+            }
         }
 
         public async Task<NewUserInput> GetUser(long id)
@@ -319,6 +333,18 @@ namespace SimpleCms.ModuleZero.Users
                 }
             }
             return rolesCreated;
+        }
+
+        private async Task SendUserCreatedNotification(string creatorName,string createdName,long? newUserId)
+        {
+            var data =
+                new LocalizableMessageNotificationData(new LocalizableString("UserCreatedByUser", ModuleZeroConstants.Source))
+                {
+                    ["creator"] = creatorName,
+                    ["created"] = createdName,
+                    ["id"] = newUserId
+                };
+            await SendNotification(data, ModuleZeroConstants.CreatedUserNotificationName, NotificationSeverity.Success);
         }
     }
 }
