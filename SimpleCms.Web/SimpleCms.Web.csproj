@@ -619,6 +619,7 @@
     <Content Include="Abp\Framework\styles\abp.mixings.less" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <None Include="Properties\PublishProfiles\FileSystem.pubxml" />
     <None Include="Properties\PublishProfiles\simplecms1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\simplecms1 - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
@@ -843,6 +844,7 @@
     <Content Include="Views\Themes\Eshopper\Layout\_mySiteLogo.cshtml" />
     <Content Include="Views\Themes\Eshopper\Layout\_mySiteName.cshtml" />
     <Content Include="Views\Shared\_adminTopBar.cshtml" />
+    <Content Include="Views\Shared\TenancyNotFound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

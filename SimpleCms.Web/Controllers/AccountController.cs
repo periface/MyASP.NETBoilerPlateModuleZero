@@ -60,6 +60,11 @@ namespace SimpleCms.Web.Controllers
 
         public ActionResult Login(string returnUrl = "")
         {
+            ViewBag.IsNotExistingTenant = false;
+            if (IsNotExistentTenancy)
+            {
+                ViewBag.IsNotExistingTenant = IsNotExistentTenancy;
+            }
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
                 returnUrl = Request.ApplicationPath;
@@ -182,7 +187,13 @@ namespace SimpleCms.Web.Controllers
         private ActionResult RegisterView(RegisterViewModel model)
         {
             ViewBag.IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled;
-
+            ViewBag.IsHost = IsHostSite;
+            ViewBag.IsNotExistingTenant = false;
+            if (IsNotExistentTenancy)
+            {
+                ViewBag.IsNotExistingTenant = IsNotExistentTenancy;
+                model.TenancyName = ActiveTenantName;
+            }
             return View("Register", model);
         }
 
@@ -213,7 +224,6 @@ namespace SimpleCms.Web.Controllers
                 //Create user
                 var user = new User
                 {
-                    TenantId = tenant.Id,
                     Name = model.Name,
                     Surname = model.Surname,
                     EmailAddress = model.EmailAddress,
@@ -264,7 +274,7 @@ namespace SimpleCms.Web.Controllers
                 user.Password = new PasswordHasher().HashPassword(model.Password);
 
                 //Switch to the tenant
-                _unitOfWorkManager.Current.EnableFilter(AbpDataFilters.MayHaveTenant);
+                _unitOfWorkManager.Current.DisableFilter(AbpDataFilters.MayHaveTenant);
                 _unitOfWorkManager.Current.SetFilterParameter(AbpDataFilters.MayHaveTenant, AbpDataFilters.Parameters.TenantId, tenant.Id);
 
                 //Add default roles

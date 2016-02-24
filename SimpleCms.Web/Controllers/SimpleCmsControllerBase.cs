@@ -93,6 +93,32 @@ namespace SimpleCms.Web.Controllers
             tenancyName = tenancyName.Split("//").Last();
             return tenancyName;
         }
+
+        public string HostWithNoTenantName()
+        {
+            var hostName = string.Empty;
+            if (Request.Url != null)
+            {
+                hostName= Request.Url.Host.Split(".").Last();
+            }
+            return hostName;
+        }
+        public bool IsNotExistentTenancy
+        {
+            get
+            {
+                //Gets the parsed name
+                var name = GetTenancyNameByUrl();
+                var hostName = HostWithNoTenantName();
+                //Checks if a tenancy name was detected
+                var hasName = Request.Url != null && !name.StartsWith(hostName);
+                //Finds the name in the database
+                var instance = AsyncHelper.RunSync(() => _tenancyService.GetTenantByName(name));
+                //if tenancy was not found && the user send a tenancy name then he was looking for an unexisting tenant
+                return instance == null && hasName;
+            }
+        }
+
         /// <summary>
         /// Detects if the site url belongs to a tenant website
         /// <para>Not available in AdminController since tenantId can be obtained from te AbpSession</para>
@@ -101,7 +127,8 @@ namespace SimpleCms.Web.Controllers
         {
             get
             {
-                var instance =AsyncHelper.RunSync(()=>_tenancyService.GetTenantByName(GetTenancyNameByUrl()));
+                var name = GetTenancyNameByUrl();
+                var instance =AsyncHelper.RunSync(()=>_tenancyService.GetTenantByName(name));
                 return instance == null;
             }
         }

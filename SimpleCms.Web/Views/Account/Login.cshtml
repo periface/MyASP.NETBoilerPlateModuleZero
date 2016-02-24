@@ -17,7 +17,7 @@
                     <fieldset>
                         <legend>@L("LogIn")</legend>
 
-                        @if (Model.IsMultiTenancyEnabled)
+                        @*@if (Model.IsMultiTenancyEnabled)
                         {
                             <div class="form-group">
                                 <div class="col-lg-12">
@@ -29,7 +29,7 @@
                         else
                         {
                             <input type="hidden" id="TenancyName" value="">
-                        }
+                        }*@
 
                         <div class="form-group">
                             <div class="col-lg-12">
@@ -54,7 +54,15 @@
 
                         <div class="form-group">
                             <div class="col-lg-12">
-                                <button id="LoginButton" type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
+                                @if (ViewBag.IsNotExistingTenant)
+                                {
+                                    <p>This tenant does not exist, why dont you register and create it!</p>
+                                    <button id="LoginButton" class="btn btn-primary disabled"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
+                                }
+                                else
+                                {
+                                    <button id="LoginButton" type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
+                                }
                                 <a class="btn btn-success" href="@Url.Action("Register")"><i class="fa fa-sign-in"></i> @L("Register")</a>
                             </div>
                         </div>

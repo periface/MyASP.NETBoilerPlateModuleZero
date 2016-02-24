@@ -17,16 +17,21 @@
                                 <i class="fa fa-warning"></i> @ViewBag.ErrorMessage
                             </div>
                         }
-
-                        @*@if (ViewBag.IsMultiTenancyEnabled)
+                        @if (ViewBag.IsHost)
                         {
-                            <div class="form-group">
-                                <div class="col-lg-12">
-                                    <input type="text" class="form-control" name="TenancyName" placeholder="@L("TenancyName")" value="@Model.TenancyName" required maxlength="@SimpleCms.MultiTenancy.Tenant.MaxTenancyNameLength">
+                            if (ViewBag.IsNotExistingTenant)
+                            {
+                                <p>This website does not exists why dont you create it!</p>
+                            }
+                            if (ViewBag.IsMultiTenancyEnabled)
+                            {
+                                <div class="form-group">
+                                    <div class="col-lg-12">
+                                        <input type="text" class="form-control" name="TenancyName" placeholder="@L("TenancyName")" value="@Model.TenancyName" required maxlength="@SimpleCms.MultiTenancy.Tenant.MaxTenancyNameLength">
+                                    </div>
                                 </div>
-                            </div>
-                        }*@
-
+                            }
+                        }
                         <input type="hidden" name="IsExternalLogin" value="@Model.IsExternalLogin.ToString()" />
 
                         <div class="form-group">

@@ -7,7 +7,7 @@ namespace SimpleCms.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.IgnoreList.Clear();
-
+            
             //SmartAdmin - Vendor 
             //bundles.Add(new StyleBundle("~/content/smartadmin").IncludeDirectory("~/content/css", "*.min.css"));
             //VENDOR RESOURCES
@@ -15,14 +15,12 @@ namespace SimpleCms.Web
             //~/Bundles/vendor/css
             bundles.Add(
                 new StyleBundle("~/Bundles/vendor/css")
-                    .Include(
-                        "~/Content/themes/base/all.css",
-                        "~/Content/bootstrap-cosmo.min.css",
-                        "~/Content/toastr.min.css",
-                        "~/Scripts/sweetalert/sweet-alert.css",
-                        "~/Content/flags/famfamfam-flags.css",
-                        "~/Content/font-awesome.min.css"
-                    )
+                    .Include("~/Content/themes/base/all.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/bootstrap-cosmo.min.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/toastr.min.css", new CssRewriteUrlTransform())
+                    .Include("~/Scripts/sweetalert/sweet-alert.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/flags/famfamfam-flags.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform())
                 );
             bundles.Add(
                 new StyleBundle("~/Bundles/vendor/cssNoConflict")
@@ -84,6 +82,8 @@ namespace SimpleCms.Web
                 new ScriptBundle("~/Bundles/js")
                     .Include("~/js/main.js")
                 );
+
+            //Custom
             bundles.Add(
                 new ScriptBundle("~/Bundles/vendor/js/bottomNoBt")
                     .Include(
