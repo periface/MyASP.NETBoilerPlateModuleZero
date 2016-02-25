@@ -17,5 +17,13 @@ namespace SimpleCms.ModuleCms.SiteConfiguration
         Task<SiteInfoDto> GetCurrentInfoForEdit(int id);
         Task AddImageToInfo(SiteInfoImageInput input);
         SiteInfoDto GetCurrentInfo(int? tenant);
+        Task<int> CreateAboutInfo(AboutInfoInput input);
+        Task EditAboutInfoMission(string mision,int aboutInfoId,bool display);
+        Task EditAboutInfoVision(string vision, int aboutInfoId, bool display);
+        Task EditAboutInfoObj(string mision, int aboutInfoId, bool display);
+        Task EditAboutInfoQualityPol(string politic, int aboutInfoId, bool display);
+        Task EditAboutInfoPrivacyPol(string politic, int aboutInfoId, bool display);
+        Task DeleteAboutInfo(int aboutInfoId);
+        Task<AboutInfoInput> GetInfoForEdit(string lang,int siteInfoId);
     }
 }

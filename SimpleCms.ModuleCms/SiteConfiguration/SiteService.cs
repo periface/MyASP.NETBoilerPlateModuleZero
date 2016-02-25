@@ -18,6 +18,7 @@ namespace SimpleCms.ModuleCms.SiteConfiguration
         private const string IconRoute = "/Content/Images/Icons/{0}/";
         private const string LogoRoute = "/Content/Images/Logos/{0}/";
         private readonly HttpServerUtility _server;
+
         public SiteService(ISiteManager siteManager)
         {
             _siteManager = siteManager;
@@ -179,6 +180,52 @@ namespace SimpleCms.ModuleCms.SiteConfiguration
                 SiteTitle = info.SiteTitle
             };
         }
+
+        Task<int> ISiteService.CreateAboutInfo(AboutInfoInput input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditAboutInfoMission(string mision, int aboutInfoId, bool display)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditAboutInfoVision(string vision, int aboutInfoId, bool display)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditAboutInfoObj(string mision, int aboutInfoId, bool display)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditAboutInfoQualityPol(string politic, int aboutInfoId, bool display)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditAboutInfoPrivacyPol(string politic, int aboutInfoId, bool display)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAboutInfo(int aboutInfoId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<AboutInfoInput> GetInfoForEdit(string lang, int siteInfoId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task CreateAboutInfo(AboutInfoInput input)
+        {
+            var info = AboutInfo.CreateInfo(input);
+            await _siteManager.CreateAboutInfo(info);
+        }
         [UnitOfWork(IsDisabled = true)]
         private string SaveImageInRoute(string route, HttpPostedFileBase image)
         {
@@ -193,6 +240,6 @@ namespace SimpleCms.ModuleCms.SiteConfiguration
         }
 
         private readonly string[] _formatStrings = { ".png", ".gif", ".jpg" };
-        private readonly string[] _formatIconStrings = { ".png", ".ico"};
+        private readonly string[] _formatIconStrings = { ".png", ".ico" };
     }
 }

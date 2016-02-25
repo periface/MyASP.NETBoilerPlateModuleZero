@@ -58,12 +58,19 @@
                                 {
                                     <p>This tenant does not exist, why dont you register and create it!</p>
                                     <button id="LoginButton" class="btn btn-primary disabled"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
-                                }
+                                }  
                                 else
                                 {
                                     <button id="LoginButton" type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> @L("LogIn")</button>
                                 }
-                                <a class="btn btn-success" href="@Url.Action("Register")"><i class="fa fa-sign-in"></i> @L("Register")</a>
+                                @if (!ViewBag.IsHost)
+                                {
+                                    <a class="btn btn-success" href="@Url.Action("Register")"><i class="fa fa-sign-in"></i> @L("Register")</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-success" href="@Url.Action("RegisterTenant")"><i class="fa fa-sign-in"></i> @L("RegisterNewTenant")</a>
+                                }
                             </div>
                         </div>
                     </fieldset>

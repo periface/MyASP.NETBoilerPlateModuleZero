@@ -14,7 +14,7 @@
     <RootNamespace>SimpleCms.Web</RootNamespace>
     <AssemblyName>SimpleCms.Web</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort>44302</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
@@ -619,6 +619,7 @@
     <Content Include="Abp\Framework\styles\abp.mixings.less" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="Areas\Admin\Views\Foda\Index.cshtml" />
     <None Include="Properties\PublishProfiles\FileSystem.pubxml" />
     <None Include="Properties\PublishProfiles\simplecms1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\simplecms1 - Web Deploy.pubxml" />
@@ -751,7 +752,7 @@
     <Content Include="Views\Account\Login.min.css">
       <DependentUpon>Login.css</DependentUpon>
     </Content>
-    <Content Include="Views\Tenants\Index.js" />
+    <Content Include="Areas\Admin\Scripts\Index.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -772,6 +773,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdministrationController.cs" />
     <Compile Include="Areas\Admin\Controllers\ControlPanelController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FodaController.cs" />
     <Compile Include="Areas\Admin\Controllers\LanguagesController.cs" />
     <Compile Include="Areas\Admin\Controllers\LayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrgUnitsController.cs" />
@@ -786,7 +788,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
-    <Compile Include="Controllers\TenantsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TenantsController.cs" />
     <Compile Include="Helpers\AjaxPermissionHelper.cs" />
     <Compile Include="Helpers\IAjaxPermissionHelper.cs" />
     <Compile Include="Helpers\ThemeHelper.cs" />
@@ -828,7 +830,7 @@
     <Content Include="Views\Account\RegisterResult.cshtml" />
     <Content Include="Views\Account\TenantSelection.cshtml" />
     <Content Include="Views\Layout\_UserMenuOrLoginLink.cshtml" />
-    <Content Include="Views\Tenants\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Tenants\Index.cshtml" />
     <Content Include="Views\Layout\GetCurrentThemeViewStart.cshtml" />
     <Content Include="Views\Layout\_siteInformationHeaderClient.cshtml" />
     <Content Include="Views\Layout\_mySiteName.cshtml" />
@@ -836,6 +838,7 @@
     <Content Include="Views\Themes\BlueLight\Layout\_mySiteName.cshtml" />
     <Content Include="Scripts\plugin\bootstrapselect\css\bootstrap-select.css.map" />
     <Content Include="Scripts\plugin\bootstrapselect\js\bootstrap-select.js.map" />
+    <Content Include="Views\Account\RegisterTenant.cshtml" />
     <None Include="Views\Home\_ok.cshtml" />
     <None Include="Views\Layout\_mySiteLogo.cshtml" />
     <Content Include="Views\Themes\Blue\Layout\_mySiteLogo.cshtml" />
@@ -924,7 +927,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61814</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/</IISUrl>
+          <IISUrl>http://localhost:1634/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

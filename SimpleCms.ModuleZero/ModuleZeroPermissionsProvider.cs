@@ -11,7 +11,7 @@ namespace SimpleCms.ModuleZero
             context.CreatePermission("AdministrationMenu",
                 new LocalizableString("Administration_Menu", ModuleZeroConstants.Source));
             context.CreatePermission("DashBoard",new LocalizableString("Administration_DashBoard",ModuleZeroConstants.Source));
-            var administracion = context.CreatePermission("Administration",new LocalizableString("Administration",ModuleZeroConstants.Source));
+            var administracion = context.CreatePermission("Administration",new LocalizableString("Administration",ModuleZeroConstants.Source),true);
             var manejoDeUsuarios = administracion.CreateChildPermission("Administration.ManageUsers", new LocalizableString("ManageUsers", ModuleZeroConstants.Source));
             manejoDeUsuarios.CreateChildPermission("Administration.ManageUsers.Menu", new LocalizableString("ManageUsersMenu", ModuleZeroConstants.Source));
             manejoDeUsuarios.CreateChildPermission("Administration.ManageUsers.Create", new LocalizableString("ManageUsersCreate", ModuleZeroConstants.Source));
@@ -37,6 +37,7 @@ namespace SimpleCms.ModuleZero
             manejoDeLenguages.CreateChildPermission("Administration.ManageLanguages.Delete", new LocalizableString("ManageLanguagesDelete", ModuleZeroConstants.Source));
             manejoDeLenguages.CreateChildPermission("Administration.ManageLanguages.EditTexts", new LocalizableString("ManageLanguagesTexts", ModuleZeroConstants.Source));
             var manejoDeConfiguracion = administracion.CreateChildPermission("Administration.ManageConfiguration.Menu", new LocalizableString("ManageConfigurationMenu", ModuleZeroConstants.Source));
+            manejoDeConfiguracion.CreateChildPermission("Administration.ManageConfiguration.Menu.Config", new LocalizableString("ManageConfigurationMenu.Delete", ModuleZeroConstants.Source));
         }
     }
 }

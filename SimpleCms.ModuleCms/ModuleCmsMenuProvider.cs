@@ -15,7 +15,7 @@ namespace SimpleCms.ModuleCms
             context.Manager.Menus["ZeroMenu"].
                 AddItem(
                 new MenuItemDefinition("Pages",
-                new LocalizableString("Cms_System", ModuleCmsConstants.Source), "fa fa-lg fa-fw fa-bookmark txt-color-blue", customData: "CmsSystem")
+                new LocalizableString("Cms_System", ModuleCmsConstants.Source), "fa fa-lg fa-fw fa-bookmark txt-color-blue", customData: "CmsSystem",order:97)
                 .AddItem(
                     new MenuItemDefinition(
                         name: "SiteConfig",

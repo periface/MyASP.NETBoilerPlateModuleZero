@@ -15,7 +15,8 @@ namespace SimpleCms.ModuleEcommerce
                     new MenuItemDefinition(
                         name: "Eco_Reports",
                         icon: "fa fa-book",
-                        displayName: new LocalizableString("Eco_Reports", ModuleEcommerceConstants.Source)
+                        displayName: new LocalizableString("Eco_Reports", ModuleEcommerceConstants.Source),
+                        order:96
                         ))
                         .AddItem(new MenuItemDefinition(
                             name: "Eco_Categ",

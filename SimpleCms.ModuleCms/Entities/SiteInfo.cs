@@ -20,7 +20,7 @@ namespace SimpleCms.ModuleCms.Entities
         public string SiteMail { get; set; }
         public int TenantId { get; set; }
         public bool IsActive { get; set; }
-
+        public ICollection<AboutInfo> About { get; set; }
         public static SiteInfo Create(string siteTitle, string siteSlogan, string siteDescription, bool isActive)
         {
             return new SiteInfo()

@@ -61,6 +61,7 @@ namespace SimpleCms.Web.Controllers
         public ActionResult Login(string returnUrl = "")
         {
             ViewBag.IsNotExistingTenant = false;
+            ViewBag.IsHost = IsHostSite;
             if (IsNotExistentTenancy)
             {
                 ViewBag.IsNotExistingTenant = IsNotExistentTenancy;
@@ -209,6 +210,14 @@ namespace SimpleCms.Web.Controllers
                 {
                     tenancyFoundName = model.TenancyName;
                 }
+                if (string.IsNullOrEmpty(tenancyFoundName))
+                {
+                    model.TenancyName = null;
+                }
+                else
+                {
+                    model.TenancyName = tenancyFoundName;
+                }
                 //Get tenancy name and tenant
                 if (!_multiTenancyConfig.IsEnabled)
                 {
@@ -227,7 +236,8 @@ namespace SimpleCms.Web.Controllers
                     Name = model.Name,
                     Surname = model.Surname,
                     EmailAddress = model.EmailAddress,
-                    IsActive = true
+                    IsActive = true,
+                    TenantId = tenant.Id
                 };
 
                 //Get external login info if possible
@@ -324,7 +334,13 @@ namespace SimpleCms.Web.Controllers
             {
                 ViewBag.IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled;
                 ViewBag.ErrorMessage = ex.Message;
-
+                ViewBag.IsHost = IsHostSite;
+                ViewBag.IsNotExistingTenant = false;
+                if (IsNotExistentTenancy)
+                {
+                    ViewBag.IsNotExistingTenant = IsNotExistentTenancy;
+                    model.TenancyName = ActiveTenantName;
+                }
                 return View("Register", model);
             }
         }
@@ -510,5 +526,17 @@ namespace SimpleCms.Web.Controllers
         }
 
         #endregion
+
+        public ActionResult RegisterTenant()
+        {
+            ViewBag.IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled;
+            ViewBag.IsHost = IsHostSite;
+            ViewBag.IsNotExistingTenant = false;
+            if (IsNotExistentTenancy)
+            {
+                ViewBag.IsNotExistingTenant = IsNotExistentTenancy;
+            }
+            return View();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
+using SimpleCms.Authorization;
 using SimpleCms.ModuleZero.Constants;
 
 namespace SimpleCms.ModuleZero
@@ -64,7 +65,25 @@ namespace SimpleCms.ModuleZero
                     requiresAuthentication: true,
                     requiredPermissionName: "Administration.ManageConfiguration.Menu",
                     url: "/Admin/Configuration",
-                    icon: "fa fa-gear")))
+                    icon: "fa fa-gear"))).AddItem(
+                    new MenuItemDefinition(
+                        "Tenants",
+                        L("Tenants"),
+                        url: "/Admin/Tenants",
+                        icon: "fa fa-lg fa-fw fa-globe txt-color-blue",
+                        requiredPermissionName: PermissionNames.Pages_Tenants,
+                        order: 98
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Foda",
+                        L("Foda_System"),
+                        url: "/Admin/Foda",
+                        requiresAuthentication: true,
+                        icon: "fa fa-lg fa-fw fa fa-info txt-color-blue",
+                        order:99
+                        )
+                )
                 );
 
         }

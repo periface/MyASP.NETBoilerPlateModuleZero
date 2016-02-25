@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201602200619038_Update_New.Designer.cs">
       <DependentUpon>201602200619038_Update_New.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602252155480_aboutInfo.cs" />
+    <Compile Include="Migrations\201602252155480_aboutInfo.Designer.cs">
+      <DependentUpon>201602252155480_aboutInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SimpleCmsDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -225,6 +229,10 @@
     <ProjectReference Include="..\SimpleCms.ModuleCms\SimpleCms.ModuleCms.csproj">
       <Project>{1935A211-5910-475F-8AB5-B078E88C4792}</Project>
       <Name>SimpleCms.ModuleCms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleCms.ModuleZero\SimpleCms.ModuleZero.csproj">
+      <Project>{642989DB-05FE-4B6F-84F5-0E0E2D56FC6E}</Project>
+      <Name>SimpleCms.ModuleZero</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602200619038_Update_New.resx">
       <DependentUpon>201602200619038_Update_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602252155480_aboutInfo.resx">
+      <DependentUpon>201602252155480_aboutInfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

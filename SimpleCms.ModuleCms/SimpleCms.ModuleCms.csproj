@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\ModuleCmsConstants.cs" />
+    <Compile Include="Entities\AboutInfo.cs" />
     <Compile Include="Entities\CategoryContent.cs" />
     <Compile Include="Entities\ConfigThemeRelation.cs" />
     <Compile Include="Entities\Menu.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IPagesService.cs" />
     <Compile Include="Services\PagesService.cs" />
+    <Compile Include="SiteConfiguration\Dto\AboutInfoInput.cs" />
     <Compile Include="SiteConfiguration\Dto\ConfigsOutput.cs" />
     <Compile Include="SiteConfiguration\Dto\InfosOutput.cs" />
     <Compile Include="SiteConfiguration\ISiteService.cs" />

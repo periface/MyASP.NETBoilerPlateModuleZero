@@ -9,6 +9,7 @@ using SimpleCms.EntityFramework;
 using SimpleCms.MultiTenancy;
 using SimpleCms.Users;
 using Microsoft.AspNet.Identity;
+using SimpleCms.ModuleZero;
 
 namespace SimpleCms.Migrations.SeedData
 {
@@ -41,7 +42,8 @@ namespace SimpleCms.Migrations.SeedData
                     .GetAllPermissions(new SimpleCmsAuthorizationProvider())
                     .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Host))
                     .ToList();
-
+                var permissionAdmin = PermissionFinder.GetAllPermissions(new ModuleZeroPermissionsProvider()).ToList();
+                permissions.AddRange(permissionAdmin);
                 foreach (var permission in permissions)
                 {
                     if (!permission.IsGrantedByDefault)

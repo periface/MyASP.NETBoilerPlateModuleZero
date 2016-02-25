@@ -21,6 +21,7 @@ namespace SimpleCms.EntityFramework
         public virtual IDbSet<SiteConfig> SieConfigs { get; set; }
         public virtual IDbSet<SiteAdress> SiteAdresses { get; set; }
         public virtual IDbSet<SiteInfo> SiteInfos { get; set; }
+        public virtual IDbSet<AboutInfo> AboutInfos{ get; set; }
         public virtual IDbSet<Theme> Themes { get; set; }
         public virtual IDbSet<ConfigThemeRelation> Config { get; set; }
         /* NOTE: 

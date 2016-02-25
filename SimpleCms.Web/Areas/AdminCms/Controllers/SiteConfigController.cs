@@ -96,5 +96,10 @@ namespace SimpleCms.Web.Areas.AdminCms.Controllers
             await _siteService.DeleteInfo(id);
             return Json(new {ok = true});
         }
+
+        public ViewResult CreateAboutInfo(int? id)
+        {
+            return View();
+        }
     }
 }

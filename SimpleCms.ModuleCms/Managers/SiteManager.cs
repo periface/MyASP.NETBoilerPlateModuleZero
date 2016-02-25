@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
 using Abp.Domain.Services;
-using Abp.Domain.Uow;
 using Abp.UI;
+using Microsoft.AspNet.Identity;
 using SimpleCms.ModuleCms.Entities;
 using SimpleCms.ModuleCms.Policies;
 
@@ -17,15 +18,15 @@ namespace SimpleCms.ModuleCms.Managers
         private readonly IRepository<SiteConfig> _siteConfigRepository;
         private readonly IRepository<SiteInfo> _siteinfoRepository;
         private readonly IRepository<Theme> _themeRepository;
-        private IRepository<SiteAdress> _siteAdressRepository;
+        private readonly IRepository<AboutInfo> _aboutInfoRepository;
         private readonly ISiteConfigPolicies _configPolicies;
-        public SiteManager(IRepository<SiteConfig> siteConfigRepository, IRepository<SiteInfo> siteinfoRepository, IRepository<SiteAdress> siteAdressRepository, ISiteConfigPolicies configPolicies, IRepository<Theme> themeRepository)
+        public SiteManager(IRepository<SiteConfig> siteConfigRepository, IRepository<SiteInfo> siteinfoRepository, ISiteConfigPolicies configPolicies, IRepository<Theme> themeRepository, IRepository<AboutInfo> aboutInfoRepository)
         {
             _siteConfigRepository = siteConfigRepository;
             _siteinfoRepository = siteinfoRepository;
-            _siteAdressRepository = siteAdressRepository;
             _configPolicies = configPolicies;
             _themeRepository = themeRepository;
+            _aboutInfoRepository = aboutInfoRepository;
         }
 
         public Task CreateInfoGetIdAsync(SiteInfo info)
@@ -35,7 +36,8 @@ namespace SimpleCms.ModuleCms.Managers
 
         public async Task CreateInfoAsync(SiteInfo info)
         {
-           
+            var emptyAboutInfo = AboutInfo.CreateInfo(CultureInfo.CurrentCulture.Name,"","","",false,"",false,"",false,info);
+            info.About = new List<AboutInfo> {emptyAboutInfo};
             await _siteinfoRepository.InsertAsync(info);
             if (info.IsActive)
             {
@@ -43,6 +45,11 @@ namespace SimpleCms.ModuleCms.Managers
             }
         }
 
+        public async Task CreateAboutInfo(AboutInfo input)
+        {
+             await _aboutInfoRepository.InsertAsync(input);
+        }
+        
         public async Task DeleteInfo(SiteInfo info)
         {
             _configPolicies.AttemptDeleteInfo(info);

@@ -1,13 +1,13 @@
-﻿using System.Threading.Tasks;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Abp.Threading;
 using Abp.Web.Mvc.Authorization;
 using SimpleCms.Authorization;
 using SimpleCms.ModuleZero.LanguageTexts;
 using SimpleCms.ModuleZero.Tenancy;
 using SimpleCms.MultiTenancy;
+using SimpleCms.Web.Controllers;
 
-namespace SimpleCms.Web.Controllers
+namespace SimpleCms.Web.Areas.Admin.Controllers
 {
     [AbpMvcAuthorize(PermissionNames.Pages_Tenants)]
     public class TenantsController : SimpleCmsControllerBase

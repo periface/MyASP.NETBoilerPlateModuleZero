@@ -23,6 +23,7 @@ namespace SimpleCms.ModuleCms.Managers
         SiteConfig GetCurrentTenantConfig();
         SiteInfo GetCurrentTenantInfo();
         SiteInfo GetCurrentTenantInfo(int idTenancy);
+        Task CreateAboutInfo(AboutInfo input);
         /// <summary>
         /// Disable others
         /// </summary>

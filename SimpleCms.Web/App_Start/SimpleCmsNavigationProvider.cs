@@ -25,15 +25,6 @@ namespace SimpleCms.Web
                         )
                 ).AddItem(
                     new MenuItemDefinition(
-                        "Tenants",
-                        L("Tenants"),
-                        url: "/Tenants",
-                        icon: "fa fa-globe",
-                        requiredPermissionName: PermissionNames.Pages_Tenants,
-                        order: 99
-                        )
-                ).AddItem(
-                    new MenuItemDefinition(
                         "Themes",
                         L("Themes"),
                         url: "/Themes",

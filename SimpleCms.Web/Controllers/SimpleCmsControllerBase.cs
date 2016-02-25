@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+
 using Abp.Dependency;
 using Abp.Extensions;
 using Abp.IdentityFramework;
@@ -10,7 +11,6 @@ using Microsoft.AspNet.Identity;
 using SimpleCms.ModuleCms.Themes;
 using SimpleCms.ModuleZero.Tenancy;
 using SimpleCms.Web.ViewEngines;
-
 namespace SimpleCms.Web.Controllers
 {
     /// <summary>
@@ -19,6 +19,7 @@ namespace SimpleCms.Web.Controllers
     public abstract class SimpleCmsControllerBase : AbpController
     {
         private const string KeySession = "Theme";
+        private const string LastTenant = "LastTenant";
         /// <summary>
         /// Gets the active tenancy, usefull for anon users
         /// </summary>
@@ -49,6 +50,7 @@ namespace SimpleCms.Web.Controllers
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
+            //Init theme
             InsertViewEngine();
         }
         /// <summary>
@@ -56,12 +58,14 @@ namespace SimpleCms.Web.Controllers
         /// </summary>
         private void InsertViewEngine()
         {
-            //If is host there is not need of obtain the current theme
-            if (IsHostSite) return;
+            ClearViewEngine(); //We clear the current view engine
             string activeThemeName;
+            //If there is not a current theme working, we load it
             if (Session[KeySession] == null)
             {
-                var instance = _themeService.GetCurrentActiveThemeFromTenant(GetTenancyNameByUrl());
+                var tenantName = GetTenancyNameByUrl();
+                Session[LastTenant] = tenantName;
+                var instance = _themeService.GetCurrentActiveThemeFromTenant(tenantName);
                 if (instance == null)
                 {
                     Session[KeySession] = "";
@@ -72,13 +76,37 @@ namespace SimpleCms.Web.Controllers
             }
             else
             {
-                activeThemeName = (string)Session[KeySession];
+                //There is a current theme in memory now we check if we are in the correct tenant
+
+                if ((string) Session[LastTenant] != GetTenancyNameByUrl())
+                {
+                    //We are not in the correct tenant
+                    ClearViewEngine(); //Clear the engine and load the theme again!
+                    var instance = _themeService.GetCurrentActiveThemeFromTenant(GetTenancyNameByUrl());
+                    if (instance == null)
+                    {
+                        Session[KeySession] = "";
+                        return;
+                    }
+                    activeThemeName = instance.UniqueFolderId;
+                    Session[KeySession] = activeThemeName;
+                }
+                else
+                {
+                    //we are in the current tenant we jus load the theme from memory
+                    activeThemeName = (string)Session[KeySession];
+                }
             }
+            //After the theme is resolved and is not null we inject it in the view engine
             if (!string.IsNullOrEmpty(activeThemeName))
             {
                 System.Web.Mvc.ViewEngines.Engines.Insert(0, new SystemThemeViewEngine(activeThemeName));
-
             }
+        }
+        private static void ClearViewEngine()
+        {
+            System.Web.Mvc.ViewEngines.Engines.Clear();
+            System.Web.Mvc.ViewEngines.Engines.Insert(0, new DefaultViewEngine());
         }
         /// <summary>
         /// Gets the current tenant name based on the current url
@@ -93,7 +121,6 @@ namespace SimpleCms.Web.Controllers
             tenancyName = tenancyName.Split("//").Last();
             return tenancyName;
         }
-
         public string HostWithNoTenantName()
         {
             var hostName = string.Empty;
@@ -118,7 +145,6 @@ namespace SimpleCms.Web.Controllers
                 return instance == null && hasName;
             }
         }
-
         /// <summary>
         /// Detects if the site url belongs to a tenant website
         /// <para>Not available in AdminController since tenantId can be obtained from te AbpSession</para>

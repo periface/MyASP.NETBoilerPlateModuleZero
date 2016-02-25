@@ -63,7 +63,7 @@ namespace SimpleCms.Web.Controllers
             {
                 return PartialView("_siteInformationHeaderClient", new SiteInfoDto()
                 {
-                    SiteTitle = "PymeTam"
+                    SiteTitle = "Cinotam"
                 });
             }
             return PartialView("_siteInformationHeaderClient",info);
@@ -76,7 +76,7 @@ namespace SimpleCms.Web.Controllers
             //Todo: If null return principalWebSiteInfo
             if (info == null)
             {
-                return PartialView("_mySiteName","PymeTam");
+                return PartialView("_mySiteName","Cinotam");
             }
             return PartialView("_mySiteName",info.SiteTitle);
         }
@@ -89,7 +89,7 @@ namespace SimpleCms.Web.Controllers
             {
                 return PartialView("_mySiteName", new SiteInfoDto()
                 {
-                    SiteTitle = "PymeTam"
+                    SiteTitle = "Cinotam"
                 });
             }
             return PartialView("_mySiteLogo", info.SiteLogo);
@@ -103,7 +103,7 @@ namespace SimpleCms.Web.Controllers
             {
                 return PartialView("_mySiteName", new SiteInfoDto()
                 {
-                    SiteTitle = "PymeTam"
+                    SiteTitle = "Cinotam"
                 });
             }
             return PartialView("_mySiteSlogan", info.SiteSlogan);

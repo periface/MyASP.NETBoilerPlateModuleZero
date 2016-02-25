@@ -21,15 +21,15 @@
                         {
                             if (ViewBag.IsNotExistingTenant)
                             {
-                                <p>This website does not exists why dont you create it!</p>
+                                <p>This website does not exists why dont you <a href="@Url.Action("CreateWebSite","Home")">create it! </a></p>
                             }
                             if (ViewBag.IsMultiTenancyEnabled)
                             {
-                                <div class="form-group">
+                                @*<div class="form-group">
                                     <div class="col-lg-12">
                                         <input type="text" class="form-control" name="TenancyName" placeholder="@L("TenancyName")" value="@Model.TenancyName" required maxlength="@SimpleCms.MultiTenancy.Tenant.MaxTenancyNameLength">
                                     </div>
-                                </div>
+                                </div>*@
                             }
                         }
                         <input type="hidden" name="IsExternalLogin" value="@Model.IsExternalLogin.ToString()" />
@@ -63,12 +63,15 @@
                                 <input type="password" class="form-control" name="Password" placeholder="@L("Password")" required maxlength="@SimpleCms.Users.User.MaxPlainPasswordLength">
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-lg-12">
-                                <button type="submit" id="RegisterButton" class="btn btn-primary"><i class="fa fa-sign-in"></i> @L("Register")</button>
+                        @if (!ViewBag.IsHost)
+                        {
+                            <div class="form-group">
+                                <div class="col-lg-12">
+                                    <button type="submit" id="RegisterButton" class="btn btn-primary"><i class="fa fa-sign-in"></i> @L("Register")</button>
+                                </div>
                             </div>
-                        </div>
+                        }
+                        
                     </fieldset>
                 </form>
             </div>

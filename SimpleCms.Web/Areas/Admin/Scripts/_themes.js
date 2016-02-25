@@ -12,7 +12,7 @@ $(document).ready(function () {
     };
     function rebindAllThemes() {
         var container = $(".allThemesWrapper");
-        container.load(urls.getThemes + "AllThemes");
+        container.load(urls.Themes + "AllThemes");
         abp.message.success(L("ThemeInLibrary"));
     }
     $(".myThemesWrapper").on("click", ".activeTheme", function () {
@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(".allThemesWrapper").on("click", ".getTheme", function () {
         var id = $(this).data("id");
         abp.ui.setBusy($(".themeWrapper-" + id), abp.ajax({
-            url: url.Themes+ "GetTheme/" + id
+            url: urls.Themes+ "GetTheme/" + id
         }).done(function () {
             rebindAllThemes();
             rebindMyThemes(false);
